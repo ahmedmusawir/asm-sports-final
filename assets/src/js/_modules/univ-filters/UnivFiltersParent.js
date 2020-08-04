@@ -10,6 +10,8 @@ class UniversityFiltersParent {
     this.locationBtn = $('#location-dropdown-btn');
     // COLLECTIN DROPDOWN
     this.dropDownBox = $('#menu-university-menu');
+    // STATES DROPDOWN MENU CLOSE BTN
+    this.statesDropdownMenuCloseBtn = $('.states-menu-close');
 
     // console.log(this.button);
     this.setEvents();
@@ -22,11 +24,19 @@ class UniversityFiltersParent {
   setEvents() {
     this.resetBtn.on('click', this.resetFilters);
     this.locationBtn.on('click', this.locationDropdownIn);
-    this.dropDownBox.on('mouseleave', this.locationDropdownOut);
+    // this.dropDownBox.on('mouseleave', this.locationDropdownOut);
     // FOLLOWING WAS FOR BODY CLICK TO MAKE DROP DOWN MENU CLOSE
     // BUT IT WAS CAUSING ISSUES SO HAS BEEN COMMENTED OUT
     // this.doc.on('mouseup', this.docClick);
+
+    // THE FOLLOWING WILL REPLACE THE ABOVE. THIS IS A CLOSE BTN
+    // WHICH WILL CLOSE THE ALL STATE DROPDOWN
+    this.statesDropdownMenuCloseBtn.on('click', this.closeTheMenu);
   }
+
+  closeTheMenu = (e) => {
+    this.dropDownBox.addClass('d-none');
+  };
 
   docClick = (e) => {
     // console.log('doc mouse up');

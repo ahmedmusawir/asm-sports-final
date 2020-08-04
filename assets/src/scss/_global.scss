@@ -2,12 +2,12 @@
 =            TOOLS            =
 =============================*/
 
-@import "bower_components/compass-sass-mixins/lib/compass";
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css";
+@import 'bower_components/compass-sass-mixins/lib/compass';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css';
 // @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 // @import url(https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css);
-@import "custom.scss"; //Boostrap 4 Variable Override
-@import "bower_components/bootstrap/scss/bootstrap.scss";
+@import 'custom.scss'; //Boostrap 4 Variable Override
+@import 'bower_components/bootstrap/scss/bootstrap.scss';
 // @import "slick-slider/slick.scss";
 
 /*=====  End of TOOLS  ======*/
@@ -15,11 +15,11 @@
 /*=============================
 =            FONTS            =
 =============================*/
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
 
-$primary-font: "Montserrat", sans-serif;
-$secondary-font: "Montserrat", sans-serif;
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
 
 // $primary-font: 'Tangerine', cursive;
 // $secondary-font: 'Philosopher', sans-serif;
@@ -81,7 +81,7 @@ body {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    background: url(http://dropdown/arrow/url/) no-repeat;
+    // background: url(http://dropdown/arrow/url/) no-repeat;
     background-position: right center;
     background-color: #cccccc;
     color: #000000;
