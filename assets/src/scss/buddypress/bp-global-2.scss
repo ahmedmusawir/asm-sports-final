@@ -1,0 +1,275 @@
+.container-fluid {
+  padding: 0 !important;
+}
+
+#buddypress {
+  position: relative;
+
+  // REGISTRATION PAGE
+  #profile-details-section {
+    // border: 1rem dotted red;
+
+    .editfield.field_38.field_registering-as {
+      // border: 1rem dotted brown;
+      position: relative;
+
+      .checkbox {
+        margin-top: 100px;
+
+        label[for='option_athlete'] {
+          // border: 1px dotted red;
+          background-color: #e3e3e3;
+          position: absolute;
+          top: 100px;
+          padding: 1rem;
+          font-weight: 700;
+        }
+        label[for='option_coach'] {
+          // border: 1px dotted red;
+          background-color: #e3e3e3;
+          position: absolute;
+          padding: 1rem;
+          top: 100px;
+          left: 150px;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .top-page-navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    .top-page-menu {
+      // border: 4px dotted blueviolet;
+      width: 100%;
+      background-color: $cg-secondary;
+      border-bottom: 2px solid lighten($color: gray, $amount: 35%);
+
+      .menu-title {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        font-weight: 600;
+        color: white;
+      }
+
+      .menu-box {
+        margin-top: 2rem;
+        margin-left: 2rem;
+
+        a {
+          padding: 0.5rem 2rem;
+          margin-left: 1rem;
+          border: 1px solid gray;
+          border-radius: 6px;
+          background-color: #e3e3e3;
+          color: lighten($color: $cg-primary, $amount: 10%);
+          font-size: 1.1rem;
+
+          i {
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .bp-wrap {
+    #item-body {
+      margin-top: 150px;
+      position: relative;
+
+      .bp-navs.bp-subnavs.user-subnav {
+        // display: none;
+      }
+
+      //  LEFT COLUMN START
+
+      .athlete-info-box {
+        position: fixed;
+        width: 23%;
+        @media (max-width: 1199px) {
+          width: 30%;
+        }
+        @media (max-width: 991px) {
+          position: relative;
+          width: 100%;
+        }
+      }
+
+      #item-header-avatar {
+        // border: 3px dotted greenyellow;
+
+        img.avatar {
+          border-radius: 50%;
+        }
+        .athlete-title {
+          font-size: 1.8rem;
+        }
+      }
+
+      .athlete-meta {
+        // border: 3px dotted greenyellow;
+        font-weight: 600;
+        i.fa-eye {
+          font-size: 1.2rem;
+          color: deepskyblue;
+        }
+        i.fa-star {
+          font-size: 1.2rem;
+          color: orange;
+        }
+      }
+
+      .athlete-bio {
+        // border: 3px dotted greenyellow;
+
+        .list-group-item {
+          // border: 4px dotted red;
+          background-color: lighten($color: #e7e7e7, $amount: 8%);
+          border-bottom: 4px solid white;
+          border-top: 1px solid white;
+          border-right: 1px solid white;
+          border-left: 1px solid white;
+        }
+      }
+
+      .athlete-sports-info {
+        // border: 4px dotted blue;
+        h1 {
+          color: #024d80;
+          font-size: 2rem;
+          text-align: center;
+        }
+        small {
+          font-size: 1rem;
+          font-weight: 600;
+        }
+      }
+
+      //  LEFT COLUMN END
+
+      // CENTER COLUMN START
+
+      .bp-profile-loop {
+        display: none;
+      }
+
+      #top-video-section {
+        // border: 0.3rem dotted red;
+        padding-bottom: 3.5rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-youtube {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+      }
+
+      #about-section {
+        // border: 0.3rem dotted limegreen;
+        padding-bottom: 3.5rem;
+        border-bottom: 2px solid $cg-primary;
+        color: lighten($color: $cg-primary, $amount: 10%);
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-user-circle {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      #sports-info-section {
+        // border: 0.3rem dotted sienna;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+        color: lighten($color: $cg-primary, $amount: 10%);
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-trophy {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%) !important;
+        }
+      }
+
+      #academics-section {
+        // border: 0.3rem dotted cyan;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-file-certificate {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+          font-weight: 600;
+        }
+        .school-box {
+          background-color: lighten($color: #e7e7e7, $amount: 5%);
+
+          .school-name {
+            font-weight: 700;
+          }
+        }
+        .test-score-box {
+          .test-score-title {
+            font-size: 1.7rem;
+          }
+        }
+      }
+
+      #instagram-section {
+        // border: 0.3rem dotted goldenrod;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-instagram {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      #interview-section {
+        // border: 0.3rem dotted steelblue;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+        color: lighten($color: $cg-primary, $amount: 10%);
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-comments {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      // CENTER COLUMN END
+
+      // RIGHT COLUMN START
+
+      // RIGHT COLUMN END
+    }
+  }
+}

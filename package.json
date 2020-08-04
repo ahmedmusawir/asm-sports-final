@@ -1,0 +1,83 @@
+{
+  "name": "cyberize-framework",
+  "version": "1.0.0",
+  "description": "Moose Plugin Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedmusawir/moose-plugin-framework-1.git"
+  },
+  "keywords": [
+    "gulpfile",
+    "scss",
+    "js",
+    "plugin",
+    "framework"
+  ],
+  "author": "The Moose",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ahmedmusawir/moose-plugin-framework-1/issues"
+  },
+  "homepage": "https://github.com/ahmedmusawir/moose-plugin-framework-1#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.40",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0-beta.40",
+    "axios": "^0.19.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "jquery": "^3.5.1",
+    "react-addons-css-transition-group": "^15.6.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "plugins": [
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ]
+  ],
+  "browserslist": [
+    "> 1%",
+    "ie >= 8",
+    "edge >= 15",
+    "ie_mob >= 10",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4",
+    "bb >= 10"
+  ],
+  "dependencies": {
+    "@popperjs/core": "^2.4.0",
+    "bootstrap": "^4.5.0",
+    "popper": "^1.0.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}

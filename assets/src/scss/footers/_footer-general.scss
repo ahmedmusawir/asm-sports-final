@@ -1,0 +1,60 @@
+/**
+ *
+ * General Styles for Site Footer
+ *
+ */
+
+.site-footer {
+  .search-form {
+    label {
+      display: block;
+    }
+    input {
+      width: 100%;
+    }
+    .search-field {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      outline-color: $cg-secondary;
+      width: 100%;
+      border: 1px solid lighten($cg-secondary, 30%);
+      background-color: lighten($cg-secondary, 30%);
+      text-align: center;
+    }
+    .search-submit {
+      // margin-bottom: 2rem;
+      border-radius: 50px;
+      background-color: lighten($cg-secondary, 20%);
+      &:hover {
+        background-color: lighten($cg-secondary, 10%);
+        color: white;
+      }
+    }
+  }
+
+  .widget {
+    padding-bottom: 1rem;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        &::before {
+          font-family: 'FontAwesome';
+          content: '\f1de';
+          color: $cg-secondary;
+          padding-right: 0.5rem;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .widgettitle,
+  .widget-title {
+    font-size: 1.7rem;
+    color: white;
+    // border: 1rem solid red;
+  }
+}

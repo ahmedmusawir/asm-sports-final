@@ -1,0 +1,58 @@
+/**
+ *
+ * General Styles for Single Post or Page
+ *
+ */
+
+#general-page-header {
+
+   	img {
+		-moz-box-shadow: 0 6px 40px  lighten($black, 20%);
+		-webkit-box-shadow: 0 6px 40px  lighten($black, 20%);
+		box-shadow: 0 6px 40px  lighten($black, 20%);
+   	}
+}
+
+.gallery {
+	.gallery-item {
+		padding: 1rem;
+	}
+}
+
+.post-navigation {
+	// border: 1px solid red;
+	@include clearfix;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	.nav-links {
+		.nav-previous {
+			float: left;
+		}
+		.nav-next {
+			float: right;
+		}
+	}
+}
+
+.content-area {
+	// padding-top: 6rem;
+	// padding-bottom: 4rem;
+
+	.post-thumbnail {
+		img {
+			width: 100%;
+			// padding-bottom: 2rem;
+			// padding-top: 2rem;
+		}
+	}
+
+	@media (max-width: 800px) {
+		img {
+			display: block;
+			clear: both;
+			width: 100%;
+			padding-bottom: 2rem;
+		}
+	}
+}

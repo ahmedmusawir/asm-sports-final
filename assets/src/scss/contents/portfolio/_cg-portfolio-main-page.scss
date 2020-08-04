@@ -1,0 +1,92 @@
+/**
+ *
+ * Taxonomy Product Type Styles
+ *
+ */
+
+#portfolio-main-page {
+	margin-top: -6rem;
+    margin-bottom: -4rem;
+
+	.portfolio-nav {
+		margin-bottom: 2rem;
+		margin-top: 5rem;
+
+		#menu-portfolio-categories {
+			list-style-type: none;
+
+			li {
+				display: inline-block;
+				border: 1px solid white;
+				padding: .5rem 1rem;
+				border-top-left-radius: 20px;
+				border-bottom-right-radius: 20px;
+				box-shadow: 2px 2px 6px gray;
+
+				a {
+					font-variant: small-caps;
+					font-weight: 700;
+				}
+
+				&:hover {
+					background-color: tomato;
+
+					a {
+						color: white;
+					}					
+				}
+
+				&.current-menu-item {
+					background-color: tomato;
+
+					a {
+						color: white;
+					}
+				}
+			}
+		}
+	}
+	.featured-content-block {
+		background-color: lighten(#e3e3e3, 0%);
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-bottom: 3rem;
+		margin-bottom: 4rem;
+		.title {
+			padding-top: 4rem;
+			text-shadow: 2px 2px 2px darken(gray, 0%);
+		}
+		@media (max-width: 500px) {
+			padding-right: .5rem;
+			padding-left: .5rem;
+		}
+
+		.featured-item {
+			padding-bottom: 1rem;
+			margin-top: 3rem;
+			margin-bottom: 3rem;
+			background-color: white;
+			box-shadow: 2px 2px 6px gray !important;
+
+		    @include transition(all .5s ease-in-out);
+			&:hover {
+				box-shadow: 9px 9px 20px gray !important;
+			}			
+
+			.btn-holder {
+				padding-top: 2rem;
+
+				.btn {
+					border: 3px solid white; 
+					padding: .5rem 1.7rem;
+					font-size: 1.8rem;
+					border-bottom-right-radius: 20px; 
+					border-top-left-radius: 20px; 
+					color: white;					
+				}
+			}
+
+		}
+	}
+
+}

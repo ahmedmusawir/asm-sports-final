@@ -1,0 +1,942 @@
+/**
+ * ITEM INDEX
+ * 1. ATHLETE EMAIL PAGE
+ * 2. FRONT END PM PRO (THE EMAIL SYSTEM STYLES)
+ * -- EMAIL DIRECTORY PAGE
+ */
+
+/**
+ * 1. ATHLETE EMAIL PAGE
+ */
+
+#asm-athlete-email-page {
+  position: relative;
+
+  #change-cover-image-personal-li {
+    display: none;
+  }
+
+  //TOP BLUE BAR
+  .top-page-navbar {
+    position: fixed;
+    top: 78px;
+    width: 100%;
+    z-index: 100;
+    //TOP MENU PROFILE EDIT
+    .top-page-menu {
+      // border: 4px dotted red;
+      width: 100%;
+      background-color: $cg-secondary;
+      border-bottom: 2px solid lighten($color: gray, $amount: 35%);
+
+      .menu-title {
+        padding: 1rem;
+        padding-left: 2rem;
+        padding-top: 1.5rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: white;
+      }
+    }
+  }
+
+  // PROFILE BODY
+  .bp-wrap {
+    margin-top: 80px;
+    min-height: 80vh;
+    // border: 4px dotted red;
+
+    #item-body {
+      margin-top: 90px;
+      position: relative;
+
+      //  LEFT COLUMN START
+      .athlete-info-box {
+        position: fixed;
+        top: 180px;
+        width: 23%;
+        @media (max-width: 1199px) {
+          width: 30%;
+        }
+        @media (max-width: 991px) {
+          position: relative;
+          width: 100%;
+        }
+      }
+
+      #item-header-avatar {
+        // border: 3px dotted greenyellow;
+        img.avatar {
+          border-radius: 50%;
+          width: 200px;
+        }
+        .athlete-title {
+          font-size: 1.8rem;
+          text-transform: uppercase !important;
+          margin: 0;
+          margin-top: 0.5rem;
+        }
+        @media (max-width: 991px) {
+          // border: 4px dotted red;
+          margin-top: -200px;
+        }
+      }
+
+      .athlete-meta {
+        // border: 3px dotted greenyellow;
+        font-weight: 600;
+        i.fa-eye {
+          font-size: 1.2rem;
+          color: deepskyblue;
+        }
+        i.fa-star {
+          font-size: 1.2rem;
+          color: orange;
+        }
+      }
+      // AHTLETE PROFILE
+      .athlete-bio {
+        // border: 3px dotted greenyellow;
+        .list-group-item {
+          // border: 4px dotted red;
+          background-color: lighten($color: #e7e7e7, $amount: 8%);
+          border-bottom: 4px solid white;
+          border-top: 1px solid white;
+          border-right: 1px solid white;
+          border-left: 1px solid white;
+          // LABELS
+          .label {
+            // border: 4px dotted red;
+            @media (min-width: 992px) and (max-width: 1750px) {
+              font-size: 0.8rem;
+              font-weight: 800;
+            }
+          }
+        }
+      }
+
+      // COACH PROFILE
+      .coach-bio {
+        // border: 4px dotted red;
+        .list-group-item {
+          background-color: lighten($color: #e7e7e7, $amount: 8%);
+          border-bottom: 4px solid white;
+          border-top: 1px solid white;
+          border-right: 1px solid white;
+          border-left: 1px solid white;
+
+          .values {
+            font-weight: 700;
+          }
+          .label {
+            // border: 4px dotted red;
+            @media (min-width: 992px) and (max-width: 1750px) {
+              font-size: 0.8rem;
+              font-weight: 800;
+            }
+          }
+        }
+
+        .bpxcftr-image {
+          // border: 3px dotted greenyellow;
+          width: 80px;
+        }
+        .text-only {
+          padding-top: 0.5rem;
+        }
+      }
+
+      .athlete-sports-info {
+        // border: 4px dotted blue;
+        @media (max-width: 991px) {
+          padding-top: 1rem;
+          margin-bottom: 2rem;
+          // border: 4px dotted blue;
+          @include clearfix;
+        }
+        @media (max-width: 500px) {
+          margin-bottom: 4rem;
+        }
+
+        h1 {
+          color: #024d80;
+          font-size: 1.3rem;
+          font-weight: 800;
+          text-align: center;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            font-size: 1.5rem;
+            font-weight: 800;
+          }
+        }
+        small {
+          font-size: 0.8rem;
+          font-weight: 600;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            font-size: 1rem;
+            font-weight: 800;
+          }
+        }
+        .sport-name {
+          float: left;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            float: none;
+          }
+          @media (max-width: 500px) {
+            float: none;
+          }
+        }
+        .enrollment-year {
+          float: right;
+          @media (min-width: 992px) and (max-width: 1750px) {
+            float: none;
+          }
+          @media (max-width: 500px) {
+            float: none;
+            margin-bottom: 2rem;
+            // border: 3px dotted greenyellow;
+          }
+        }
+      }
+
+      //  LEFT COLUMN END
+
+      // CENTER COLUMN START
+
+      .bp-profile {
+        // border: 4px dotted red;
+        // PROFILE EDIT MENU
+        #subnav {
+          border: 2px solid $cg-secondary;
+          margin-top: 2rem;
+          background-color: $cg-primary;
+          .subnav {
+            li {
+              a {
+                color: white;
+                &:hover {
+                  background-color: lighten($color: $cg-primary, $amount: 40%);
+                }
+              }
+
+              &.current.selected {
+                a {
+                  color: $cg-secondary;
+                }
+              }
+              &.current.selected.hover {
+                color: white !important;
+              }
+            }
+          }
+        }
+
+        // PROFILE EDIT AREA
+        #profile-edit-form {
+          // border: 4px dotted blue;
+          .button-tabs.button-nav {
+            // border: 4px dotted red;
+            li {
+              border: 1px solid $cg-primary;
+              border-radius: 10px;
+              padding: 0.35rem 0.75rem;
+              margin-bottom: 0.5rem;
+            }
+            li.current {
+              background-color: $cg-primary;
+              // color: white;
+              a {
+                background-color: $cg-primary;
+                color: white;
+                padding: 0;
+              }
+            }
+          }
+        }
+
+        // PROFILE SAVE BUTTON
+        #profile-group-edit-submit {
+          border: 4px solid $cg-primary;
+          padding: 1rem 4rem;
+          margin-bottom: 2rem;
+          font-weight: 700;
+          color: #e7e7e7;
+          background-color: $cg-primary;
+
+          &:hover {
+            background-color: lighten($color: $cg-primary, $amount: 10%);
+          }
+        }
+      }
+
+      /**
+       * REMOVING THE BP DEFAULT LOOP
+       */
+      .bp-profile-loop {
+        display: none;
+      }
+
+      #top-video-section {
+        padding-bottom: 3.5rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-youtube {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+      }
+
+      #about-section {
+        // border: 0.3rem dotted limegreen;
+        padding-bottom: 3.5rem;
+        border-bottom: 2px solid $cg-primary;
+        color: lighten($color: $cg-primary, $amount: 10%);
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-user-circle {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      #sports-stats-section {
+        // border: 0.3rem dotted sienna;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+        color: lighten($color: $cg-primary, $amount: 10%);
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-trophy {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%) !important;
+        }
+      }
+
+      #academics-section {
+        // border: 0.3rem dotted cyan;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+          font-weight: 600;
+        }
+        .school-box {
+          background-color: lighten($color: #e7e7e7, $amount: 5%);
+
+          .school-name {
+            font-weight: 700;
+          }
+        }
+        .test-score-box {
+          .test-score-title {
+            font-size: 1.7rem;
+          }
+        }
+      }
+
+      #instagram-section {
+        // border: 0.3rem dotted goldenrod;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-instagram {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      #interview-section {
+        // border: 0.3rem dotted steelblue;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid $cg-primary;
+        color: lighten($color: $cg-primary, $amount: 10%);
+
+        .block-header {
+          font-size: 2rem;
+          i.fa-comments {
+            color: lighten($color: $cg-primary, $amount: 20%);
+          }
+        }
+        .text-content {
+          color: lighten($color: $cg-primary, $amount: 10%);
+        }
+      }
+
+      // CENTER COLUMN END
+
+      // RIGHT COLUMN START
+      .sidebar-col {
+        background-color: white;
+        @media (max-width: 1199px) {
+          margin-top: 450px;
+        }
+        @media (max-width: 991px) {
+          margin-top: 50px;
+        }
+      }
+      // RIGHT COLUMN END
+    }
+  }
+
+  // 1a. ATHLETE PROFILE RIGHT EMAIL BUTTONS
+  #athlete-right-email-button {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
+    background: #cf0404; /* Old browsers */
+    background: -moz-linear-gradient(
+      left,
+      #cf0404 0%,
+      #ff3019 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      #cf0404 0%,
+      #ff3019 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      #cf0404 0%,
+      #ff3019 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf0404', endColorstr='#ff3019',GradientType=1 ); /* IE6-9 */
+
+    .btn-image {
+      width: 60px;
+      border: 1px solid red;
+    }
+    .btn-text-holder {
+      border: 1px solid transparent;
+      .btn-text {
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+        // padding-top: 0.5rem;
+        padding-top: 1.35rem;
+        padding-left: 5.5rem;
+      }
+    }
+  }
+
+  #athlete-right-search-athlete-button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
+    background: $cg-primary; /* Old browsers */
+    background: -moz-linear-gradient(
+      left,
+      #035083 0%,
+      #0574b8 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      left,
+      #035083 0%,
+      #0574b8 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to right,
+      #035083 0%,
+      #0574b8 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#035083', endColorstr='#0574b8',GradientType=1 ); /* IE6-9 */
+
+    .btn-image {
+      width: 60px;
+      border: 1px solid #035083;
+    }
+    .btn-text-holder {
+      border: 1px solid transparent;
+      .btn-text {
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+        padding-top: 1.35rem;
+        padding-left: 5.5rem;
+      }
+    }
+  }
+  // 2a. ATHLETE VIEW COUNT BOX ON RIGHT SIDEBAR
+  #athlete-view-count-box {
+    // border: 4px dotted red;
+    .view-count-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
+
+    margin-bottom: 2rem;
+    .box-content {
+      // border: 4px dotted blue;
+      box-shadow: 1px 1px 5px gray;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 1rem;
+
+      .versity-logo {
+        img {
+          width: 80px;
+          margin-top: 1rem;
+        }
+      }
+
+      .text-content {
+        padding: 0;
+        margin: 0;
+
+        .icon-text-box {
+          background-color: darken($color: #4b5ec1, $amount: 10%);
+          border: 1px solid darken($color: #4b5ec1, $amount: 10%);
+          .icon-text {
+            color: white;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+          }
+        }
+
+        .text-only-box {
+          border: 1px solid #e7e7e7;
+          background-color: #e7e7e7;
+          .text-only {
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * 2. FRONT END PM PRO (THE EMAIL SYSTEM STYLES)
+ */
+
+#asm-athlete-email-page {
+  #item-body {
+    #fep-wrapper {
+      // border: 4px dotted red;
+      @media (max-width: 991px) {
+        // border: 4px dotted red;
+        margin-top: 200px;
+      }
+      // MENU TOGGLE BUTTON
+      #fep-menu-toggle-button {
+        box-shadow: 1px 1px 6px gray;
+        border-radius: 20px;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        font-weight: 800;
+      }
+      // EMAIL BOX HEADER
+      #fep-header {
+        // border: 4px dotted blue;
+        background-color: #fbfbfb;
+        box-shadow: 1px 1px 8px lighten($color: gray, $amount: 20%);
+        padding: 1rem;
+        border-radius: 1rem;
+
+        .avatar.photo {
+          float: left;
+          margin-right: 2rem;
+          margin-top: 0.3rem;
+          border-radius: 10px;
+        }
+      }
+
+      // EMAIL BOX MENU BAR
+      #fep-menu {
+        // border: 4px dotted blue;
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+        #fep-menu-announcements {
+          display: none;
+        }
+      }
+
+      .fep-menu-toggle {
+        display: none;
+      }
+      // SEARCH BOX
+      #fep-messagebox-search-form {
+        // text-align: center;
+        border-top: 1px solid #e7e7e7;
+        border-bottom: 1px solid #e7e7e7;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        .fep-messagebox-search-form-field {
+          width: 100%;
+          border: 1px solid #e6e6e6;
+          padding: 0.5rem;
+        }
+      }
+      // BULK ACTION ROW
+      .fep-table.fep-action-table {
+        // border: 2px dotted red;
+
+        .fep-bulk-action {
+          float: left;
+          padding: 0.5rem;
+          margin-top: 0.3rem;
+        }
+        .fep-button {
+          padding: 0.3rem 4rem;
+          border-radius: 10px;
+        }
+        .fep-filter {
+          float: right;
+          margin-top: -0.8rem;
+        }
+      }
+
+      /**
+       * MESSAGE BOX PAGE (EMAIL LIST)
+       */
+
+      #fep-box-content-content {
+        // border: 3px dotted red;
+        .fep-avatar-2,
+        .fep-avatar-1 {
+          display: none;
+        }
+        // CHECK/UNCHECK ALL
+        .fep-cb-check-uncheck-all-div {
+          width: 100%;
+          display: flex;
+          margin: 0.5rem 0;
+        }
+
+        // EMAIL LIST CONTENT
+        #fep-table {
+          // border: 2px dotted red;
+          .fep-table-row {
+            padding: 1rem;
+          }
+
+          .fep-column.fep-column-fep-cb {
+            float: left;
+            margin-top: -0.1rem;
+            // padding-top: 0.5rem;
+            // padding-left: 0.5rem;
+          }
+          .fep-message-author {
+            padding-left: 0.6rem;
+            font-weight: 700;
+          }
+          .fep-message-date {
+            padding-left: 1.5rem;
+            display: block;
+            clear: both;
+            font-size: 0.7rem;
+            font-weight: 800;
+          }
+          .fep-column.fep-column-title {
+            padding-top: 0.5rem;
+            a {
+              color: lighten($color: $cg-primary, $amount: 10%);
+              font-weight: 700;
+              padding-left: 1.5rem;
+              &:hover {
+                color: lighten($color: $cg-primary, $amount: 20%);
+              }
+            }
+            .fep-unread-classp {
+              font-size: 0.6rem;
+              font-weight: 800;
+              padding-left: 0.5rem;
+            }
+            .fep-message-excerpt {
+              padding-left: 1.5rem;
+              padding-top: 0.5rem;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+
+      /**
+       * SEND NEW MESSAGE PAGE
+       */
+
+      #fep-content {
+        padding: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 1px 1px 5px lighten($color: gray, $amount: 20%);
+
+        // BLOCK TITLE (GENERAL EMAIL BLOCK TITLE)
+        h2 {
+          font-size: 1.5rem;
+          font-weight: 800;
+        }
+
+        // FORM LABELS
+        .fep-label {
+          label {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+          }
+        }
+
+        // TO INPUT
+        ul.token-input-list-facebook {
+          // border: none !important;
+          border: 0.5px solid lighten($color: gray, $amount: 30%);
+        }
+
+        // SUBJECT INPUT
+        #message_title {
+          border: 0.5px solid lighten($color: gray, $amount: 30%);
+        }
+
+        // TEXTAREA
+        #mceu_24-body {
+          // border: 0.5px solid lighten($color: $cg-secondary, $amount: 10%);
+        }
+
+        // FILE UPLOAD BLOCK
+        #fep_upload {
+          .fep-attachment-field-div {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e7e7e7;
+          }
+        }
+
+        .fep-attachment-field-a,
+        #fep-attachment-field-add {
+          padding: 0.3rem 1rem;
+          margin-top: 0.5rem;
+          border-radius: 10px;
+          border: 1px solid $cg-secondary;
+          font-size: 0.8rem;
+          font-weight: 700;
+        }
+        // SEND MAIL BUTTON
+        .fep-form.fep-form-newmessage {
+          .fep-button {
+            margin-top: 1.5rem;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            background-color: lighten($color: $cg-primary, $amount: 10%);
+            color: white;
+          }
+        }
+
+        /**
+         * EMAIL SETTINGS PAGE
+         */
+        .fep-form.fep-form-settings {
+          // border: 3px dotted red;
+          .fep-button {
+            margin-top: 1.5rem;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            background-color: lighten($color: $cg-primary, $amount: 10%);
+            color: white;
+          }
+        }
+
+        /**
+         * EMAIL DIRECTORY PAGE
+         */
+        // SEARCH BOX
+        #fep-directory-search-form {
+          // text-align: center;
+          border-top: 1px solid #e7e7e7;
+          border-bottom: 1px solid #e7e7e7;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+          .fep-directory-search-form-field {
+            width: 100%;
+            border: 1px solid #e6e6e6;
+            padding: 0.5rem;
+          }
+        }
+        // DIRECTORY CONTENT AREA
+        .fep-directory-table.form {
+          // border: 2px dotted red;
+          // BULK ACTION ROW
+          .fep-table.fep-action-table {
+            .fep-bulk-action {
+              float: left;
+              padding: 0.5rem;
+              margin-top: 0.3rem;
+            }
+            .fep-button {
+              padding: 0.3rem 4rem;
+              border-radius: 10px;
+            }
+            .fep-filter {
+              float: right;
+              margin-top: -1.8rem;
+              // border: 2px dotted blue;
+            }
+          }
+
+          // DIRECTORY LISTING BLOCK
+          // border: 3px dotted red;
+
+          // CHECK/UNCHECK ALL
+          .fep-cb-check-uncheck-all-div {
+            width: 100%;
+            display: flex;
+            margin: 0.5rem 0;
+          }
+
+          // DIRECTORY MEMBER IMAGE
+          .avatar.avatar-55.photo {
+            // display: none;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            border-radius: 10px;
+            float: left;
+          }
+
+          // EMAIL LIST CONTENT
+          #fep-table {
+            // border: 2px dotted red;
+            .fep-table-row {
+              // border: 2px dotted red;
+              padding: 1rem;
+
+              .fep-column.fep-column-avatar {
+                // border: 2px dotted red;
+                img {
+                  display: none;
+                }
+              }
+            }
+            // CHECKBOX
+            .fep-column.fep-column-fep-cb {
+              float: left;
+            }
+            // MEMBER TITLE
+            .fep-column-name {
+              padding-left: 2rem;
+              font-weight: 700;
+            }
+            // BLOCK BUTTON
+            .fep_block_unblock_user {
+              border: 1px solid $cg-secondary;
+              border-radius: 10px;
+              padding: 0.1rem 2rem;
+              margin-right: 1rem;
+              float: left;
+              font-size: 0.8rem;
+              font-weight: 800;
+              &:hover {
+                color: white;
+                background-color: $cg-primary;
+              }
+            }
+            // SEND MESSAGE BUTTON
+            .fep-column.fep-column-send_message {
+              a {
+                border: 1px solid $cg-secondary;
+                border-radius: 10px;
+                padding: 0.1rem 2rem;
+                margin-right: 1rem;
+                float: left;
+                font-size: 0.8rem;
+                font-weight: 800;
+                &:hover {
+                  color: white;
+                  background-color: $cg-primary;
+                }
+              }
+            }
+          }
+        }
+      }
+      // EMAIL SINGLE MESSAGE PAGE (REPLY ETC.)
+      #fep-content {
+        #fep-content-single {
+          #fep-content-single-sidebar {
+            // GETTING RID OF UNNECESSARY AVATARS
+            #fep-content-single-heads {
+              display: none;
+            }
+          }
+          // SINGLE MESSAGE HEADER & CONTENT
+          #fep-content-single-content {
+            // border: 2px dotted red;
+            margin-top: 1rem;
+            // SUBJECT
+            .fep-message-title-heading {
+              font-size: 1rem;
+              font-weight: 800;
+              padding-top: 0.5rem;
+              padding-left: 0.5rem;
+            }
+            .fep-message-title-heading.participants {
+              font-size: 0.8rem;
+              font-weight: 800;
+              padding-bottom: 0.5rem;
+              padding-left: 0.5rem;
+            }
+            // TOGGLE BUTTON
+            .fep-button.fep-message-toggle-all {
+              margin-top: 0.5rem;
+              margin-bottom: 0.5rem;
+              padding: 1rem 2rem;
+              border-radius: 10px;
+              background-color: lighten($color: $cg-primary, $amount: 10%);
+              color: white;
+            }
+            // SENDER BLOCK
+            .fep-message-title {
+              padding-top: 0.5rem;
+              padding-bottom: 0.5rem;
+              padding-left: 0.5rem;
+              .author {
+                font-size: 1rem;
+                font-weight: 600;
+              }
+              .date {
+                font-size: 0.7rem;
+                font-weight: 800;
+              }
+            }
+          }
+
+          // REPLY BLOCK
+          #fep-content-single-reply-form {
+            // REPLY BUTTON
+            .fep-button {
+              margin-top: 0.5rem;
+              margin-bottom: 0.5rem;
+              padding: 1rem 4rem;
+              border-radius: 10px;
+              background-color: lighten($color: $cg-primary, $amount: 10%);
+              color: white;
+            }
+          }
+        }
+      }
+      // EMAIL BOX FOOTER
+      #fep-footer {
+        display: none;
+      }
+    }
+  }
+}

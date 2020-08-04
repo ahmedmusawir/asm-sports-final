@@ -1,0 +1,32 @@
+{
+  "name": "compass-sass-mixins",
+  "authors": [
+    "Andrey Stehno <a.stegno@gmail.com>"
+  ],
+  "description": "Compass sass stylesheets",
+  "keywords": [
+    "compass",
+    "mixins",
+    "sass",
+    "css3"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/askucher/compass-sass-mixins",
+  "_release": "d8d7072b10",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d8d7072b1092eec34cd0b22f8205067fe1a81514"
+  },
+  "_source": "https://github.com/askucher/compass-sass-mixins.git",
+  "_target": "*",
+  "_originalSource": "compass-sass-mixins",
+  "_direct": true
+}

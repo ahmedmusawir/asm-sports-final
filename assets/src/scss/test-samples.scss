@@ -1,0 +1,179 @@
+#gform_wrapper_1 {
+
+	textarea {
+		height: 4rem;
+		margin-bottom: -1.5rem !important;
+	}
+	#gform_submit_button_1 {
+		color: white;
+		border: 1px solid $cg-button;
+		background-color: $cg-button;
+		padding: .2rem 4rem;
+	}
+}
+
+/**
+ *
+ * Order Form - Testimonial guy
+ *
+ */
+#order-form-testimonial-img {
+	img {
+		padding: .3rem;
+		border: 5px solid $cg-primary;
+		border-radius: 50%;
+	}
+}
+
+#gravity-form-container {
+	// border: 2px solid yellow;
+}
+
+/**
+ *
+ * Global Gravity From Styles
+ *
+ */
+
+#contact-page-form-box {
+	// border: 1rem solid blue;
+	label {
+		margin-top: 1rem;
+	}
+	textarea {
+		height: 160px !important;
+	}
+
+
+}
+
+#gform_submit_button_10 {
+	display: block;
+	clear: both;
+	margin: 0 auto !important;
+	// border: 1rem solid red;
+
+}
+
+.gform_footer {
+	.gform_button {
+		padding: 1rem 4rem;
+		background-color: $cg-button;
+		color: white;
+		border-radius: 0px;
+		outline: none;
+		border: 1px solid $cg-button;
+		font-weight: bold;
+
+		&:hover {
+			background-color: darkslategray;
+		}
+	}
+}
+.ginput_container {
+	input {
+		border: 0px solid tomato;
+		border-radius: 0px;
+		outline: none;
+		background-color: whitesmoke;
+	}
+	textarea {
+		border: 0px solid tomato;
+		background-color: whitesmoke;
+	}
+	select {
+		border: 1px solid #e3e3e3;
+		outline: none;
+		background: transparent;
+
+		-webkit-appearance: menulist !important;
+	  	-moz-appearance: menulist !important;
+	  	appearance: menulist !important;
+	}
+
+}
+
+
+.gform_wrapper li.gfield.gfield_creditcard_warning {
+    padding: 16px 16px 14px;
+    border-top: 2px solid #790000;
+    border-bottom: 4px solid #790000;
+    background-color: transparent !important;
+    width: calc(100% - 16px);
+}
+
+/* ------------- THANK YOU PAGE START ------------- */
+
+.thank-you-page-bg {
+	background-color: black;
+	background-image: url("../../../assets/img/thank_you_bg.png");
+	background-size: cover;
+	background-position: top center;
+
+	.page-content {
+
+		padding-top: 120px;
+		padding-bottom: 120px;
+		margin-top: 50px;
+
+		img {
+			margin-bottom: 30px;
+		}
+
+		h1 {
+
+			color: #fff;
+			font-size: 64px;
+			font-weight: 500;
+		}
+
+		p {
+
+			color: #fff;
+			font-size: 16px;
+		}
+
+		.thank-you-page-button {
+
+			background-color: #DDB46C;
+			padding: 12px;
+			color: #fff;
+			border: 1px solid #DDB46C;
+			border-radius: 50px;
+			width: 200px;
+			text-transform: uppercase;
+		}
+
+		.heateor_sss_sharing_container ul {
+			display: inline-block;
+		}
+	}
+}
+
+/* ------------- THANK YOU PAGE END ------------- */
+
+
+
+/* ------------- 404 PAGE END ------------- */
+
+.error-404-page-area {
+
+	padding-top: 120px;
+	padding-bottom: 120px;
+	margin-top: 50px;
+
+	img {
+		margin-bottom: 30px;
+	}
+
+	a {
+		color: $cg-button;
+		font-weight: normal;
+	}
+}
+
+/* ------------- 404 PAGE END ------------- */
+
+
+/*=====  End of GLOBAL CONTENT  ======*/
+

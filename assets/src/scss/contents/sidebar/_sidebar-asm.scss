@@ -1,0 +1,37 @@
+/**
+ *
+ * General Styles for Sidebar ASM
+ *
+ */
+
+#sidebar {
+  .recent-visitors-widget {
+    // border: 4px dotted red;
+    .item-avatar {
+      // border: 4px dotted red;
+      img {
+        border-radius: 10px;
+      }
+    }
+    .item {
+      .item-title {
+        font-size: 0.7rem;
+        font-weight: 700;
+        min-height: 2rem;
+      }
+      .item-meta {
+        background-color: $cg-primary;
+        padding: 0.2rem;
+        border-radius: 30px;
+
+        span {
+          color: white;
+          font-size: 0.9rem;
+          .visit-count {
+            padding-left: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+/**
+ *
+ * FREEMAN PORTFOLIO GALLERY STYLES
+ * APE GALLERY IS USED
+ *
+ */
+
+.wpape_gallery_button {
+
+	.apebtn.apebtn-flat.active {
+		// border: 1rem dotted red;
+		background-color: $cg-button !important;
+		color: white !important;
+	}
+	.apebtn {
+		// border: 1rem solid red;
+		font-size: .7rem !important;
+		font-weight: 700 !important;
+		padding-top: .0rem !important;
+		padding-bottom: 0rem !important;
+		padding-left: .5rem !important;
+		padding-right: .5rem !important;
+		@media (max-width: 408px) {
+			// border: 1rem solid red !important;
+			width: 100%;
+		}
+	}
+}
+
+// Ape Gallery Plugin Item Popup
+.mfp-bottom-bar {
+	display: none;
+	background-color: $cg-secondary;
+	padding: 2rem;
+
+	.mfp-title {
+		font-family: $primary-font !important;
+	}
+	.mfp-counter {
+		padding: .5rem;
+	}
+}

@@ -1,0 +1,106 @@
+$imb-primary: #f5f5f5; //whitesmoke
+$imb-secondary: #ef4409; //orangered
+$imb-third: #434141; //darkslategray
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%); // #222;
+$gray-dark:              lighten($gray-base, 20%);   // #333;
+$gray:                   lighten($gray-base, 33.5%); // #555;
+$gray-light:             lighten($gray-base, 46.7%); // #777;
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee;
+
+$white       : #FFFFFF;
+$ghost       : #FAFAFA;
+$snow        : #F9F9F9;
+$vapor       : #F6F6F6;
+$white-smoke : #F5F5F5;
+$silver      : #EFEFEF;
+$smoke       : #EEEEEE;
+$gainsboro   : #DDDDDD;
+$iron        : #CCCCCC;
+$base        : #AAAAAA;
+$aluminum    : #999999;
+$jumbo       : #888888;
+$monsoon     : #777777;
+$steel       : #666666;
+$charcoal    : #555555;
+$tuatara     : #444444;
+$oil         : #333333;
+$jet         : #222222;
+$black       : #000000;
+
+.featherlight-content {
+	background: $imb-third !important;
+
+	.featherlight-close-icon {
+		font-size: 2rem;
+	}
+}
+
+
+// THE SINGLE PORTFOLIO POP UP
+
+.portfolio-single-popup {
+
+	// border: 1rem solid red;
+
+	.left-content {
+		#header {
+			background: $imb-secondary;
+			padding: 2rem;
+
+			.title {
+				color: white;
+				padding: 0;
+			}
+			.subtitle {
+				color: lighten(gray, 30%);
+				padding: 0;
+				font-style: italic;
+				font-weight: 300;
+			}
+			.btn-holder {
+				.btn {
+					background-color: $imb-third;
+					border-radius: 50px;
+
+					&:hover {
+						background-color: black;
+					}
+				}
+			}
+		}
+
+		main {
+			figure {
+				padding-top: 3rem;
+				padding-bottom: 3rem;
+			}
+		}
+	}
+	.right-content {
+		// background: #e3e3e3;
+		background: white;
+		padding: 3rem;
+
+		.content {
+
+			h5 {
+				color: white;
+				font-weight: 700;
+				padding: 1rem;
+				background: $imb-secondary;
+			}
+			p {
+				font-size: 1.4rem;
+				line-height: 1.5rem;
+			}
+		}
+	}
+
+}
+
+
+
+

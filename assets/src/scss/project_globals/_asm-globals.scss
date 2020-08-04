@@ -1,0 +1,197 @@
+/**
+ *
+ * STYLE: ASM GLOBAL
+ *
+ */
+
+// GRAVITY REGISTRATION / SIGNUP FORM
+
+#gform_wrapper_1 {
+  // border: 1rem dotted red;
+
+  #gf_progressbar_wrapper_1 {
+    display: none;
+  }
+  .signup-page-1 {
+    // border: 1rem dotted red;
+
+    #asm-reg-logo {
+      // border: 1rem dotted blue;
+      width: 90px;
+      display: block;
+      margin: 0 auto;
+      margin-top: -5rem;
+    }
+
+    .asm-reg-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: $cg-primary;
+    }
+    .asm-reg-subtitle {
+      font-size: 0.9rem;
+      color: gray;
+    }
+  }
+
+  .signup-page-2 {
+    // border: 1rem dotted blue;
+    margin-top: -4rem;
+    .asm-reg-dots {
+      // border: 1rem dotted red;
+      text-align: center;
+
+      i {
+        font-size: 1rem;
+        color: red;
+        padding-left: 1.5rem;
+      }
+    }
+    .asm-reg-page2-title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  .signup-page-3 {
+    // border: 1rem dotted blue;
+    margin-top: -4rem;
+    .asm-reg-dots {
+      // border: 1rem dotted red;
+      text-align: center;
+
+      i {
+        font-size: 1rem;
+        color: red;
+        padding-left: 1.5rem;
+      }
+    }
+    .asm-reg-page3-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+  #gform_page_1_3 {
+    // border: 1px dotted blue;
+    // ATHLETE PHONE
+    #input_1_26,
+    #input_1_24 {
+      padding: 1rem;
+      border-radius: 10px;
+    }
+  }
+}
+
+// THE REGISTRATION FORM PAGE 1
+#gform_page_1_1 {
+  // border: 4px dotted red;
+
+  #field_1_23 {
+    padding: 0;
+    margin-bottom: -1rem;
+    // border: 4px dotted blue;
+
+    #input_1_23_3,
+    #input_1_23_6 {
+      padding: 1rem;
+      border-radius: 10px;
+    }
+  }
+
+  #field_1_22 {
+    padding: 0;
+    // border: 4px dotted blue;
+
+    #input_1_22 {
+      padding: 1rem;
+      border-radius: 10px;
+    }
+
+    .gfield_required {
+      display: none;
+    }
+  }
+
+  #foot-note {
+    // border: 1rem dotted red;
+    p {
+      font-size: 0.8rem;
+      color: gray;
+    }
+  }
+
+  #gform_next_button_1_10 {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    width: 100%;
+  }
+}
+
+// GFORM DEFAULT LOADER SPINNER
+body img.gform_ajax_spinner {
+  // display: none !important;
+  // border: 1rem solid red;
+  width: 50px !important;
+  margin-top: 3rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// THE REGISTRATION FORM PAGE 2
+#gform_page_1_2 {
+  #input_1_6 {
+    li {
+      background-color: #e3e3e3;
+      padding: 1rem !important;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+
+      label {
+        margin-top: 0.5rem;
+        padding-left: 1rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  #gform_previous_button_1_11 {
+    float: left;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+  }
+
+  #gform_next_button_1_11 {
+    float: right;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+  }
+}
+
+// THE REGISTRATION FORM PAGE 2
+#gform_page_1_3 {
+  #gform_previous_button_1 {
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+  }
+
+  #gform_submit_button_1 {
+    width: 200px;
+    padding: 1rem;
+    border-radius: 10px;
+    // background-color: red;
+    color: white;
+  }
+}

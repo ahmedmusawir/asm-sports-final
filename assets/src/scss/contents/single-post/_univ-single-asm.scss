@@ -1,0 +1,247 @@
+/**
+ *
+ * STYLE: Single University Post ASM
+ *
+ */
+
+.single-post-asm {
+  #general-blog-page-header {
+    position: fixed;
+    top: 66px;
+    z-index: 100;
+    width: 100vw;
+    height: 65px;
+    background-color: $cg-secondary;
+    background-size: cover;
+    background-position: top center;
+    margin-bottom: 30px;
+
+    .top-page-menu {
+      .menu-title {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-top: 1.3rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: white;
+      }
+    }
+
+    .menu-box {
+      margin-top: 1.3rem;
+
+      #menu-post-category-filter {
+        list-style-type: none;
+        list-style: none;
+        list-style-image: none;
+
+        .menu-item {
+          display: inline-block;
+        }
+      }
+
+      #menu-university-menu {
+        list-style-type: none;
+        list-style: none;
+        list-style-image: none;
+
+        .menu-item {
+          display: inline-block;
+        }
+      }
+
+      a {
+        padding: 0.5rem 2rem;
+        margin-left: 1rem;
+        border: 1px solid gray;
+        border-radius: 6px;
+        background-color: #e3e3e3;
+        color: lighten($color: $cg-primary, $amount: 10%);
+        font-size: 1.1rem;
+
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.univ-single-asm {
+  margin-bottom: 60px;
+  position: relative;
+  // border: 5px dotted red;
+
+  .featured-img-holder {
+    img {
+      width: 100%;
+      // border-radius: 20px;
+    }
+  }
+
+  .container-fluid {
+    width: 90%;
+    margin: auto;
+    // margin-top: 180px;
+  }
+
+  .entry-content {
+    // border: 5px dotted red;
+
+    .main-content {
+      // width: 90%;
+      // border: 5px dotted green;
+
+      .univ-header {
+        border-bottom: 1px solid $cg-primary;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+
+        @media (max-width: 767px) {
+          text-align: center;
+        }
+
+        .entry-title {
+          // border: 5px dotted blue;
+          margin-top: 30px;
+          margin-bottom: 30px;
+
+          @media (max-width: 399px) {
+            font-size: 1.7rem;
+          }
+
+          a {
+            color: #013300;
+            font-weight: 700;
+            font-family: $primary-font;
+          }
+        }
+
+        .university-logo {
+          img {
+            border-radius: 50%;
+            box-shadow: 2px 2px 6px gray;
+          }
+        }
+      }
+
+      .univ-left-content {
+        table {
+          thead {
+            tr {
+              th {
+                color: lighten($color: $cg-primary, $amount: 15%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #univ-right-col {
+      // border: 5px dotted blueviolet;
+
+      .acf-map {
+        margin-bottom: 0;
+      }
+
+      .address-block {
+        box-shadow: 2px 2px 6px gray;
+        padding: 2rem;
+        p {
+          // color: $cg-primary;
+          font-size: 0.8rem;
+          font-weight: 700;
+          line-height: 1.5rem !important;
+        }
+
+        a {
+          color: lighten($color: $cg-primary, $amount: 20%);
+          font-weight: 700;
+        }
+
+        .social {
+          i {
+            font-size: 2.5rem;
+            margin-right: 1rem;
+            color: $cg-primary;
+          }
+        }
+      }
+
+      .button-block {
+        box-shadow: 2px 2px 6px gray;
+        padding: 3rem;
+        background-color: $cg-primary;
+        color: white;
+
+        i {
+          font-size: 3.5rem;
+          padding-bottom: 1.5rem;
+        }
+
+        h5 {
+          color: white;
+        }
+      }
+    }
+  }
+
+  #most-viewed-athlete {
+    min-height: 400px;
+    background-color: lighten($color: $cg-primary, $amount: 0%);
+
+    .block-title {
+      color: white;
+      font-weight: 600;
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+    }
+
+    .popular-athlete-list {
+      // border: 3px dotted white;
+
+      .item-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+          display: inline-block;
+
+          .item-avatar {
+            width: 300px;
+          }
+
+          .item {
+            text-align: center;
+
+            .item-title {
+              padding-bottom: 1rem;
+              padding-top: 1rem;
+              a {
+                color: lighten($color: $cg-primary, $amount: 30%);
+                font-size: 1.5rem;
+                font-weight: 600;
+
+                &:hover {
+                  color: lighten($color: $cg-primary, $amount: 50%);
+                }
+              }
+            }
+
+            .item-meta {
+              padding-bottom: 2rem;
+              span {
+                background-color: lighten($color: $cg-primary, $amount: 20%);
+                color: white;
+                padding: 0.5rem 1rem;
+                border-radius: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+/**
+ *
+ * Footer asm
+ *
+ */
+
+#footer-asm {
+  position: relative;
+  // z-index: 1000;
+  background-color: #f7f7f7;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: black;
+
+  .footer-header {
+    img {
+      width: 40px;
+    }
+
+    .footer-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+  }
+
+  .widget-title {
+    // border: 3px dotted red;
+    color: $cg-text;
+    font-size: 1rem !important;
+    font-weight: 800;
+  }
+
+  #footer-address-block {
+    h5 {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .footer-text {
+      list-style: none;
+      padding-bottom: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+  }
+
+  .footer-social {
+    span {
+      list-style: none;
+      display: inline-block;
+
+      i {
+        font-size: 2rem;
+        padding-right: 1rem;
+      }
+    }
+  }
+
+  .site-info {
+    padding: 30px 0px;
+    text-align: center;
+    color: lighten($color: gray, $amount: 0);
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: $secondary-font;
+  }
+}

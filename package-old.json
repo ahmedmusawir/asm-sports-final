@@ -1,0 +1,53 @@
+{
+  "name": "cyberize-framework",
+  "version": "1.0.0",
+  "description": "Moose Plugin Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmedmusawir/moose-plugin-framework-1.git"
+  },
+  "keywords": [
+    "gulpfile",
+    "scss",
+    "js",
+    "plugin",
+    "framework"
+  ],
+  "author": "The Moose",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ahmedmusawir/moose-plugin-framework-1/issues"
+  },
+  "homepage": "https://github.com/ahmedmusawir/moose-plugin-framework-1#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}

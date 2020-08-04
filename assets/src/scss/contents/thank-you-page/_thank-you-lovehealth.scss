@@ -1,0 +1,31 @@
+/**
+ *
+ * THANK YOU PAGE - lovehealth
+ *
+ */
+
+#thank-you-freeman {
+	// border: 1rem dotted red;
+	margin-top: 5rem;
+	padding-top: 15rem;
+	padding-bottom: 15rem;
+
+	@media (max-width: 1366px) {
+		padding-top: 6rem;
+		padding-bottom: 6rem;
+	}
+	@media (max-width: 640px) {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+	}
+
+	p {
+		font-size: 1.5rem;
+		line-height: 2rem;
+		padding-bottom: 3rem;
+	}
+}

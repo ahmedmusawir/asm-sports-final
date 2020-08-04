@@ -1,0 +1,24 @@
+body.login {
+  background-color: #230665;
+  background: url("/wp-content/uploads/Group-236.png");
+}
+
+body.login div#login p#nav {
+  background-color: #e7e7e7;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+}
+
+body.login div#login p#nav a {
+  color: #39adfc;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+body.login div#login p#backtoblog a {
+  color: #39adfc;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=style-login.css.map */

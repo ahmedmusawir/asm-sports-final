@@ -1,0 +1,96 @@
+/**
+ *
+ * Widgets Styles lovehealth
+ *
+ */
+
+
+.freeman-testimonial-widget {
+	// border: 1rem solid red;
+	box-shadow: 2px 2px 6px gray;
+	background: url('/wp-content/uploads/2019/06/quote-bg-light.png');
+	background-size: 60%;
+	background-position: 10% 10%;
+	background-repeat: no-repeat;
+	font-size: .9rem;
+	padding: 3rem;
+
+	.star-holder {
+		.client-name {
+			h5 {
+				font-size: 1.2rem;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.freeman-button-widget {
+	box-shadow: 2px 2px 6px gray;
+	background-color: $cg-button;
+	text-transform: uppercase;
+	padding-top: 1rem;
+	padding-bottom: .2rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+
+
+	p {
+		color: white;
+		font-size: .8rem;
+		font-weight: 600;
+	}
+}
+
+.freeman-footer-widget {
+
+	.icon-holder {
+		float: left;
+
+		img {
+			width: 75%;
+		}
+
+		@media (max-width: 1199px) {
+
+			float: none;
+
+			img {
+				width: 45%;
+				display: block;
+				margin: auto;
+				clear: both;
+			}
+
+		}
+		@media (max-width: 767px) {
+
+			img {
+				width: 25%;
+				// border: 1px solid red;
+			}
+		}
+
+	}
+
+	.info-text {
+		.title {
+
+		}
+		.info {
+			color: white;
+			font-weight: 400;
+		}
+		.email {
+			font-size: .9rem;
+			color: white;
+		}
+
+		@media (max-width: 1199px) {
+
+			text-align: center;
+			margin-top: 1.5rem;
+		}
+
+	}
+}

@@ -1,0 +1,120 @@
+// Removing Home tab from Member's Profile Page
+$asm-title-font-color: #024d80;
+
+#buddypress {
+  .bp-wrap {
+    #item-body {
+      .bp-navs.bp-subnavs.user-subnav {
+        // display: none;
+      }
+      #item-header-avatar {
+        img.avatar {
+          // border: 1rem dotted red;
+          border-radius: 50%;
+        }
+        .athlete-title {
+          font-size: 1.8rem;
+          color: $asm-title-font-color;
+        }
+      }
+
+      .athlete-meta {
+        // border: 4px dotted red;
+        color: $asm-title-font-color;
+        font-weight: 600;
+        i.fa-eye {
+          font-size: 1.2rem;
+          color: deepskyblue;
+        }
+        i.fa-star {
+          font-size: 1.2rem;
+          color: orange;
+        }
+      }
+
+      .athlete-bio {
+        .list-group-item {
+          // border: 4px dotted red;
+          background-color: lighten($color: #e7e7e7, $amount: 8%);
+          border-bottom: 4px solid white;
+          border-top: 1px solid white;
+          border-right: 1px solid white;
+          border-left: 1px solid white;
+        }
+      }
+
+      .athlete-sports-info {
+        // border: 4px dotted blue;
+        h1 {
+          color: #024d80;
+          font-size: 2rem;
+          text-align: center;
+        }
+        small {
+          font-size: 1rem;
+          font-weight: 600;
+          color: $asm-title-font-color;
+        }
+      }
+
+      .bp-profile-loop {
+        display: none;
+
+        .screen-heading.view-profile-screen {
+          display: none;
+        }
+
+        .bp-widget.base {
+          display: none;
+        }
+
+        .bp-widget.video {
+          .screen-heading.profile-group-title {
+            display: none;
+          }
+          .field_5.field_youtube.optional-field.field_type_oembed {
+            .label {
+              display: none;
+            }
+          }
+        }
+
+        .bp-widget.member-bio {
+          display: none;
+        }
+
+        .bp-widget.about {
+          .field_28.field_about.optional-field.field_type_textarea {
+            .label {
+              display: none;
+            }
+          }
+        }
+
+        .bp-widget.sports-info {
+          .field_20.field_sports-info.optional-field.field_type_textarea {
+            .label {
+              display: none;
+            }
+          }
+        }
+
+        .bp-widget.pictures {
+          .field_25.field_athlete-pic-1.optional-field.field_type_image {
+            // .field_25.field_athletic-pic-1.optional-field.visibility-public.field_type_image {
+            // border: 1rem solid red;
+            .label {
+              display: none;
+            }
+          }
+          .field_26.field_athletic-pic-2.optional-field.visibility-public.field_type_image {
+            // border: 1rem solid blue;
+            .label {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+// /*--------------------------------------------------------------
+// MAIN NAVIGATION AREA [NON-BOOTSTRAP]
+// --------------------------------------------------------------*/
+
+.main-navigation {
+  // border: 2rem dotted dodgerblue;
+  position: relative;
+  float: left;
+  width: 100%;
+  display: block;
+  clear: both;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  // background: #313131;
+
+  .main-navbar {
+    // border: 1rem dotted hotpink;
+    padding: 0.57rem;
+    background-color: #e7e7e7;
+
+    .navbar-logo {
+      float: left;
+      padding: 0 !important;
+      width: 45px;
+    }
+
+    .search-form {
+      @media (max-width: 1220px) {
+        display: none;
+      }
+    }
+
+    //MAIN NAV BOX
+    .main-nav {
+      display: flex;
+      align-items: center !important;
+      // border: 1rem dotted blue;
+      #primary-menu {
+        .menu-item {
+          @media (max-width: 820px) {
+            display: none;
+          }
+        }
+        .dropdown-nav-button {
+          @media (max-width: 820px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  //MAIN NAV BOX
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    ul {
+      position: absolute;
+      left: 0;
+      z-index: 99999;
+      display: none;
+      float: left;
+      padding: 0;
+      background: #4d4d4d;
+
+      ul {
+        left: 100%;
+        top: 0;
+      }
+
+      a {
+        width: 200px;
+        &:hover {
+          background: #313131;
+          border-bottom: 4px solid red;
+        }
+      }
+    }
+  }
+  /** MAIN NAV ITEMS */
+  li {
+    float: left;
+    position: relative;
+    // border: 3px dotted yellowgreen;
+
+    a {
+      font-size: 0.8rem;
+      font-weight: 900 !important;
+    }
+
+    &:hover > ul {
+      display: block;
+    }
+
+    &:hover > a {
+      color: lighten($color: $cg-primary, $amount: 15%);
+      text-decoration: underline !important;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.3em;
+  }
+
+  // CURRENT PAGE HOVER
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_item > a:hover,
+  .current-menu-item > a:hover {
+    // CURRENT PAGE SELECTED STATUS FOR MAIN MENUS
+    color: lighten($color: $cg-primary, $amount: 15%);
+    // text-decoration: underline !important;
+    // border: 1px solid $cg-primary;
+  }
+  // CURRENT PAGE SELECTED STATUS FOR SUBMENUS
+  .sub-menu .current_page_ancestor {
+    color: lighten($color: $cg-primary, $amount: 15%);
+    text-decoration: underline !important;
+    border-bottom: 4px solid red;
+  }
+
+  ul ul .current_page_parent,
+  .current_page_parent .current_page_item > a {
+    color: #fff;
+    background: #313131;
+  }
+}

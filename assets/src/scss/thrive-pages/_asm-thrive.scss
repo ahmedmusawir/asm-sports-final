@@ -1,0 +1,134 @@
+/**
+ * ASM THRIVE PAGES	
+ ******************************************************************************/
+
+/**
+	* THE HOME PAGE	
+  */
+
+// MOST SEARCHED UNIVERSITIES
+#most-searched-univ {
+  // border: 1rem dotted red;
+  .wpp-list {
+    li {
+      width: 250px;
+      padding: 1rem;
+      display: inline-block;
+      margin-bottom: 0 !important;
+
+      a {
+        color: lighten($color: $cg-primary, $amount: 30%);
+        img {
+          float: none;
+          display: block;
+        }
+      }
+
+      .wpp-post-title {
+        height: 50px;
+        padding-top: 1rem;
+        display: block;
+        // border: 1rem dotted red;
+      }
+
+      .wpp-meta {
+        // color: lighten($color: $cg-primary, $amount: 30%);
+        display: block;
+        margin-top: 2rem;
+        border-radius: 20px;
+        text-align: center;
+        color: white;
+        background-color: lighten($color: $cg-primary, $amount: 20%);
+      }
+    }
+  }
+}
+// MOST VIEWED ATHLETE
+#most-viewed-athlete {
+  min-height: 400px;
+  background-color: lighten($color: $cg-primary, $amount: 0%);
+  // border: 1rem dotted red;
+
+  .recent-visitors-shortcode {
+    // border: 3px dotted white;
+
+    .item-list {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        display: inline-block;
+
+        .item-avatar {
+          width: 270px;
+          padding: 1rem;
+        }
+
+        .item {
+          text-align: center;
+
+          .item-title {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            a {
+              color: lighten($color: $cg-primary, $amount: 30%);
+              font-size: 1.2rem;
+              font-weight: 700;
+
+              &:hover {
+                color: lighten($color: $cg-primary, $amount: 50%);
+              }
+            }
+          }
+
+          .item-meta {
+            padding-bottom: 2rem;
+            span {
+              background-color: lighten($color: $cg-primary, $amount: 20%);
+              color: white;
+              padding: 0.5rem 1rem;
+              border-radius: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// BLOG BLOCK
+
+#blog-section {
+  // border: 1rem dotted red;
+  #blog-box {
+    padding: 3rem;
+    border-radius: 20px;
+    background-color: lighten($color: #e7e7e7, $amount: 0%);
+
+    //THUMBNAIL IMAGE
+    .tcb-post-thumbnail.tcb-shortcode.thrv_wrapper {
+      // border: 1rem solid red;
+      img {
+        border-radius: 20px;
+      }
+    }
+    //POST TITLE
+    .thrv_wrapper.thrv_text_element {
+      // border: 1rem dotted red;
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 10px;
+      }
+    }
+    //POST EXCERPT
+    .tcb-post-content.tcb-shortcode.thrv_wrapper {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+  }
+}

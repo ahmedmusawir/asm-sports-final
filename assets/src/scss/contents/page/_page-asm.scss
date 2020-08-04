@@ -1,0 +1,21 @@
+/**
+ *
+ * STYLE: Page ASM
+ *
+ */
+
+#page-asm {
+  .entry-content {
+    // padding-top: 4rem;
+    @media (max-width: 576px) {
+      // padding-left: 1.5rem;
+      // padding-right: 1.5rem;
+    }
+
+    img {
+      // display: block;
+      // clear: both;
+      // width: 100%;
+    }
+  }
+}

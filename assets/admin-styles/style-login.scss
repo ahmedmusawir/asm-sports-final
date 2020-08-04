@@ -1,0 +1,54 @@
+$cg-primary: #024d80; //light greenish blue
+$cg-secondary: #230665; //dark blue
+$cg-third: red;
+$cg-text: #050505; //black
+$cg-button: #230665; //purple
+
+body.login {
+  background-color: $cg-secondary;
+  background: url('/wp-content/uploads/Group-236.png');
+}
+
+body.login div#login {
+}
+body.login div#login h1 {
+}
+body.login div#login h1 a {
+}
+body.login div#login form#loginform {
+}
+body.login div#login form#loginform p {
+}
+body.login div#login form#loginform p label {
+}
+body.login div#login form#loginform input {
+}
+body.login div#login form#loginform input#user_login {
+}
+body.login div#login form#loginform input#user_pass {
+}
+body.login div#login form#loginform p.forgetmenot {
+}
+body.login div#login form#loginform p.forgetmenot input#rememberme {
+}
+body.login div#login form#loginform p.submit {
+}
+body.login div#login form#loginform p.submit input#wp-submit {
+}
+body.login div#login p#nav {
+  background-color: #e7e7e7;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+}
+body.login div#login p#nav a {
+  color: lighten($color: $cg-primary, $amount: 35%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+body.login div#login p#backtoblog {
+}
+body.login div#login p#backtoblog a {
+  color: lighten($color: $cg-primary, $amount: 35%);
+  font-size: 1rem;
+  font-weight: 600;
+}

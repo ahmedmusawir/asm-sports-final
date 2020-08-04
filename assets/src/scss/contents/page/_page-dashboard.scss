@@ -1,0 +1,334 @@
+/**
+ *
+ * STYLE: Page ASM Dashboard
+ *
+ */
+
+// ATHLETE DASHBOARD
+#page-asm-dashboard {
+  #general-page-header {
+    // border: 1rem solid red;
+    position: fixed;
+    top: 80px;
+    z-index: 100;
+    width: 100vw;
+    height: 65px;
+    background-color: $cg-secondary;
+    background-size: cover;
+    background-position: top center;
+    margin-bottom: 30px;
+
+    .top-page-menu {
+      .menu-title {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-top: 1.3rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: white;
+      }
+    }
+
+    .menu-box {
+      margin-top: 1.3rem;
+
+      #menu-post-category-filter {
+        list-style-type: none;
+        list-style: none;
+        list-style-image: none;
+
+        .menu-item {
+          display: inline-block;
+        }
+      }
+
+      #menu-university-menu {
+        list-style-type: none;
+        list-style: none;
+        list-style-image: none;
+
+        .menu-item {
+          display: inline-block;
+        }
+      }
+
+      a {
+        padding: 0.5rem 2rem;
+        margin-left: 1rem;
+        border: 1px solid gray;
+        border-radius: 6px;
+        background-color: #e3e3e3;
+        color: lighten($color: $cg-primary, $amount: 10%);
+        font-size: 1.1rem;
+
+        i {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  // TOP TASK BOX
+  #dashboard-task-board {
+    // border: 1rem dotted blue;
+    background-color: #0277bb;
+    margin-top: 113px;
+    padding: 3rem;
+
+    #top-task-block {
+      // border: 3px dotted hotpink;
+      padding: 2rem;
+
+      .block-title {
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .membership-box {
+        // border: 3px dotted green;
+        background-color: white;
+        float: right;
+        padding-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 0.5rem;
+
+        .text {
+          padding-right: 3rem;
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: $cg-primary;
+          float: left;
+        }
+        .btn {
+          padding: 0.5rem 4rem;
+          border-radius: 0;
+        }
+      }
+    }
+
+    #bottom-task-block {
+      // border: 3px dotted dodgerblue;
+      justify-content: space-around;
+
+      .task-box {
+        background-color: white;
+        margin-bottom: 1.5rem;
+        margin-right: 0.5rem;
+        // border: 1rem dotted dodgerblue;
+
+        i {
+          font-size: 2.5rem;
+          font-weight: 600;
+          padding-top: 1rem;
+          color: lighten($color: $cg-primary, $amount: 15%);
+        }
+        i.fa-envelope-square {
+          // border: 4px dotted red;
+        }
+        .text-only {
+          font-weight: 700;
+          padding-top: 0.5rem;
+          padding-bottom: 1rem;
+          color: $cg-secondary;
+        }
+        .text-number {
+          font-size: 3rem;
+          font-weight: 700;
+        }
+        .btn {
+          padding: 1rem 2rem;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+          width: 200px;
+          border-radius: 0;
+          background-color: lighten($color: #0277bb, $amount: 10%);
+        }
+      }
+      .task-box-sm {
+        width: 270px;
+        // border: 3px dotted pink;
+        padding: 1rem 2rem;
+      }
+      .task-box-lg {
+        width: 550px;
+        // border: 3px dotted red;
+      }
+    }
+  }
+
+  #asm-dashboard-content {
+    // border: 1rem dotted blue;
+    margin-top: 30px;
+  }
+
+  //MAIN CONTENT - TASK VIDEO ITEMS
+  #main {
+    // border: 3px dotted red;
+    padding: 4rem;
+
+    .task-item {
+      box-shadow: 2px 2px 6px #e3e3e3;
+      .col-sm-3 {
+        padding: 0 !important;
+      }
+      .video-box {
+      }
+      .text-box {
+        border-right: 1px solid darken($color: #e3e3e3, $amount: 10%);
+        border-top: 1px solid darken($color: #e3e3e3, $amount: 10%);
+        padding: 2rem;
+
+        h3 {
+          font-weight: 700;
+        }
+      }
+      .icon-box {
+        border-top: 1px solid darken($color: #e3e3e3, $amount: 10%);
+        border-right: 1px solid darken($color: #e3e3e3, $amount: 10%);
+
+        h4 {
+          padding: 1rem;
+          background-color: lighten($color: $cg-primary, $amount: 15%);
+          font-size: 1rem;
+          font-weight: 700;
+          color: white;
+        }
+
+        i {
+          padding: 2rem;
+          font-size: 3rem;
+          font-weight: 700;
+          color: $cg-primary;
+        }
+      }
+    }
+  }
+}
+
+// COACH'S DASHBOARD
+
+#page-coach-dashboard {
+  // border: 1rem dotted red;
+
+  #general-page-header {
+    position: fixed;
+    top: 80px;
+    z-index: 100;
+    width: 100vw;
+    height: 65px;
+    background-color: $cg-secondary;
+    background-size: cover;
+    background-position: top center;
+    margin-bottom: 30px;
+
+    .top-page-menu {
+      .menu-title {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-top: 1.3rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: white;
+      }
+    }
+  }
+
+  // TOP TASK BOX
+  #dashboard-task-board {
+    // border: 3px dotted blue;
+    background: url('/wp-content/uploads/bg-image.jpg');
+    // background-color: #0277bb;
+    margin-top: 113px;
+    padding: 3rem;
+    padding-bottom: 6rem;
+
+    #top-task-block {
+      // border: 3px dotted hotpink;
+      padding: 2rem;
+
+      .block-title {
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .membership-box {
+        // border: 3px dotted green;
+        background-color: white;
+        float: right;
+        padding-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 0.5rem;
+
+        .text {
+          padding-right: 3rem;
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: $cg-primary;
+          float: left;
+        }
+        .btn {
+          padding: 0.5rem 4rem;
+          border-radius: 0;
+        }
+      }
+    }
+
+    #bottom-task-block {
+      // border: 3px dotted dodgerblue;
+      justify-content: space-around;
+
+      .task-box {
+        background-color: white;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+
+        @media (max-width: 625px) {
+          margin-right: 0;
+        }
+
+        i {
+          font-size: 2.5rem;
+          font-weight: 600;
+          padding-top: 1rem;
+          color: lighten($color: $cg-primary, $amount: 15%);
+        }
+
+        .text-only {
+          font-weight: 700;
+          padding-top: 0.5rem;
+          padding-bottom: 1rem;
+          color: $cg-secondary;
+        }
+        .text-number {
+          font-size: 2.5rem;
+          font-weight: 700;
+          min-height: 3.5rem;
+          // border: 4px dotted red;
+        }
+        .email-number {
+          padding-top: 1rem;
+        }
+        .btn {
+          padding: 1rem 2rem;
+          margin-top: 2rem;
+          width: 200px;
+          border-radius: 0;
+          background-color: lighten($color: #0277bb, $amount: 10%);
+        }
+      }
+      .task-box-sm {
+        width: 270px;
+        // border: 3px dotted pink;
+        padding: 1rem 2rem;
+      }
+      .task-box-lg {
+        width: 550px;
+        // border: 3px dotted red;
+      }
+    }
+  }
+}

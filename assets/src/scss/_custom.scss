@@ -1,0 +1,69 @@
+/*=======================================================
+=            Customize Bootstrap 4 Variables            =
+=======================================================*/
+
+/*==============================
+=            COLORS            =
+==============================*/
+$cg-primary: #024d80; //light greenish blue
+$cg-secondary: #230665; //dark blue
+$cg-third: red;
+$cg-text: #050505; //black
+$cg-button: #230665; //purple
+$cg-gray: #e7e7e7; //gray
+$cg-accent: #ff9801;
+$cg-nav-bg: #d4c1aa;
+$cg-link: #cc1836; //purple;
+$cg-primary-light: #8abf67;
+$cg-widget-link: #bdc612;
+
+$cg-third: #302968; //midnightblue
+$cg-extra-1: #e7d7bc; //wheat
+$cg-contact-bg: #362f29; //dark brown
+
+$blue: #007bff !default;
+$black: #000000 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #e83e8c !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+$white: #ffffff !default;
+
+$primary: $cg-primary;
+$secondary: $cg-secondary;
+// $success: $cg-button;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+
+// $body-bg: lighten($indigo, 45%);
+// $body-bg: lighten($cg-primary, 45%);
+
+/*=====  End of COLORS  ======*/
+
+/**
+ *
+ * FONTS
+ *
+ */
+
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+
+// $h1-font-size:                $font-size-base * 3.5;
+$h1-font-size: $font-size-base * 2.5;
+// $h2-font-size:                $font-size-base * 3;
+$h2-font-size: $font-size-base * 2;
+// $h3-font-size:                $font-size-base * 2.5;
+$h3-font-size: $font-size-base * 1.75;
+// $h4-font-size:                $font-size-base * 2.25;
+$h4-font-size: $font-size-base * 1.5;
+// $h5-font-size:                $font-size-base * 1.75;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+
+/*=====  End of Customize Bootstrap 4 Variables  ======*/

@@ -1,0 +1,284 @@
+/**
+ * HEADER ASM
+ * 
+ * - MAIN NAVIGATION ASM
+ * - GLOBAL DROPDOWN NAV
+ */
+
+// GLOBAL DROPDOWN NAV
+#dropdown-navigation {
+  .container-fluid {
+    width: 90% !important;
+    // border: 1rem dotted red;
+  }
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba($color: $cg-primary, $alpha: 1) 0%,
+    rgba($color: $cg-primary, $alpha: 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: white;
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+
+  @media (max-width: 1024px) {
+    overflow: scroll;
+  }
+
+  #dropdown-close-button {
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    i {
+      // color: lighten($color: deepskyblue, $amount: 0%);
+      color: lighten($color: deepskyblue, $amount: 100%);
+      font-size: 3.5rem;
+      font-weight: 800;
+      float: right;
+
+      &:hover {
+        color: red !important;
+      }
+    }
+  }
+
+  .dropdown-navigation-header {
+    // border: 4px dotted pink;
+    .the-logo {
+      // border: 3px dotted yellow;
+    }
+    .social-links-box {
+      text-align: center;
+      // border: 3px dotted yellow;
+      .social-icon {
+        i {
+          font-size: 3rem;
+          padding-top: 2rem;
+          padding-right: 1.5rem;
+          color: white;
+
+          &:hover {
+            color: lighten($color: $cg-primary, $amount: 50%) !important;
+          }
+          @media (max-width: 1136px) {
+            font-size: 2rem;
+          }
+          @media (max-width: 370px) {
+            font-size: 1.8rem;
+          }
+        }
+      }
+    }
+    .login-box {
+      // border: 3px dotted yellow;
+      padding-top: 2rem;
+      text-align: center;
+
+      .btn {
+        padding: 1rem 4rem;
+        border-radius: 0;
+        font-weight: 700;
+        margin-right: 1rem;
+        @media (max-width: 1136px) {
+          margin-bottom: 0.5rem;
+          padding: 0.5rem 2rem;
+        }
+        @media (max-width: 370px) {
+          margin-bottom: 0.5rem;
+          padding: 0.5rem 1.5rem;
+        }
+      }
+    }
+  }
+
+  .dropdown-navigation-body {
+    // border: 4px dotted yellow;
+    margin-top: 4rem;
+
+    .left-menu {
+      // border: 4px dotted pink;
+      .left-menu-title {
+        font-weight: 700;
+        &:hover {
+          color: lighten($color: $cg-primary, $amount: 50%) !important;
+        }
+      }
+      .global-dropdown-left-menu {
+        #menu-global-dropdown-left-menu {
+          // border: 4px dotted red;
+          list-style: none;
+
+          .menu-item {
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding-bottom: 0.7rem;
+
+            a {
+              color: white;
+
+              &:hover {
+                color: lighten($color: $cg-primary, $amount: 50%) !important;
+              }
+            }
+
+            .sub-menu {
+              // border: 4px dotted red;
+              .menu-item {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right-menu {
+      // border: 4px dotted skyblue;
+      .right-menu-title {
+        // border: 4px dotted lightblue;
+        font-weight: 700;
+        &:hover {
+          color: lighten($color: $cg-primary, $amount: 50%) !important;
+        }
+      }
+      .global-dropdown-right-menu {
+        #menu-global-dropdown-right-menu-1,
+        #menu-global-dropdown-right-menu-2 {
+          // border: 4px dotted red;
+          list-style: none;
+
+          .menu-item {
+            font-size: 1rem;
+            font-weight: 600;
+            padding-bottom: 0.7rem;
+
+            a {
+              color: white;
+
+              &:hover {
+                color: lighten($color: $cg-primary, $amount: 50%) !important;
+              }
+            }
+
+            .sub-menu {
+              // border: 4px dotted red;
+              .menu-item {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .content {
+      .title {
+        color: #e3e3e3;
+        font-weight: 600;
+        font-size: 1.7rem;
+        @media (max-width: 400px) {
+          font-size: 1.5rem;
+        }
+      }
+      .sub-title {
+        color: white;
+        font-weight: 600;
+        font-size: 1.7rem;
+        @media (max-width: 400px) {
+          font-size: 1.5rem;
+        }
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
+.box-close {
+  display: none !important;
+}
+.box-open {
+  display: block !important;
+}
+.menu-close {
+  height: 0px !important;
+}
+.menu-open {
+  // display: block !important;
+  // overflow-x: hidden;
+  height: 100% !important;
+}
+
+// MAIN NAVIGATION ASM
+.main-navigation {
+  background-color: white !important;
+  // border: 1rem dotted red;
+  .welcome-user {
+    border: 1px solid $cg-primary;
+    border-radius: 20px;
+    padding: 0.5rem 2rem;
+    background-color: $cg-secondary;
+    color: white;
+    text-transform: capitalize;
+  }
+
+  // ASM MAIN NAVBAR
+  #main-navbar-asm {
+    // border: 1rem dotted red;
+    background-color: white;
+
+    // HEADER SEARCH
+    #header-search {
+      // border: 2px solid red;
+      display: flex;
+      .search-field {
+        padding: 0.3rem 2rem;
+        margin-top: 0.5rem;
+        margin-left: 2rem;
+        width: 300px;
+        border: 1px solid #e3e3e3;
+        box-shadow: 1px 1px 4px gray;
+      }
+      .search-submit {
+        display: none;
+      }
+    }
+  }
+
+  //MAIN NAV BOX
+  .main-nav {
+    display: flex;
+    align-items: center !important;
+    margin-right: 5rem;
+  }
+
+  // GLOBAL DROPDOWN BUTTON
+  .dropdown-nav-button {
+    position: absolute;
+    top: 8px;
+    right: 0.5rem;
+    padding: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    &::before {
+      // border: 16px solid $cg-primary;
+      color: lighten($color: $cg-primary, $amount: 30%);
+      font-size: 2rem;
+      margin-right: 1rem;
+      // margin-top: 1rem !important;
+      // margin-bottom: -0.5rem !important;
+    }
+
+    a {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+// /*--------------------------------------------------------------
+// MAIN NAVIGATION AREA [NON-BOOTSTRAP]
+// --------------------------------------------------------------*/
+
+.main-navigation {
+  position: relative;
+  float: left;
+  width: 100%;
+  display: block;
+  clear: both;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  background: #313131;
+
+  .main-navbar {
+    .navbar-logo {
+      float: left;
+      padding: 0 !important;
+      width: 35px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center !important;
+      // padding-top: 1rem;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    ul {
+      position: absolute;
+      left: 0;
+      z-index: 99999;
+      display: none;
+      float: left;
+      padding: 0;
+      background: #4d4d4d;
+
+      ul {
+        left: 100%;
+        top: 0;
+      }
+
+      a {
+        width: 200px;
+        &:hover {
+          background: #313131;
+          border-bottom: 4px solid red;
+        }
+      }
+    }
+  }
+
+  li {
+    float: left;
+    position: relative;
+
+    &:hover > ul {
+      display: block;
+    }
+
+    &:hover > a {
+      // color: #fff;
+      border-bottom: 4px solid red;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.3em;
+  }
+
+  // CURRENT PAGE HOVER
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_item > a:hover,
+  .current-menu-item > a:hover {
+    // background: darken($cg-primary, 10%);
+    // color: yellow;
+    border-bottom: 4px solid red;
+  }
+  // CURRENT PAGE SELECTED STATUS
+  .sub-menu .current_page_ancestor {
+    border-bottom: 4px solid red;
+  }
+
+  ul ul .current_page_parent,
+  .current_page_parent .current_page_item > a {
+    color: #fff;
+    background: #313131;
+  }
+}
