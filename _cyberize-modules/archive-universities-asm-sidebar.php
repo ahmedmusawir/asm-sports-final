@@ -28,7 +28,7 @@
 
             <li id="location-dropdown-btn" class="list-inline-item">
 
-              <span class="btn-text select-filter">All Locations</span>
+              <span class="btn-text select-filter">All States</span>
 
             </li>
 
@@ -65,6 +65,39 @@
                 <option value="mens-sports-football-men">Football – Men</option>
                 <option value="mens-sports-golf-men">Golf – Men</option>
                 <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+                <option value="mens-sports-soccer-men">Soccer – Men</option>
+
 
               </select>
 

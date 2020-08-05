@@ -11,7 +11,7 @@
 
   <header class="dropdown-navigation-header row">
 
-    <div class="col-sm-2 the-logo">
+    <div class="col-sm-3 the-logo">
       <!-- <img class="img-fluid" src="/wp-content/uploads/logo.png" alt=""> -->
       <img src=" <?php the_field('site_logo', 'option') ?>" class="img-fluid" alt="">
 
@@ -57,7 +57,7 @@
 
     </div>
 
-    <div class="col-sm-6 login-box">
+    <div class="col-sm-5 login-box">
 
       <?php if ( !is_user_logged_in() ) : ?>
 
@@ -85,9 +85,9 @@
             $user_profile_url = "/members/$user_nicename";
         ?>
 
-        <?php if ( is_user_logged_in() ) : ?>
-        <h3><a class="left-menu-title text-white" href="<?php echo $user_profile_url; ?>">PROFILE</a></h3>
-        <?php endif; ?>
+        <!-- <?php if ( is_user_logged_in() ) : ?> -->
+        <!-- <h3><a class="left-menu-title text-white" href="<?php echo $user_profile_url; ?>">PROFILE</a></h3> -->
+        <!-- <?php endif; ?> -->
 
         <?php
 
@@ -98,9 +98,9 @@
 
       </div>
       <div class="col-sm-7 right-menu">
-        <h3><a class="right-menu-title text-light" href="/members/type/athletes/">ATHLETES</a></h3>
+        <h4><a class="right-menu-title text-light" href="/members/type/athletes/">Sports</a></h4>
         <section class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <?php
 
             wp_nav_menu( array( 
@@ -108,7 +108,7 @@
                 'container_class' => 'global-dropdown-right-menu' ) ); 
             ?>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-8">
             <?php
 
             wp_nav_menu( array( 
