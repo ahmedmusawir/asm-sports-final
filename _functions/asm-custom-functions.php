@@ -3,6 +3,42 @@
  * CUSTOM FUNCTIONS FOR ASM PROJECT
  */
 
+/**
+ * LOG OUT REDIRECTION TO HOME
+ */
+function ps_redirect_after_logout(){
+  wp_redirect( '/' );
+  exit();
+}
+add_action('wp_logout','ps_redirect_after_logout');
+
+/**
+ * LOGIN REDIRECT FOR ATHLETE AND COACH USERS BY ROLE
+ * The following was over ridden by Member Type plugin. The default
+ * was [user_profile_url] which is a shortcode and would redirected to 
+ * Member's Profile by BuddyPress
+*/
+
+// function my_login_redirect( $redirect_to, $request, $user ) {
+//     //validating user login and roles
+//     if (isset($user->roles) && is_array($user->roles)) {
+//         //is this a gold plan subscriber?
+//         if (in_array('athlete', $user->roles)) {
+//             // redirect them to their special plan page
+//             $redirect_to = "/dashboard-athlete";
+//         } elseif (in_array('coach', $user->roles)) {
+//           //all other members
+//           $redirect_to = "/dashboard-coach";
+//         } else {
+//             //all other members
+//             $redirect_to = "/wp-admin";
+//         }
+//     }
+//     return $redirect_to;
+// }
+ 
+// add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
+
  /**
   * LOGIN PAGE REGISTER URL CHANGE  
   */

@@ -54,7 +54,7 @@
                 ?>
 
                 <h3 class="sub-title">
-                  Grade: <span class="text-info pl-3"><?php the_field('university_grade'); ?></span>
+                  <span class="text-info pl-3"><?php the_field('university_grade'); ?></span>
                 </h3>
               </div>
               <div class="col-md-3">
@@ -303,11 +303,11 @@
           <!-- ADDRESS BLOCK END -->
 
           <!-- BUTTON BLOCK -->
-          <a href="#">
-            <section class="button-block text-center">
+          <a href="#" data-toggle="modal" data-target="#contactCoachModal">
+            <section class=" button-block text-center">
               <i class="fas fa-user-circle"></i>
-              <h5>BUILD YOUR</h5>
-              <h5>PROFILE NOW</h5>
+              <h5>CONTACT COACH</h5>
+              <!-- <h5>PROFILE NOW</h5> -->
             </section>
           </a>
           <!-- BUTTON BLOCK END -->
@@ -336,3 +336,31 @@
 
   </section>
 </article><!-- #post- -->
+
+<!-- CONTACT COACH DROPDOWN MODAL -->
+
+<!-- Modal -->
+<div class="modal fade" id="contactCoachModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Contact Coach Form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="gravity-form-shortcode">
+          <?php 
+            $gravity_form = get_field('university_single_contact_coach_form', 'option');
+            echo do_shortcode( $gravity_form ); 
+          ?>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

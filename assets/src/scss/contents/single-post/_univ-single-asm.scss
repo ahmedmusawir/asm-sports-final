@@ -143,6 +143,8 @@
 
       .acf-map {
         margin-bottom: 0;
+        position: relative !important;
+        width: 100%;
       }
 
       .address-block {
@@ -172,7 +174,7 @@
       .button-block {
         box-shadow: 2px 2px 6px gray;
         padding: 3rem;
-        background-color: $cg-primary;
+        background-color: darken($color: crimson, $amount: 5%);
         color: white;
 
         i {
