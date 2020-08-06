@@ -37,7 +37,7 @@
 
             <li id="location-dropdown-btn" class="list-inline-item">
 
-              <span class="btn-text select-filter">All Locations</span>
+              <span class="btn-text select-filter">All States</span>
 
             </li>
 

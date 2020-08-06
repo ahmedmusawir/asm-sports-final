@@ -27,11 +27,9 @@ function cyberize_scripts() {
 
 //CYBERIZE FRAMEWORK GOOGLE MAP API KEY SETUP
 wp_enqueue_script( 'cyberize-framework-1-googlemap', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCLPeaPHJFYJCR0xKMI-0aGPZpuc2aru8U', NULL, '20190504', true );
-// wp_enqueue_script( 'cyberize-framework-1-googlemap', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB8WAfCJ5HyJ63WbGSOY2zTqkhZKk_1vMg', NULL, '20190504', true );
 
 //CYBERIZE FRAMEWORK 1.0 BASE JS SCRIPTS
 wp_enqueue_script( 'cyberize-framework-1-acfGoogleMap', get_template_directory_uri() . '/assets/dist/js/GoogleMap.min.js', array('jquery'), '20190504', true );
-// wp_enqueue_script( 'cyberize-framework-1-acfGoogleMap', get_template_directory_uri() . '/assets/src/js/GoogleMap.js', array('jquery'), '20190504', true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

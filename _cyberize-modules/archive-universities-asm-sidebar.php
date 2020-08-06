@@ -57,61 +57,28 @@
 
             <li class="list-inline-item">
 
-              <select class="select-filter" id="men-select">
+              <select class="select-filter" id="men-select" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
 
                 <option value="all">All Men's Sports</option>
-                <option value="mens-sports-baseball-men">Baseball – Men</option>
+                <!-- <option value="mens-sports-baseball-men">Baseball – Men</option>
                 <option value="mens-sports-basketball-men">Basketball – Men</option>
                 <option value="mens-sports-football-men">Football – Men</option>
                 <option value="mens-sports-golf-men">Golf – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-                <option value="mens-sports-soccer-men">Soccer – Men</option>
-
+                <option value="mens-sports-soccer-men">Soccer – Men</option> -->
 
               </select>
 
             </li>
 
             <li class="list-inline-item">
-              <select class="select-filter" id="women-select">
+              <select class="select-filter" id="women-select" data-url="<?php echo admin_url('admin-ajax.php'); ?>">
 
                 <option value="all">All Women's Sports</option>
-                <option value="womens-sports-baseball-women">Baseball – Women</option>
+                <!-- <option value="womens-sports-baseball-women">Baseball – Women</option>
                 <option value="womens-sports-basketball-women">Basketball – Women</option>
                 <option value="womens-sports-softball-women">Softball – Women</option>
                 <option value="womens-sports-golf-women">Golf – Women</option>
-                <option value="womens-sports-soccer-women">Soccer – Women</option>
+                <option value="womens-sports-soccer-women">Soccer – Women</option> -->
 
               </select>
             </li>

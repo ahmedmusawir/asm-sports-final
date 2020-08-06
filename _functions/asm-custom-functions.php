@@ -15,16 +15,18 @@
   }
 
  /**
- * UNIVERSITY LOAD MORE AJAX FUNCTION
+ * LOAD ALL THE PHP FUNCTION FILES FOR AJAX 
  */
 require get_template_directory() . '/_functions/univ-loadmore-function.php';
 require get_template_directory() . '/_functions/univ-location-loadmore-function.php';
 require get_template_directory() . '/_functions/athlete-loadmore-function.php';
 require get_template_directory() . '/_functions/athlete-dynamic-location-ajax-function.php';
 require get_template_directory() . '/_functions/athlete-dynamic-sports-ajax-function.php';
+require get_template_directory() . '/_functions/univ-men-sports-ajax-function.php';
+require get_template_directory() . '/_functions/univ-women-sports-ajax-function.php';
 
 /**
- * LOCALIZE GLOBAL VARIABLE FOR AJAX
+ * SETTING UP THE JS SCRIPTS & LOCALIZE GLOBAL VARIABLE FOR AJAX
  */
 function load_asm_globals() {
 
@@ -35,7 +37,7 @@ function load_asm_globals() {
       get_template_directory_uri() . '/assets/dist/js/loadASMFiltersToLocalStorage.js', 
       array('jquery'), 
       '2015121X', 
-      true 
+      false 
     );
     
   }
@@ -54,7 +56,7 @@ function load_asm_dynamic_filter_scripts() {
 		get_template_directory_uri() . '/assets/dist/js/loadASMLocationFiltersWithLocalStorage.js', 
 		array('jquery'), 
 		'2015121X', 
-		true 
+		false 
   );
   
   // SPORTS FILTER SCRIPT
@@ -63,7 +65,27 @@ function load_asm_dynamic_filter_scripts() {
 		get_template_directory_uri() . '/assets/dist/js/loadASMSportsFiltersWithLocalStorage.js', 
 		array('jquery'), 
 		'2015121Y', 
-		true 
-	);
+		false
+  );
+
+  // UNIVERSITY WOMEN'S SPORTS FILTER SCRIPT
+  wp_enqueue_script( 
+    'unv-womens-sports-filter-script', 
+    get_template_directory_uri() . '/assets/dist/js/loadUnivWomenSportsFromLocalStorage.js', 
+    array('jquery'), 
+    '2020121X', 
+    false
+  );
+  
+  // UNIVERSITY MEN'S SPORTS FILTER SCRIPT
+  wp_enqueue_script( 
+		'unv-mens-sports-filter-script', 
+		get_template_directory_uri() . '/assets/dist/js/loadUnivMenSportsFromLocalStorage.js', 
+		array('jquery'), 
+		'2015121Y', 
+		false
+  );
+  
+
 }
-add_action('wp_head', 'load_asm_dynamic_filter_scripts');
+add_action('wp_enqueue_scripts', 'load_asm_dynamic_filter_scripts');
