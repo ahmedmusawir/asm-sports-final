@@ -11,27 +11,65 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-single'); ?>>
   <section class="univ-single-asm">
-    <?php if (has_post_thumbnail()) : ?>
 
-    <figure class="featured-img-holder d-none d-md-block">
-      <?php cyberize_post_thumbnail(); ?>
-    </figure>
+    <!-- UNIVERSITY HEADER IMAGE SLIDER  -->
 
-    <figure class="featured-img-holder d-md-none mt-5 pt-5">
-      <?php cyberize_post_thumbnail('univ-mobile-size'); ?>
-    </figure>
+    <div id="univ-header-slider" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
 
-    <?php else : ?>
+          <?php if (get_field('header_banner_image_1')) : ?>
 
-    <figure class="featured-image-box">
-      <a href="<?php the_permalink(); ?>">
-        <img class="attachment-featured-size size-featured-size wp-post-image"
-          src="/wp-content/uploads/bg-image-1920x600-1.jpg" alt="">
+          <img class="d-block w-100" src="<?php the_field('header_banner_image_1'); ?>" alt="First slide">
+
+          <?php else : ?>
+
+          <img class="attachment-featured-size size-featured-size wp-post-image"
+            src="/wp-content/uploads/NO-IMG-FOUND.jpg" alt="">
+
+          <?php endif; ?>
+
+        </div> <!-- END CAROUSEL ITEM 1 -->
+        <div class="carousel-item">
+
+          <?php if (get_field('header_banner_image_2')) : ?>
+
+          <img class="d-block w-100" src="<?php the_field('header_banner_image_2'); ?>" alt="Second slide">
+
+          <?php else : ?>
+
+          <img class="attachment-featured-size size-featured-size wp-post-image"
+            src="/wp-content/uploads/NO-IMG-FOUND.jpg" alt="">
+
+          <?php endif; ?>
+
+        </div> <!-- END CAROUSEL ITEM 2 -->
+        <div class="carousel-item">
+
+          <?php if (get_field('header_banner_image_3')) : ?>
+
+          <img class="d-block w-100" src="<?php the_field('header_banner_image_3'); ?>" alt="Second slide">
+
+          <?php else : ?>
+
+          <img class="attachment-featured-size size-featured-size wp-post-image"
+            src="/wp-content/uploads/NO-IMG-FOUND.jpg" alt="">
+
+          <?php endif; ?>
+
+        </div> <!-- END CAROUSEL ITEM 3 -->
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
       </a>
-    </figure>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
 
-
-    <?php endif; ?>
+    <!-- UNIVERSITY HEADER IMAGE SLIDER END -->
 
     <div class="entry-content container-fluid">
 
