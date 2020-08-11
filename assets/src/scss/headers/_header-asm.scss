@@ -256,6 +256,71 @@
         display: none;
       }
     }
+
+    .nav-visitor {
+      // border: 4px dotted red;
+      padding-right: 1rem;
+      a {
+        display: none;
+      }
+      &.fas.fa-eye {
+        font-size: 1.75rem;
+        color: $cg-secondary;
+      }
+    }
+    .nav-email {
+      // border: 4px dotted red;
+      a {
+        display: none;
+      }
+      &.fas.fa-envelope-square {
+        font-size: 1.75rem;
+        color: $cg-secondary;
+      }
+    }
+    .nav-avatar {
+      // border: 4px dotted red;
+      margin-right: -1rem;
+      width: 60px !important;
+      a {
+        // border: 4px dotted red;
+        .avatar.avatar-24.photo {
+          width: 85% !important;
+          border-radius: 50%;
+          margin-top: -8px;
+        }
+      }
+    }
+    .bp-logout-nav {
+      // border: 4px dotted red;
+      border: 1px solid $cg-secondary;
+      width: 100px;
+      background-color: white;
+
+      // THIS IS FOR LOGOUT BOX
+      a {
+        &:hover {
+          background: white !important;
+          width: 98px !important;
+          text-decoration: none !important;
+        }
+      }
+    }
+    .header-view-count-box {
+      // THIS IS FOR VIEW COUNT BOX
+      border: 1px solid $cg-secondary;
+      width: 130px;
+      height: 40px !important;
+      background-color: white;
+
+      p {
+        font-family: "Lato", sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: $cg-secondary;
+        padding: 0.5rem;
+      }
+    }
   }
 
   //MAIN NAV BOX

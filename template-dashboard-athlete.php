@@ -83,7 +83,7 @@ get_header(); ?>
         <i class="fas fa-eye"></i>
         <h6 class="text-only">PROFILE VIEWS</h6>
         <!-- <h1 class="text-number"><?php //echo $total_profile_visit; ?></h1> -->
-        <h1 class="text-number"><?php echo $total_profile_visit; ?></h1>
+        <h1 id="view-count-holder" class="text-number"><?php echo $total_profile_visit; ?></h1>
         <a href="/members/<?php echo $athlete_slug; ?>/" class="btn btn-info">View Profile</a>
       </div>
 
@@ -365,6 +365,15 @@ get_header(); ?>
 
 </div> <!-- #page-asm-dashboard end  -->
 
+<script>
+jQuery(document).ready(function($) {
+  var viewCountHolder = $('#view-count-holder');
+  var theViewCount = viewCountHolder.text();
+  var numberValue = Number(theViewCount);
+  // alert(theCount);
+  localStorage.setItem('theViewCount', JSON.stringify(numberValue));
+});
+</script>
 
 
 <?php
