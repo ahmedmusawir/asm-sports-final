@@ -14,7 +14,7 @@
       <!-- Page Header with image -->
       <section id="general-blog-page-header">
         <section class="top-page-menu clearfix">
-          <h3 class="bluebar-title float-left">Get Recruited</h3>
+          <h3 class="bluebar-title float-left">Learn</h3>
         </section>
         <section class="top-page-menu-mobile">
 
@@ -46,9 +46,9 @@
 
         <div class="row">
 
-          <div class="col-sm-12 col-md-12 col-lg-8">
+          <div class="col-sm-12 col-md-12 col-lg-12">
 
-            <header class="blog-index-header py-3">
+            <header class="blog-index-header">
               <?php
 										the_archive_title( '<h2 class="archive-type">', '</h2>' );
 										//the_archive_description( '<div class="archive-description">', '</div>' );
@@ -93,11 +93,11 @@
 
           </div> <!-- 9 COLS END -->
 
-          <div class="col-sm-12 col-md-12 col-lg-4">
+          <!-- <div class="col-sm-12 col-md-12 col-lg-4"> -->
 
-            <?php get_sidebar(); ?>
+          <?php //get_sidebar(); ?>
 
-          </div> <!-- 3 COLS END -->
+          <!-- </div> 3 COLS END -->
 
         </div> <!-- End Row -->
 

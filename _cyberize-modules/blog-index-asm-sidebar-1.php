@@ -46,9 +46,9 @@
 
         <div class="row">
 
-          <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="col-sm-12 col-md-12 col-lg-8">
 
-            <div class="blog-index-header py-3 d-none">
+            <div class="blog-index-header py-3">
               <h2 class="header-title">All Article and Videos</h2>
               <h5 class="header-title">Browse on dozens of articles and find the right one for you</h5>
             </div>
@@ -87,11 +87,11 @@
 
           </div> <!-- 9 COLS END -->
 
-          <!-- <div class="col-sm-12 col-md-12 col-lg-4"> -->
+          <div class="col-sm-12 col-md-12 col-lg-4">
 
-          <?php //get_sidebar(); ?>
+            <?php get_sidebar(); ?>
 
-          <!-- </div> 3 COLS END -->
+          </div> <!-- 3 COLS END -->
 
         </div> <!-- ROW END -->
 

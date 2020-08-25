@@ -15,7 +15,7 @@
     <?php if (has_post_thumbnail()) : ?>
 
     <div class="FL-post-item-footer">
-      <?php cyberize_entry_footer(); ?>
+      <?php //cyberize_entry_footer(); ?>
     </div>
 
     <figure class="featured-image-box">
@@ -35,14 +35,14 @@
 
 				?>
 
-    <div class="entry-meta">
-      <?php
-        cyberize_posted_by();
-        cyberize_posted_on();
+    <!-- <div class="entry-meta"> -->
+    <?php
+        // cyberize_posted_by();
+        // cyberize_posted_on();
 			?>
-    </div><!-- .entry-meta -->
+    <!-- </div>.entry-meta -->
 
-    <div class="pr-3">
+    <div class="asm-post-content">
 
       <?php
         // <!-- CONTENT -->
@@ -50,30 +50,30 @@
         ?>
     </div>
 
-    <hr>
+    <!-- <hr> -->
 
     <?php else : ?>
 
     <div class="FL-post-item-footer">
-      <?php cyberize_entry_footer(); ?>
+      <?php //cyberize_entry_footer(); ?>
     </div>
 
     <?php
 				if ( is_singular() ) :
-					the_title( '<h1 class="entry-title">', '</h1>' );
+					the_title( '<h1 class="entry-title pt-4">', '</h1>' );
 				else :
-					the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+					the_title( '<h3 class="entry-title pt-4"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
 				endif;
 
 				?>
-    <div class="entry-meta">
-      <?php
+    <!-- <div class="entry-meta"> -->
+    <?php
         // cyberize_posted_by();
         // cyberize_posted_on();
       ?>
-    </div><!-- .entry-meta -->
+    <!-- </div>.entry-meta -->
 
-    <div class="pr-3 pt-3 pb-3">
+    <div class="asm-post-content">
 
       <?php
       // <!-- CONTENT -->
