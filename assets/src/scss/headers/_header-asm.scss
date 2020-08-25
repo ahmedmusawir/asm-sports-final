@@ -248,12 +248,21 @@
         padding: 0.3rem 2rem;
         margin-top: 0.5rem;
         margin-left: 2rem;
-        width: 300px;
+        width: 320px;
         border: 1px solid #e3e3e3;
         box-shadow: 1px 1px 4px gray;
+
+        &::placeholder {
+          color: darken($color: #e3e3e3, $amount: 15%);
+        }
       }
       .search-submit {
         display: none;
+      }
+      //SEARCH ICON FOR SEARCH INPUT
+      input[type="search"] {
+        font-family: FontAwesome, arial;
+        // color: black !important;
       }
     }
 

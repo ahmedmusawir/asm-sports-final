@@ -20,7 +20,7 @@
 
     <figure class="featured-image-box">
       <a href="<?php the_permalink(); ?>">
-        <?php the_post_thumbnail( 'full' ); ?>
+        <?php the_post_thumbnail( 'blog-size' ); ?>
       </a>
     </figure>
 

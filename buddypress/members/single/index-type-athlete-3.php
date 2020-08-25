@@ -35,38 +35,40 @@ get_header();
       <h3 class="menu-title float-left">Filter</h3>
       <ul class="list-inline menu-box">
         <a href="#top-video-section">
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/video-icon.png" alt="">
+          <li class="list-inline-item"><img class="img-icon"
+              src="/wp-content/uploads/Screen-Shot-2020-03-30-at-11.29.14-AM-e1585539321304.png" alt="">
             <span class="btn-text">Video</span>
           </li>
         </a>
         <a href="#about-section">
           <!-- <li class="list-inline-item"><i class="fad fa-user-circle"></i>Bio</li> -->
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/bio-icon-2.png" alt="">
+          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/bio-icon.png" alt="">
             <span class="btn-text">Bio</span>
           </li>
         </a>
         <a href="#sports-stats-section">
           <!-- <li class="list-inline-item"><i class="fad fa-trophy-alt"></i></i>Sports Stats</li> -->
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/awards-icon.png" alt="">
+          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/sports-info-icon.png" alt="">
             <span class="btn-text">Sports Info</span>
           </li>
         </a>
         <a href="#academics-section">
           <!-- <li class="list-inline-item"><i class="fad fa-file-certificate"></i>Academics</li> -->
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/academics-icon-1.png" alt="">
+          <li class="list-inline-item"><img class="img-icon"
+              src="/wp-content/uploads/Screen-Shot-2020-03-30-at-11.30.01-AM.png" alt="">
             <span class="btn-text">Academics</span>
           </li>
         </a>
         <a href="#instagram-section">
           <!-- <li class="list-inline-item"><i class="fab fa-instagram"></i>Instagram</li> -->
-          <li class="list-inline-item"><img class="img-icon" style="padding-top: .1rem;"
-              src="/wp-content/uploads/images-icon.png" alt="">
+          <li class="list-inline-item"><img class="img-icon" style="padding-top: .2rem;"
+              src="/wp-content/uploads/pics-icon.png" alt="">
             <span class="btn-text">Instagram</span>
           </li>
         </a>
         <a href="#interview-section">
           <!-- <li class="list-inline-item"><i class="fad fa-comments"></i>Interviews</li> -->
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/interview-icon-2.png" alt="">
+          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/interview-icon.png" alt="">
             <span class="btn-text">Interviews</span>
           </li>
         </a>
