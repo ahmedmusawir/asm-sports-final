@@ -35,38 +35,40 @@ get_header();
       <h3 class="menu-title float-left">Filter</h3>
       <ul class="list-inline menu-box">
         <a href="#top-video-section">
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/video-icon.png" alt="">
+          <li class="list-inline-item"><img class="img-icon"
+              src="/wp-content/uploads/Screen-Shot-2020-03-30-at-11.29.14-AM-e1585539321304.png" alt="">
             <span class="btn-text">Video</span>
           </li>
         </a>
         <a href="#about-section">
           <!-- <li class="list-inline-item"><i class="fad fa-user-circle"></i>Bio</li> -->
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/bio-icon-2.png" alt="">
+          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/bio-icon.png" alt="">
             <span class="btn-text">Bio</span>
           </li>
         </a>
         <a href="#sports-stats-section">
           <!-- <li class="list-inline-item"><i class="fad fa-trophy-alt"></i></i>Sports Stats</li> -->
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/awards-icon.png" alt="">
+          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/sports-info-icon.png" alt="">
             <span class="btn-text">Sports Info</span>
           </li>
         </a>
         <a href="#academics-section">
           <!-- <li class="list-inline-item"><i class="fad fa-file-certificate"></i>Academics</li> -->
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/academics-icon-1.png" alt="">
+          <li class="list-inline-item"><img class="img-icon"
+              src="/wp-content/uploads/Screen-Shot-2020-03-30-at-11.30.01-AM.png" alt="">
             <span class="btn-text">Academics</span>
           </li>
         </a>
         <a href="#instagram-section">
           <!-- <li class="list-inline-item"><i class="fab fa-instagram"></i>Instagram</li> -->
-          <li class="list-inline-item"><img class="img-icon" style="padding-top: .1rem;"
-              src="/wp-content/uploads/images-icon.png" alt="">
+          <li class="list-inline-item"><img class="img-icon" style="padding-top: .2rem;"
+              src="/wp-content/uploads/pics-icon.png" alt="">
             <span class="btn-text">Instagram</span>
           </li>
         </a>
         <a href="#interview-section">
           <!-- <li class="list-inline-item"><i class="fad fa-comments"></i>Interviews</li> -->
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/interview-icon-2.png" alt="">
+          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/interview-icon.png" alt="">
             <span class="btn-text">Interviews</span>
           </li>
         </a>
@@ -76,54 +78,6 @@ get_header();
   </div>
 
   <div class="bp-wrap">
-    <section id="large-profile-header">
-
-      <div class="container-fluid">
-        <div class="row">
-
-          <article class="col-md-3">
-            <div id="item-header-avatar">
-              <!-- <a href="<?php bp_displayed_user_link(); ?>"> -->
-
-              <div class="athlete-img-box text-center">
-
-                <?php bp_displayed_user_avatar( 'type=full' ); ?>
-
-              </div>
-
-              <!-- </a> -->
-            </div><!-- #item-header-avatar -->
-          </article>
-          <article class="col-md-9">
-            <h1 class="athlete-title text-center">
-
-              <?php echo bp_core_get_user_displayname( $user_id, true ); ?>
-
-            </h1>
-            <?php 
-              $total_profile_visit = visitors_get_profile_visit_count($user_id);
-              // $user_id = get_current_user_id();
-              // $total_unique_visitors = visitors_get_unique_visitors_count( $user_id );
-            ?>
-
-            <section class="athlete-meta">
-
-              <div class="athlete-meta-info clearfix px-1 py-3 text-center">
-                <span class="eye"><i class="fas fa-eye"></i> &nbsp;<?php echo $total_profile_visit; ?> Views</span>
-                <!-- <span class="star float-right"><i class="fas fa-star"></i> &nbsp;4.5</span> -->
-              </div>
-
-            </section>
-          </article>
-
-        </div>
-      </div>
-
-
-
-
-
-    </section>
 
     <div id="item-body" class="item-body row">
       <!-- LEFT COLUMN START -->
@@ -132,10 +86,8 @@ get_header();
         <!-- LEFT-INFO-BOX SECTION START -->
 
         <?php 
-      
-          get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-left-info-box');
-      
-        ?>
+      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-left-info-box');
+      ?>
 
         <!-- LEFT-INFO-BOX SECTION END -->
 

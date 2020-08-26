@@ -11,37 +11,8 @@ $user_id = bp_displayed_user_id();
   $enrollment_year = xprofile_get_field_data( 17, $user_id, $multi_format = 'array' ); 
  
 ?>
-<?php 
-  // $user_id = get_current_user_id();
-  $total_profile_visit = visitors_get_profile_visit_count($user_id);
-  // $total_unique_visitors = visitors_get_unique_visitors_count( $user_id );
-?>
 
 <section class="athlete-info-box">
-  <div id="item-header-avatar">
-    <!-- <a href="<?php bp_displayed_user_link(); ?>"> -->
-
-    <div class="athlete-img-box text-center">
-
-      <?php bp_displayed_user_avatar( 'type=full' ); ?>
-
-    </div>
-    <h1 class="athlete-title text-center">
-
-      <?php echo bp_core_get_user_displayname( $user_id, true ); ?>
-
-    </h1>
-    <!-- </a> -->
-  </div><!-- #item-header-avatar -->
-
-  <section class="athlete-meta">
-
-    <div class="athlete-meta-info clearfix px-1 py-3 text-center">
-      <span class="eye"><i class="fas fa-eye"></i> &nbsp;<?php echo $total_profile_visit; ?> Views</span>
-      <!-- <span class="star float-right"><i class="fas fa-star"></i> &nbsp;4.5</span> -->
-    </div>
-
-  </section>
 
   <section class="athlete-bio">
     <ul class="list-group">

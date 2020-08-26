@@ -6,6 +6,9 @@
 
 .blog-index-block-asm {
   position: relative;
+  background-color: lighten($color: #e3e3e3, $amount: 5%);
+  margin-top: -0.5rem;
+  padding-top: 1rem;
   // border: 1rem dotted red;
   .container-fluid {
     width: 95% !important;
@@ -160,12 +163,6 @@
     margin-bottom: 60px;
     position: relative;
 
-    .pr-3 {
-      p {
-        font-size: 17px;
-      }
-    }
-
     .entry-content {
       .featured-image-box {
         img {
@@ -179,7 +176,7 @@
         margin-left: 60px;
 
         &::before {
-          content: url("../../../assets/img/comment-icon.png");
+          content: url('../../../assets/img/comment-icon.png');
           display: inline-block;
           vertical-align: middle;
           padding-right: 30px;
@@ -198,16 +195,23 @@
       }
 
       .entry-title {
-        padding-top: 0px;
-        padding-bottom: 15px;
-        line-height: 2rem;
+        padding: 1.5rem;
+        padding-bottom: 0rem;
+        padding-top: 0rem;
+        line-height: 1.3rem;
 
         a {
-          color: $cg-secondary;
-          font-size: 1.5rem;
-          font-weight: 600;
+          color: black;
+          font-size: 1.2rem;
+          font-weight: 700;
           font-family: $primary-font;
         }
+      }
+
+      .asm-post-content {
+        padding: 1.5rem;
+        padding-bottom: 2rem;
+        padding-top: 0;
       }
 
       .entry-meta {
@@ -246,6 +250,18 @@
     }
   }
 
+  // CATEGORY ARCHIVE HEADER
+  .blog-index-header {
+    .archive-type {
+      color: black;
+      margin-left: 1.8rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      padding-top: 1.5rem;
+      padding-bottom: 0rem;
+    }
+  }
+
   // MASONRY CODE
   .post-item-container {
     // background-color: lighten($color: #e7e7e7, $amount: 5%);
@@ -274,7 +290,7 @@
     .item {
       display: inline-block;
       background: #fff;
-      padding: 1rem;
+      // padding: 1rem;
       // padding: 1.5em;
       margin: 0 0 1rem;
       // margin: 0 0 1.5em;
@@ -284,10 +300,10 @@
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       -webkit-appearance: none;
-      -webkit-box-shadow: 3px 3px 6px 6px #ccc;
-      box-shadow: 3px 3px 3px #ccc;
+      // -webkit-box-shadow: 3px 3px 6px 6px #ccc;
+      // box-shadow: 3px 3px 3px #ccc;
       border: 2px solid #e3e3e3;
-      border-radius: 20px;
+      border-radius: 10px;
 
       .university-item-content {
         // border: 4px dotted red;
@@ -308,6 +324,8 @@
     .item img {
       max-width: 100%;
       border-radius: 10px;
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
     }
 
     @media only screen and (max-width: 639px) {
@@ -334,9 +352,9 @@
     }
     @media only screen and (min-width: 1201px) {
       .masonry {
-        -moz-column-count: 2;
-        -webkit-column-count: 2;
-        column-count: 2;
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        column-count: 3;
       }
     }
   }
