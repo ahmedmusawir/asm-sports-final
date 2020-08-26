@@ -7,8 +7,8 @@
 .blog-index-block-asm {
   position: relative;
   background-color: lighten($color: #e3e3e3, $amount: 5%);
-  margin-top: -1.5rem;
-  // padding-top: 1.2rem;
+  margin-top: -0.5rem;
+  padding-top: 1rem;
   // border: 1rem dotted red;
   .container-fluid {
     width: 95% !important;
@@ -176,7 +176,7 @@
         margin-left: 60px;
 
         &::before {
-          content: url("../../../assets/img/comment-icon.png");
+          content: url('../../../assets/img/comment-icon.png');
           display: inline-block;
           vertical-align: middle;
           padding-right: 30px;

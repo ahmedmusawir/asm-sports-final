@@ -76,54 +76,6 @@ get_header();
   </div>
 
   <div class="bp-wrap">
-    <section id="large-profile-header">
-
-      <div class="container-fluid">
-        <div class="row">
-
-          <article class="col-md-3">
-            <div id="item-header-avatar">
-              <!-- <a href="<?php bp_displayed_user_link(); ?>"> -->
-
-              <div class="athlete-img-box text-center">
-
-                <?php bp_displayed_user_avatar( 'type=full' ); ?>
-
-              </div>
-
-              <!-- </a> -->
-            </div><!-- #item-header-avatar -->
-          </article>
-          <article class="col-md-9">
-            <h1 class="athlete-title text-center">
-
-              <?php echo bp_core_get_user_displayname( $user_id, true ); ?>
-
-            </h1>
-            <?php 
-              $total_profile_visit = visitors_get_profile_visit_count($user_id);
-              // $user_id = get_current_user_id();
-              // $total_unique_visitors = visitors_get_unique_visitors_count( $user_id );
-            ?>
-
-            <section class="athlete-meta">
-
-              <div class="athlete-meta-info clearfix px-1 py-3 text-center">
-                <span class="eye"><i class="fas fa-eye"></i> &nbsp;<?php echo $total_profile_visit; ?> Views</span>
-                <!-- <span class="star float-right"><i class="fas fa-star"></i> &nbsp;4.5</span> -->
-              </div>
-
-            </section>
-          </article>
-
-        </div>
-      </div>
-
-
-
-
-
-    </section>
 
     <div id="item-body" class="item-body row">
       <!-- LEFT COLUMN START -->
@@ -132,10 +84,8 @@ get_header();
         <!-- LEFT-INFO-BOX SECTION START -->
 
         <?php 
-      
-          get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-left-info-box');
-      
-        ?>
+      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-left-info-box');
+      ?>
 
         <!-- LEFT-INFO-BOX SECTION END -->
 

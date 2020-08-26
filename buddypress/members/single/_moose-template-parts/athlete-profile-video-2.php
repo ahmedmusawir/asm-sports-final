@@ -22,11 +22,6 @@ $user_id = bp_displayed_user_id();
 ?>
 <section id="top-video-section">
 
-  <h1 class="block-header">
-    <!-- <i class="fab fa-youtube"></i> Videos -->
-    <img src="/wp-content/uploads/videos-icon.png" alt=""></i> Videos
-  </h1>
-
   <div class="embed-responsive embed-responsive-16by9">
 
     <iframe class="embed-responsive-item"
@@ -37,7 +32,12 @@ $user_id = bp_displayed_user_id();
 
   </div>
 
-  <!-- <section class="more-videos-box">
+  <h1 class="block-header">
+    <!-- <i class="fab fa-youtube"></i> Videos -->
+    <img src="/wp-content/uploads/videos-icon.png" alt=""></i> Videos
+  </h1>
+
+  <section class="more-videos-box">
 
     <div class="row">
 
@@ -66,8 +66,7 @@ $user_id = bp_displayed_user_id();
       </div>
 
 
-  </section>  -->
-  <!-- end more-videos-box -->
+  </section> <!-- end more-videos-box -->
 
 </section> <!-- end top-video-section -->
 
