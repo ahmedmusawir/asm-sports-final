@@ -11,9 +11,12 @@ get_header();
   <!-- FONT AWESOME 5 PRO -->
   <!-- <script src="https://kit.fontawesome.com/c8084101a0.js" crossorigin="anonymous"></script> -->
   <?php
+  
     $user_id = bp_displayed_user_id();
     $current_user = wp_get_current_user();
     $current_user_id = $current_user->ID;
+    $sport = xprofile_get_field_data( 49, $user_id, $multi_format = 'array' );
+
   ?>
 
   <div class="top-page-navbar">
@@ -81,9 +84,10 @@ get_header();
       <div class="container-fluid">
         <div class="row">
 
+          <!-- ATHLETE AVATAR IMAGE -->
           <article class="col-md-3">
-            <div id="item-header-avatar">
-              <!-- <a href="<?php bp_displayed_user_link(); ?>"> -->
+            <div>
+              <!-- <a href="<?php //bp_displayed_user_link(); ?>"> -->
 
               <div class="athlete-img-box text-center">
 
@@ -94,42 +98,79 @@ get_header();
               <!-- </a> -->
             </div><!-- #item-header-avatar -->
           </article>
-          <article class="col-md-9">
-            <h1 class="athlete-title text-center">
 
-              <?php echo bp_core_get_user_displayname( $user_id, true ); ?>
+          <!-- ATHLETE NAME - VIEW COUNT - VARIFICATION -->
+          <article class="col-md-5">
 
-            </h1>
-            <?php 
+            <div class="title-box">
+              <h1 class="athlete-title">
+
+                <?php echo bp_core_get_user_displayname( $user_id, true ); ?>
+
+                &nbsp;
+                <small>(<?php echo $sport; ?>)</small>
+
+              </h1>
+            </div>
+
+            <section class="athlete-meta">
+              <?php 
               $total_profile_visit = visitors_get_profile_visit_count($user_id);
               // $user_id = get_current_user_id();
               // $total_unique_visitors = visitors_get_unique_visitors_count( $user_id );
             ?>
 
-            <section class="athlete-meta">
-
-              <div class="athlete-meta-info clearfix px-1 py-3 text-center">
-                <span class="eye"><i class="fas fa-eye"></i> &nbsp;<?php echo $total_profile_visit; ?> Views</span>
-                <!-- <span class="star float-right"><i class="fas fa-star"></i> &nbsp;4.5</span> -->
-              </div>
+              <ul class="athlete-meta-check d-inline">
+                <li class="d-inline meta-icon">
+                  <i class="fas fa-check-circle"></i>
+                </li>
+                <li class="d-inline meta-text">
+                  <span class="text">Verified Profile</span>
+                </li>
+              </ul>
+              <ul class="athlete-meta-eye d-inline">
+                <li class="d-inline meta-icon">
+                  <i class="fas fa-eye"></i>
+                </li>
+                <li class="d-inline meta-text">
+                  <span class="text"><?php echo $total_profile_visit; ?>&nbsp; Views</span>
+                </li>
+              </ul>
 
             </section>
           </article>
 
+          <!-- ATHLETE COMMITTED - UNIVERSITY NAME - UNIVERSITY LOGO -->
+          <article class="col-md-4">
+
+          </article>
+
+
         </div>
       </div>
 
-
-
-
-
-    </section>
+    </section> <!-- END OF id="large-profile-header" -->
 
     <div id="item-body" class="item-body row">
       <!-- LEFT COLUMN START -->
       <article class="left-col col-sm-12 col-md-12 col-lg-4 col-xl-3">
 
         <!-- LEFT-INFO-BOX SECTION START -->
+
+        <section class="btn-box">
+          <div class="message-athlete">
+            <a href="/athlete-email-inbox/">
+              <img class="btn-img" src="/wp-content/uploads/mesage-athlete-icon-1.png" alt=""
+                class="message-athlete-btn">
+            </a>
+          </div>
+          <div class="more-athlete">
+            <a href="/members/type/athletes/">
+              <img class="btn-img" src="/wp-content/uploads/more-athletes-icon-1.png" alt=""
+                class="message-athlete-btn">
+            </a>
+          </div>
+        </section>
 
         <?php 
       
@@ -228,41 +269,6 @@ get_header();
 
       <article class="sidebar-col col-sm-12 col-md-12 col-lg-12 col-xl-3">
 
-        <!-- ATHLETE PROFILE RIGHT EMAIL BUTTON SET START -->
-
-        <!-- MESSAGE BUTTON -->
-        <?php if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
-
-        <section id="athlete-right-email-button">
-          <a href="/athlete-email-inbox/" class="clearfix">
-            <div class="message-button">
-              <img src="/wp-content/uploads/email-btn-icon.png" alt="" class="float-left btn-image">
-              <div class="btn-text-holder">
-                <h5 class="btn-text">MESSAGE ATHLETE</h5>
-              </div>
-            </div>
-          </a>
-
-        </section>
-        <?php endif; ?>
-
-
-        <!-- SEARCH ATHLETE BUTTON -->
-
-        <section id="athlete-right-search-athlete-button">
-          <a href="/members/type/athletes/" class="clearfix">
-            <div class="message-button">
-              <img src="/wp-content/uploads/search-athlete-icon.png" alt="" class="float-left btn-image">
-              <div class="btn-text-holder">
-                <h5 class="btn-text">SEARCH ATHLETE</h5>
-              </div>
-            </div>
-          </a>
-
-        </section>
-
-        <!-- ATHLETE PROFILE RIGHT EMAIL BUTTON SET END -->
-
         <!-- ATHLETE VIEW COUNT BOX ON RIGHT SIDEBAR START -->
         <?php
           $user_id = bp_displayed_user_id();
@@ -277,7 +283,7 @@ get_header();
 
           <?php if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
 
-          <h2 class="view-count-title pb-3">Views</h2>
+          <h2 class="view-count-title pb-3">Activity Feed</h2>
 
           <!-- <img src="/wp-content/uploads/2020/01/profile-sidebar.png" alt=""> -->
           <?php //echo do_shortcode('[bp-visitors-recent-visitors]'); ?>
@@ -371,7 +377,7 @@ get_header();
   var adjustAnchor = function() {
 
     var $anchor = $(':target'),
-      fixedElementHeight = 230;
+      fixedElementHeight = 440;
 
     if ($anchor.length > 0) {
 

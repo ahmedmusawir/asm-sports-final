@@ -17,7 +17,7 @@ $sport = xprofile_get_field_data( 49, $user_id, $multi_format = 'array' );
 
   <h1 class="block-header">
     <!-- <i class="fas fa-trophy"></i> Sports Stats -->
-    <img src="/wp-content/uploads/sports-info-icon-1.png" class="pb-2" alt=""> Sports Stats
+    <img src="/wp-content/uploads/awards-icon.png" class="menu-icon" alt=""> Sports Stats
   </h1>
   <!-- <h5>Sports (REMOVE THIS): <?php echo $sport; ?></h5> -->
 

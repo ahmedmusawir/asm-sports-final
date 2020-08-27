@@ -164,19 +164,88 @@ body.buddypress {
     width: 100%;
     z-index: 1000;
     // background-color: gray;
-    background: url(/wp-content/uploads/Dashboard-header.jpg);
+    // background: url(/wp-content/uploads/athlete-header.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.6)),
+      url('/wp-content/uploads/athlete-header.jpg');
+    background-position: center top;
     background-size: 100%;
 
     .athlete-img-box {
       // border: 4px dotted red;
       margin-top: 35px;
       img {
-        width: 65% !important;
+        width: 50% !important;
         border: 4px solid white;
         border-radius: 50%;
         display: block;
         margin: auto;
       }
+    }
+
+    .title-box {
+      border-bottom: 3px solid white;
+      // width: 50%;
+      .athlete-title {
+        color: white;
+        margin: 0;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        small {
+          font-size: 1.3rem;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .athlete-meta {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 700;
+
+      .athlete-meta-check {
+        padding-inline-start: 0px;
+
+        .meta-icon {
+          i.fas {
+            font-size: 2.5rem;
+            padding-top: 1rem;
+          }
+        }
+        .meta-text {
+          // border: 1px solid red;
+          position: relative;
+          .text {
+            position: absolute;
+            top: -8px;
+            left: 10px;
+            width: 200px;
+          }
+        }
+      }
+      .athlete-meta-eye {
+        padding-inline-start: 0px;
+        margin-left: 13rem;
+        .meta-icon {
+          i.fas {
+            font-size: 2.75rem;
+            padding-top: 1rem;
+          }
+        }
+        .meta-text {
+          // border: 1px solid red;
+          position: relative;
+          .text {
+            position: absolute;
+            top: -8px;
+            left: 10px;
+            width: 200px;
+          }
+        }
+      }
+
+      // .view-icon {
+      //   padding-left: 2rem;
+      // }
     }
   }
 
@@ -304,15 +373,28 @@ body.buddypress {
     // border: 4px dotted red;
 
     #item-body {
-      margin-top: 260px;
+      margin-top: 240px;
       // margin-top: 60px;
       position: relative;
       // border: 1rem dotted green;
 
       //  LEFT COLUMN START
+
+      // ATHLETE BUTTON BOX
+      .btn-box {
+        position: fixed;
+        top: 490px;
+
+        .btn-img {
+          // border: 3px dotted red;
+          width: 60%;
+          padding-bottom: 0.5rem;
+        }
+      }
+      // ATHLETE INFO BOX
       .athlete-info-box {
         position: fixed;
-        top: 550px;
+        top: 690px;
         width: 23%;
         @media (max-width: 1199px) {
           width: 30%;
@@ -347,19 +429,19 @@ body.buddypress {
         }
       }
 
-      #item-header-avatar {
-        // border: 3px dotted greenyellow;
-        img.avatar {
-          border-radius: 50%;
-          width: 200px;
-        }
-        .athlete-title {
-          font-size: 1.8rem;
-          text-transform: uppercase !important;
-          margin: 0;
-          margin-top: 0.5rem;
-        }
-      }
+      // #item-header-avatar {
+      //   // border: 3px dotted greenyellow;
+      //   img.avatar {
+      //     border-radius: 50%;
+      //     width: 200px;
+      //   }
+      //   .athlete-title {
+      //     font-size: 1.8rem;
+      //     text-transform: uppercase !important;
+      //     margin: 0;
+      //     margin-top: 0.5rem;
+      //   }
+      // }
 
       .athlete-meta {
         // border: 3px dotted greenyellow;
@@ -567,25 +649,20 @@ body.buddypress {
         display: none;
       }
 
+      //TAKES CARE OF ALL THE BLOCKS ICON AND FONT SIZE
+      .block-header {
+        font-size: 2rem;
+        .menu-icon {
+          width: 32px;
+        }
+      }
+
       #top-video-section {
         padding-bottom: 3.5rem;
         border-bottom: 2px solid $cg-primary;
 
         @media (max-width: 514px) {
           padding-top: 2rem;
-        }
-
-        .block-header {
-          font-size: 2rem;
-          i.fa-youtube {
-            color: lighten($color: $cg-primary, $amount: 20%);
-          }
-        }
-
-        .more-videos-box {
-          .video-button {
-            cursor: pointer;
-          }
         }
       }
 

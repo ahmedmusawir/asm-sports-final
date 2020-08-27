@@ -16,7 +16,7 @@ $act = xprofile_get_field_data( 328, $user_id, $multi_format = 'array' );
 
   <h1 class="block-header">
     <!-- <i class="fas fa-file-certificate"></i> Academics -->
-    <img class="pb-2" src="/wp-content/uploads/academics-icon.png" alt=""> Academics
+    <img class="menu-icon pb-2" src="/wp-content/uploads/academics-icon-1.png" alt=""> Academics
   </h1>
 
   <div class="school-box clearfix p-4">

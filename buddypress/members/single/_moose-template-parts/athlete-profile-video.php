@@ -8,14 +8,14 @@ $user_id = bp_displayed_user_id();
   // $video_4 = '';
   // $video_5 = '';
   $video_1 = xprofile_get_field_data( 31, $user_id, $multi_format = 'array' );
-  $video_2 = xprofile_get_field_data( 29, $user_id, $multi_format = 'array' );
-  $video_3 = xprofile_get_field_data( 32, $user_id, $multi_format = 'array' );
-  $video_4 = xprofile_get_field_data( 33, $user_id, $multi_format = 'array' );
+  // $video_2 = xprofile_get_field_data( 29, $user_id, $multi_format = 'array' );
+  // $video_3 = xprofile_get_field_data( 32, $user_id, $multi_format = 'array' );
+  // $video_4 = xprofile_get_field_data( 33, $user_id, $multi_format = 'array' );
   // $video_5 = xprofile_get_field_data( 34, $user_id, $multi_format = 'array' );
 
-  $vid_img_2 = "https://img.youtube.com/vi/$video_2/0.jpg";
-  $vid_img_3 = "https://img.youtube.com/vi/$video_3/0.jpg";
-  $vid_img_4 = "https://img.youtube.com/vi/$video_4/0.jpg";
+  // $vid_img_2 = "https://img.youtube.com/vi/$video_2/0.jpg";
+  // $vid_img_3 = "https://img.youtube.com/vi/$video_3/0.jpg";
+  // $vid_img_4 = "https://img.youtube.com/vi/$video_4/0.jpg";
   // $vid_img_5 = "https://img.youtube.com/vi/$video_5/0.jpg";
 
 
@@ -24,7 +24,7 @@ $user_id = bp_displayed_user_id();
 
   <h1 class="block-header">
     <!-- <i class="fab fa-youtube"></i> Videos -->
-    <img src="/wp-content/uploads/videos-icon.png" alt=""></i> Videos
+    <img class="menu-icon" src="/wp-content/uploads/video-icon.png" alt=""></i> Videos
   </h1>
 
   <div class="embed-responsive embed-responsive-16by9">
@@ -36,38 +36,6 @@ $user_id = bp_displayed_user_id();
     </iframe>
 
   </div>
-
-  <!-- <section class="more-videos-box">
-
-    <div class="row">
-
-      <div class="col-sm-4 col-md-4">
-
-        <a type="button" class="video-button" data-toggle="modal" data-target="#<?php echo $video_2; ?>">
-          <img class="img-fluid" src="<?php echo $vid_img_2; ?>" alt="">
-        </a>
-
-      </div>
-
-      <div class="col-sm-4 col-md-4">
-
-        <a type="button" class="video-button" data-toggle="modal" data-target="#<?php echo $video_3; ?>">
-          <img class="img-fluid" src="<?php echo $vid_img_3; ?>" alt="">
-        </a>
-
-      </div>
-
-      <div class="col-sm-4 col-md-4">
-
-        <a type="button" class="video-button" data-toggle="modal" data-target="#<?php echo $video_4; ?>">
-          <img class="img-fluid" src="<?php echo $vid_img_4; ?>" alt="">
-        </a>
-
-      </div>
-
-
-  </section>  -->
-  <!-- end more-videos-box -->
 
 </section> <!-- end top-video-section -->
 
