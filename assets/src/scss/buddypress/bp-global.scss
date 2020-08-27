@@ -84,6 +84,15 @@ body.buddypress {
       height: 170px;
     }
 
+    // PROFILE EDTI BUTTON
+    #edit-athlete-profile-button {
+      font-weight: 700;
+      i.fas.fa-pen-square {
+        font-size: 2rem;
+        color: $cg-secondary;
+      }
+    }
+
     //TOP MENU PROFILE EDIT
     .top-page-menu {
       // border: 1rem solid red;
@@ -242,10 +251,46 @@ body.buddypress {
           }
         }
       }
+    }
 
-      // .view-icon {
-      //   padding-left: 2rem;
-      // }
+    .athlete-committed-box {
+      // border: 2px dotted yellow;
+      position: relative;
+      margin-top: 35px;
+
+      .univ-logo {
+        position: absolute;
+        z-index: 100;
+        left: 40px;
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+
+        img {
+          width: 75px;
+          margin: auto;
+        }
+      }
+      .committed-text {
+        .text {
+          width: 70%;
+          background-color: crimson;
+          padding: 1rem 1rem;
+          padding-left: 4rem;
+          color: white;
+          font-weight: 700;
+        }
+        .univ-name {
+          color: white;
+          font-weight: 700;
+          padding-left: 3rem;
+          margin-top: -1rem;
+        }
+      }
     }
   }
 

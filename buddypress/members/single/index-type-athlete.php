@@ -26,7 +26,7 @@ get_header();
       <h3 class="menu-title float-left">Profile</h3>
       <?php if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
 
-      <h3 id="edit-athlete-profile-button" class="menu-title float-right">Edit Profile</h3>
+      <!-- <h3 id="edit-athlete-profile-button" class="menu-title float-right">Edit Profile</h3> -->
 
       <?php endif; ?>
 
@@ -36,6 +36,11 @@ get_header();
 
     <section class="top-page-menu clearfix">
       <h3 class="menu-title float-left">Filter</h3>
+      <h3 id="edit-athlete-profile-button" class="menu-title float-right">
+        Edit Profile &nbsp;
+        <i class="fas fa-pen-square"></i>
+      </h3>
+
       <ul class="list-inline menu-box">
         <a href="#top-video-section">
           <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/video-icon.png" alt="">
@@ -143,6 +148,28 @@ get_header();
           <!-- ATHLETE COMMITTED - UNIVERSITY NAME - UNIVERSITY LOGO -->
           <article class="col-md-4">
 
+            <section class="athlete-committed-box">
+
+              <div class="row">
+                <div class="col-sm-3">
+
+                  <div class="univ-logo">
+                    <img class="" src="/wp-content/uploads/stanforduniversity-california-logo.jpg" alt="">
+                  </div>
+
+                </div>
+                <div class="col-sm-9">
+
+                  <header class="committed-text">
+                    <h4 class="text">Committed</h4>
+                    <h5 class="univ-name">Stanford University</h5>
+                  </header>
+
+                </div>
+              </div>
+
+            </section>
+
           </article>
 
 
@@ -185,8 +212,6 @@ get_header();
 
       <!-- CENTER COLUMN START -->
       <article class="col-sm-12 col-md-12 col-lg-8 col-xl-6">
-
-
 
         <?php if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
         <!-- SETTING UP EMAIL INBOX -->
