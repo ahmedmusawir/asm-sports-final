@@ -79,6 +79,7 @@
       <section class="main-navigation">
         <div id="main-navbar-asm" class="main-navbar navbar fixed-top">
           <a class="navbar-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <!-- <img src="/wp-content/uploads/logo.png" class="img-fluid" alt=""> -->
             <img src=" <?php the_field('site_logo', 'option') ?>" class="img-fluid" alt="">
           </a>
 
@@ -97,6 +98,28 @@
             </form>
           </div>
           <!-- THE HEADER SEACH FORM END -->
+
+          <?php 
+            // $athlete_name = bp_get_displayed_user_fullname();
+            // $athlete_email = bp_displayed_user_email();
+            // $logged_in_user_name = bp_core_get_user_displayname( bp_loggedin_user_id() );
+            // $logged_in_user_obj = wp_get_current_user();
+            // $user_nicename = $logged_in_user_obj->user_nicename;
+            // $user_profile_url = "/members/$user_nicename";
+            
+            if ( is_user_logged_in() ) {
+              // echo '<a href="' . $user_profile_url . '">';
+              // echo '<span class="welcome-user">';
+              // echo "Welcome, " . $logged_in_user_name;
+              // echo '</span>';
+              // echo '</a>';
+            } else {
+
+              // echo 'Welcome, visitor!';
+              // echo do_shortcode('[user_profile_url]');
+                
+            }
+            ?>
 
           <!-- THE HEADER MENU   -->
           <?php

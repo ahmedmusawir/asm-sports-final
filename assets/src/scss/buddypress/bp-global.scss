@@ -174,8 +174,7 @@ body.buddypress {
     z-index: 1000;
     // background-color: gray;
     // background: url(/wp-content/uploads/athlete-header.jpg);
-    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.6)),
-      url('/wp-content/uploads/athlete-header.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.6)), url("/wp-content/uploads/athlete-header.jpg");
     background-position: center top;
     background-size: 100%;
 
@@ -626,10 +625,7 @@ body.buddypress {
               a {
                 color: white;
                 &:hover {
-                  background: lighten(
-                    $color: $cg-primary,
-                    $amount: 40%
-                  ) !important;
+                  background: lighten($color: $cg-primary, $amount: 40%) !important;
                 }
               }
 
@@ -849,16 +845,8 @@ body.buddypress {
   #athlete-right-email-button {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
     background: #cf0404; /* Old browsers */
-    background: -moz-linear-gradient(
-      left,
-      #cf0404 0%,
-      #ff3019 100%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      left,
-      #cf0404 0%,
-      #ff3019 100%
-    ); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(left, #cf0404 0%, #ff3019 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #cf0404 0%, #ff3019 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to right,
       #cf0404 0%,
@@ -887,16 +875,8 @@ body.buddypress {
     margin-bottom: 1rem;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
     background: $cg-primary; /* Old browsers */
-    background: -moz-linear-gradient(
-      left,
-      #035083 0%,
-      #0574b8 100%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      left,
-      #035083 0%,
-      #0574b8 100%
-    ); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(left, #035083 0%, #0574b8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #035083 0%, #0574b8 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to right,
       #035083 0%,
@@ -1077,6 +1057,8 @@ body.buddypress {
       }
       @media (max-width: 950px) {
         border-bottom: none;
+        background: white;
+        padding-bottom: 1.5rem;
       }
       @media (max-width: 699px) {
         background-color: $cg-secondary !important;
@@ -1106,7 +1088,13 @@ body.buddypress {
           margin-bottom: 1rem;
         }
         @media (max-width: 934px) {
+          text-align: center;
           margin-bottom: 0rem;
+          padding-right: 2rem;
+        }
+        @media (max-width: 767px) {
+          // border: 4px dotted blue;
+          padding-right: 2rem;
         }
 
         .select-filter {
@@ -1194,7 +1182,6 @@ body.buddypress {
       .menu-box {
         margin-top: 1.3rem;
         margin-left: 1rem;
-        // border: 4px dotted blue;
 
         .select-filter {
           background-color: white;
@@ -1306,11 +1293,19 @@ body.buddypress {
       font-weight: 700;
     }
 
+    .bp-list > li {
+      border-bottom: 0 !important;
+    }
+
     .item-entry-asm {
-      // border: 4px solid red;
       background-color: white;
-      margin-bottom: 2rem;
-      box-shadow: 2px 2px 12px lighten($color: gray, $amount: 15%);
+      margin-bottom: 1rem;
+      // box-shadow: 2px 2px 12px lighten($color: gray, $amount: 15%);
+
+      .list-wrap-asm {
+        border: 1px solid #e3e3e3;
+        margin-left: 15px;
+      }
 
       @media (max-width: 400px) {
         box-shadow: none;
@@ -1323,13 +1318,18 @@ body.buddypress {
       }
 
       .item-avatar-asm {
-        padding-left: 0.5rem;
+        // padding-left: 0.5rem;
         width: 250px;
+        margin-left: -15px !important;
+
         @media (max-width: 767px) {
-          width: 320px;
+          width: 100% !important;
           padding-top: 1rem;
+          margin-left: 0 !important;
           img {
             border-radius: 20px;
+            display: block;
+            margin: auto;
           }
         }
       }
@@ -1361,6 +1361,11 @@ body.buddypress {
       }
       @media (max-width: 767px) {
         margin-left: 0rem;
+        // border: 1px solid blue;
+        text-align: center;
+        .item-block-asm {
+          margin-top: 0;
+        }
       }
 
       .status-bar {
@@ -1376,27 +1381,13 @@ body.buddypress {
           float: none !important;
         }
 
-        .verified-status {
-          padding-right: 1rem;
-          font-size: 0.8rem;
-          font-weight: 600;
-          color: $cg-primary;
-
-          .fa-check-circle {
-            color: lighten($color: $cg-primary, $amount: 25%);
-          }
-          .fa-times-circle {
-            color: red;
-          }
-        }
-
         .available-status {
           font-size: 0.8rem;
           font-weight: 600;
           text-transform: uppercase;
 
           .available {
-            color: green;
+            color: darken($color: Chartreuse, $amount: 12%);
           }
           .committed {
             color: red;
@@ -1407,6 +1398,12 @@ body.buddypress {
       .item-block-asm {
         // border: 3px dotted red;
         padding-left: 1.5rem;
+        margin-top: 3rem;
+
+        @media (max-width: 767px) {
+          margin-top: 0;
+          padding-bottom: 2rem;
+        }
 
         .member-name {
           // border: 3px dotted red;
@@ -1428,9 +1425,46 @@ body.buddypress {
             font-weight: 700;
             color: lighten($color: $cg-primary, $amount: 10%);
 
+            @media (min-width: 768px) and (max-width: 1150px) {
+              font-size: 0.75rem;
+              // border: 2px dotted blue;
+              .fas {
+                font-size: 1rem !important;
+              }
+            }
+            @media (max-width: 400px) {
+              font-size: 0.75rem;
+              // border: 2px dotted blue;
+              .fas {
+                font-size: 1rem !important;
+              }
+            }
+
             .fas {
               // border: 3px dotted red;
-              color: lighten($color: $cg-primary, $amount: 35%) !important;
+              color: lighten($color: $cg-primary, $amount: 35%);
+            }
+            .fas.fa-eye {
+              font-size: 1.3rem;
+            }
+            .fas.fa-globe {
+              font-size: 1.2rem;
+            }
+
+            .verified-status {
+              padding-right: 1rem;
+              // border: 2px dotted yellowgreen;
+
+              .fa-check-circle {
+                color: lighten($color: $cg-primary, $amount: 25%);
+                font-size: 1.2rem;
+                padding-right: 0.5rem;
+              }
+              .fa-times-circle {
+                color: red;
+                font-size: 1.2rem;
+                padding-right: 0.5rem;
+              }
             }
           }
         }
@@ -1441,11 +1475,22 @@ body.buddypress {
           color: $cg-primary;
 
           .readmore {
-            float: right;
+            // float: right;
             a {
               font-size: 1rem;
               font-weight: 600;
               color: lighten($color: $cg-primary, $amount: 0%);
+            }
+
+            @media (min-width: 1800px) {
+              display: block;
+              clear: both;
+              margin-top: 1.5rem;
+            }
+            @media (max-width: 768px) and (min-width: 1800px) {
+              display: block;
+              clear: both;
+              margin-top: 1.5rem;
             }
           }
         }
@@ -1675,7 +1720,7 @@ body.buddypress {
   // border: 1rem dotted red;
   margin-top: -4.2rem;
   padding: 5rem;
-  background: url('/wp-content/uploads/Group-236.png');
+  background: url("/wp-content/uploads/Group-236.png");
 
   #register-page {
     // border: 1rem dotted dodgerblue;

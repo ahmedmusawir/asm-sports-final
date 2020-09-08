@@ -9,14 +9,13 @@
 #dropdown-navigation {
   .container-fluid {
     width: 90% !important;
-    // border: 1rem dotted red;
   }
   background: rgb(2, 0, 36);
   background: linear-gradient(
     180deg,
     rgba($color: $cg-primary, $alpha: 1) 0%,
     rgba($color: $cg-primary, $alpha: 1) 5%,
-    rgb(44, 147, 243) 100% // rgb(7, 129, 230) 100%
+    rgb(44, 147, 243) 100%
   );
   color: white;
   position: absolute;
@@ -37,7 +36,6 @@
     margin-top: 1rem;
     margin-right: 1rem;
     i {
-      // color: lighten($color: deepskyblue, $amount: 0%);
       color: lighten($color: deepskyblue, $amount: 100%);
       font-size: 3rem;
       font-weight: 800;
@@ -217,15 +215,13 @@
   height: 0px !important;
 }
 .menu-open {
-  // display: block !important;
-  // overflow-x: hidden;
   height: 100% !important;
 }
 
 // MAIN NAVIGATION ASM
 .main-navigation {
   background-color: white !important;
-  // border: 1rem dotted red;
+  // border: 0.3rem dotted red;
   .welcome-user {
     border: 1px solid $cg-primary;
     border-radius: 20px;

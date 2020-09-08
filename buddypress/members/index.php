@@ -908,7 +908,7 @@
 
     <div class="row asm-index-page-content">
 
-      <div class="col-md-12 col-lg-9">
+      <div class="col-md-12 col-lg-9 col-xl-9">
 
         <!-- NO DATA FOUND START -->
 
@@ -938,7 +938,7 @@
 
       </div> <!-- end col-md-8 -->
 
-      <div class="col-md-12 col-lg-3">
+      <div class="col-md-12 col-lg-3 col-xl-3">
 
         <div class="sidebar-container pr-3">
           <?php get_sidebar(); ?>

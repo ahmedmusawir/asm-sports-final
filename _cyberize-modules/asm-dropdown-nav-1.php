@@ -78,15 +78,16 @@
 
     <section class="row">
       <div class="col-sm-5 left-menu">
+        <!-- <h1 class="text-light">Left Menu</h1> -->
         <?php 
             $logged_in_user_obj = wp_get_current_user();
             $user_nicename = $logged_in_user_obj->user_nicename;
             $user_profile_url = "/members/$user_nicename";
         ?>
 
-        <?php if ( is_user_logged_in() ) : ?>
+        <!-- <?php if ( is_user_logged_in() ) : ?> -->
         <h3><a class="left-menu-title text-white" href="<?php echo $user_profile_url; ?>">PROFILE</a></h3>
-        <?php endif; ?>
+        <!-- <?php endif; ?> -->
 
         <?php
 
