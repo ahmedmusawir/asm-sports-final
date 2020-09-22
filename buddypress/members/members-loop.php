@@ -34,9 +34,13 @@ bp_nouveau_before_loop(); ?>
 
         $verification = get_field( 'athlete_verification', $user_id_for_ACF );
         $availability = get_field( 'athlete_availability', $user_id_for_ACF );
+        $committed_status = get_field( 'athlete_availability', $user_id_for_ACF );
+        $committed_university_name = get_field( 'university_name', $user_id_for_ACF );
+        $committed_university_logo = get_field( 'university_logo', $user_id_for_ACF );
 
         // ATHLETE VIEWS
-        $total_unique_visitors = visitors_get_unique_visitors_count( $user_id );
+        $total_profile_visit = visitors_get_profile_visit_count($user_id);
+        // $total_unique_visitors = visitors_get_unique_visitors_count( $user_id );
 
         // echo $verification;
 
@@ -316,6 +320,39 @@ bp_nouveau_before_loop(); ?>
           <div class="item-avatar-asm mx-auto">
             <a href="<?php bp_member_permalink(); ?>"><?php bp_member_avatar( bp_nouveau_avatar_args() ); ?></a>
           </div>
+          <?php if ( !$committed_status || $committed_status == 'yes') : ?>
+
+          <!-- PRINT NOTHING -->
+
+
+          <?php else : ?>
+
+          <section class="athlete-index-committed-box">
+
+            <div class="row">
+              <div class="col-sm-3">
+
+                <div class="univ-logo">
+                  <img class="" src="<?php echo $committed_university_logo; ?>" alt="">
+                  <!-- <img class="" src="/wp-content/uploads/stanforduniversity-california-logo.jpg" alt=""> -->
+                </div>
+
+              </div>
+              <div class="col-sm-9">
+
+                <header class="committed-text">
+                  <h4 class="text">Committed</h4>
+                  <!-- <h5 class="univ-name"><?php echo $committed_university_name; ?></h5> -->
+                  <!-- <h5 class="univ-name">Stanford University</h5> -->
+                </header>
+
+              </div>
+            </div>
+
+          </section>
+
+          <?php endif; ?>
+
         </article>
         <article class="col-12 col-sm-12 col-md-9 col-lg-9">
           <div class="item-asm">
@@ -342,7 +379,7 @@ bp_nouveau_before_loop(); ?>
                 <li class="list-inline-item"><i class="fas fa-globe"></i> &nbsp;
                   <?php echo $nationality; ?></li>
                 <li class="list-inline-item"><i class="fas fa-eye"></i> &nbsp;
-                  <?php echo $total_unique_visitors; ?> Profile Views
+                  <?php echo $total_profile_visit; ?> Profile Views
                 </li>
                 <li class="list-inline-item">
                   <!-- VARIFICATION STATUS -->

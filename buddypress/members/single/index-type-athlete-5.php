@@ -119,7 +119,7 @@ get_header();
         <div class="row">
 
           <!-- ATHLETE AVATAR IMAGE -->
-          <article class="col-3 col-md-3">
+          <article class="col-md-3">
             <div>
               <!-- <a href="<?php //bp_displayed_user_link(); ?>"> -->
 
@@ -134,7 +134,7 @@ get_header();
           </article>
 
           <!-- ATHLETE NAME - VIEW COUNT - VARIFICATION -->
-          <article class="col-8 col-md-5">
+          <article class="col-md-5">
 
             <div class="title-box">
               <h1 class="athlete-title">
@@ -170,7 +170,7 @@ get_header();
           </article>
 
           <!-- ATHLETE COMMITTED - UNIVERSITY NAME - UNIVERSITY LOGO -->
-          <article class="col-1 col-md-4">
+          <article class="col-md-4">
 
 
             <?php if ( !$committed_status || $committed_status == 'yes') : ?>
