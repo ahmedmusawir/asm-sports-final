@@ -177,7 +177,7 @@ body.buddypress {
     background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.6)),
       url('/wp-content/uploads/athlete-header.jpg');
     background-position: center top;
-    background-size: 100%;
+    // background-size: 100%;
 
     @media (max-width: 1350px) {
       top: 158px;
@@ -188,6 +188,10 @@ body.buddypress {
     @media (max-width: 889px) {
       top: 203px;
       height: 150px;
+    }
+    @media (max-width: 486px) {
+      top: 248px;
+      // height: 150px;
     }
 
     .athlete-img-box {
@@ -200,8 +204,15 @@ body.buddypress {
         display: block;
         margin: auto;
 
-        @media (max-width: 767px) {
+        @media (max-width: 1250px) {
           width: 70% !important;
+        }
+        @media (max-width: 530px) {
+          width: 80% !important;
+        }
+        @media (max-width: 420px) {
+          width: 95% !important;
+          padding-left: 0.5rem;
         }
       }
 
@@ -229,6 +240,9 @@ body.buddypress {
             font-size: 0.8rem;
           }
         }
+        @media (max-width: 469px) {
+          padding-top: 1.3rem;
+        }
       }
     }
 
@@ -248,6 +262,9 @@ body.buddypress {
             @media (max-width: 1100px) {
               font-size: 1rem;
             }
+            @media (max-width: 450px) {
+              display: none;
+            }
           }
         }
         .meta-text {
@@ -263,12 +280,26 @@ body.buddypress {
               font-size: 1rem;
               top: 0;
             }
+            @media (max-width: 530px) {
+              width: 150px;
+            }
+            @media (max-width: 450px) {
+              font-size: 0.8rem;
+            }
           }
         }
       }
       .athlete-meta-eye {
         padding-inline-start: 0px;
         margin-left: 13rem;
+
+        @media (max-width: 530px) {
+          margin-left: 10rem;
+        }
+        @media (max-width: 450px) {
+          margin-left: 8rem;
+        }
+
         .meta-icon {
           i.fas {
             font-size: 2.75rem;
@@ -277,6 +308,9 @@ body.buddypress {
             @media (max-width: 1100px) {
               font-size: 1rem;
             }
+            @media (max-width: 450px) {
+              display: none;
+            }
           }
         }
         .meta-text {
@@ -291,6 +325,9 @@ body.buddypress {
             @media (max-width: 1100px) {
               font-size: 1rem;
               top: 0;
+            }
+            @media (max-width: 450px) {
+              font-size: 0.8rem;
             }
           }
         }
@@ -540,6 +577,10 @@ body.buddypress {
 
       @media (max-width: 1350px) {
         margin-top: 190px;
+      }
+      @media (max-width: 486px) {
+        margin-top: 230px;
+        // height: 150px;
       }
       //  LEFT COLUMN START
 

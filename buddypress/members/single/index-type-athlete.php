@@ -119,7 +119,7 @@ get_header();
         <div class="row">
 
           <!-- ATHLETE AVATAR IMAGE -->
-          <article class="col-3 col-md-3">
+          <article class="col-4 col-md-3">
             <div>
               <!-- <a href="<?php //bp_displayed_user_link(); ?>"> -->
 
@@ -134,7 +134,7 @@ get_header();
           </article>
 
           <!-- ATHLETE NAME - VIEW COUNT - VARIFICATION -->
-          <article class="col-8 col-md-5">
+          <article class="col-7 col-md-5">
 
             <div class="title-box">
               <h1 class="athlete-title">
