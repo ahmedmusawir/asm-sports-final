@@ -14,23 +14,19 @@ class AthleteLoadMore {
   };
 
   setEvents = () => {
-    // this.button.on('click', this.clickHandler);
     this.doc.on('click', '#ath-load-more-btn:not(.loading)', this.clickHandler);
   };
 
   clickHandler() {
-    // console.log('clicked up from Sample Module ...');
     const loadMoreBtn = $(this);
     let page = loadMoreBtn.data('page');
     let newPage = page + 1;
     const ajaxUrl = loadMoreBtn.data('url');
-    // console.log(page);
 
     // LOAD MORE SPINNER
     loadMoreBtn.addClass('loading');
 
     const ajaxFunction = 'athlete_load_more';
-    // console.log(ajaxFunction);
 
     $.ajax({
       url: ajaxUrl,
@@ -41,7 +37,6 @@ class AthleteLoadMore {
       },
     })
       .done(function (res) {
-        // console.log(res);
         // UPDATING THE page NUMBER TO THE NEW VALUE AFTER ADDING +1 EVERYTIME
         loadMoreBtn.data('page', newPage);
         $('#athlete-index-container').append(res);

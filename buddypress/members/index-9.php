@@ -929,7 +929,7 @@
 
         <div class="text-center">
           <a id="ath-load-more-btn" class="btn btn-light btn-lg mb-5" data-page="2"
-            data-url="<?php echo admin_url('admin-ajax.php'); ?>">
+            data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-univ="index">
             <span class="asm-loading pr-3"><i class="fas fa-spinner"></i></span>Load More
           </a>
         </div>
@@ -943,8 +943,84 @@
         <div class="sidebar-container pr-3">
 
           <!-- ATHLETE VIEW COUNT BOX ON RIGHT SIDEBAR START -->
+          <?php
+          $user_id = bp_displayed_user_id();
+          $current_user = wp_get_current_user();
+          $current_user_id = $current_user->ID;
 
-          <?php get_asm_profile_views(); ?>
+          get_profile_views();
+        ?>
+
+          <section id="athlete-view-count-box" class="d-none">
+
+            <h2 class="view-count-title pb-3">Activity Feed</h2>
+
+            <?php 
+          $users_obj = visitors_get_recent_visitors( 23, $count = 5 );
+          // $users_obj = visitors_get_recent_visitors( get_current_user_id(), $count = 5 );
+          // echo '<pre>';
+          // print_r($users_obj);
+          // echo '</pre>';
+          foreach ($users_obj as $value) :
+            
+          // OBJECTS FROM THE RECENT VISITOR PLUGIN 
+          $user_id = $value->visitor_id;
+          // VARSITY NAME
+          $versity_name = xprofile_get_field_data( 435, $user_id, $multi_format = 'array' );
+          // VERSITY LOGO IMAGE
+          $versity_logo = xprofile_get_field_data( 439, $user_id, $multi_format = 'array' );
+
+          // GETTING USER DATA
+          $user_obj = get_userdata($user_id);
+          // echo '<pre>';
+          // print_r($user_obj);
+          // echo $user_obj->roles[0];
+          // echo $user_obj->roles[1];
+          // echo '</pre>';
+
+        /**
+         * ATHLETE VIEW BOX
+         * Look inside ATHLETE & COACH SINGLE PROFILE in bp-global.scss file for styling
+         */
+
+         if ( !isset($user_obj->roles[0])) {
+          $user_obj->roles[0] = null;
+         }
+         if ( !isset($user_obj->roles[1])) {
+          $user_obj->roles[1] = null;
+         }
+
+         $user_role = $user_obj->roles[1];
+
+         // CHECKING FOR COACH VIEWS
+         if ( $user_role == 'coach') :
+        ?>
+            <div class="box-content row">
+              <figure class="versity-logo col-sm-5 d-flex justify-content-center align-items-center">
+                <?php echo $versity_logo; ?>
+              </figure>
+              <article class="text-content col-sm-7">
+                <div class="icon-text-box">
+                  <h4 class="icon-text">
+                    <i class="fas fa-eye"></i> Viewed
+                  </h4>
+                </div>
+                <div class="text-only-box">
+                  <h5 class="text-only">
+                    <?php echo $versity_name; ?> viewed <br>
+                    <?php //print_r($current_user); ?>
+                    <?php echo  $current_user->display_name; ?>
+                  </h5>
+                </div>
+              </article>
+            </div>
+
+            <?php endif; ?>
+
+            <?php endforeach; ?>
+
+          </section> <!-- #athlete-view-count-box end -->
+
 
           <!-- ATHLETE VIEW COUNT BOX ON RIGHT SIDEBAR END -->
 
@@ -956,7 +1032,11 @@
 
     </div> <!-- end row -->
 
+
+
+
   </div><!-- // .screen-content -->
+
 
 </section>
 

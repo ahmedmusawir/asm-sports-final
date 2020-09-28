@@ -86,4 +86,17 @@ require get_template_directory() . '/_functions/wp-logon-screen.php';
  * 		
  */
 
-require get_template_directory() . '/_functions/asm-custom-functions.php';
+require get_template_directory() . '/_functions/asm-functions/asm-custom-functions.php';
+require get_template_directory() . '/_functions/asm-functions/asm-get-profile-views.php';
+require get_template_directory() . '/_functions/asm-functions/asm-get-loggedin-profile-views.php';
+
+ /**
+ * LOAD ALL THE PHP FUNCTION FILES FOR AJAX 
+ */
+require get_template_directory() . '/_functions/univ-loadmore-function.php';
+require get_template_directory() . '/_functions/univ-location-loadmore-function.php';
+require get_template_directory() . '/_functions/athlete-loadmore-function.php';
+require get_template_directory() . '/_functions/athlete-dynamic-location-ajax-function.php';
+require get_template_directory() . '/_functions/athlete-dynamic-sports-ajax-function.php';
+require get_template_directory() . '/_functions/univ-men-sports-ajax-function.php';
+require get_template_directory() . '/_functions/univ-women-sports-ajax-function.php';

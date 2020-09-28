@@ -56,7 +56,6 @@ bp_nouveau_before_loop(); ?>
 
           $verify_filter = 'verified';
 
-
         }
 
         // echo $availability;
@@ -359,7 +358,7 @@ bp_nouveau_before_loop(); ?>
 
             <ul class="list-inline status-bar float-right">
               <!-- AVAILABILITY STATUS -->
-              <li class="list-inline-item">
+              <li class="list-inline-item commit-status">
                 <?php echo $a_result; ?>
               </li>
             </ul>
@@ -368,10 +367,7 @@ bp_nouveau_before_loop(); ?>
 
               <h2 class="list-title member-name">
                 <a href="<?php bp_member_permalink(); ?>"><?php bp_member_name(); ?></a>
-                <!-- (<?php echo bp_get_member_user_id(); ?>) -->
                 <small>(<?php echo $sport; ?>)</small>
-                <!-- VERIFICATION: <?php the_field( 'athlete_verification', $user_id_for_ACF ); ?> -->
-                <!-- AVAILABILITY: <?php the_field( 'athlete_availability', $user_id_for_ACF ); ?> -->
               </h2>
 
 

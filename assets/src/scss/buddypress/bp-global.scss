@@ -197,6 +197,13 @@ body.buddypress {
     .athlete-img-box {
       // border: 4px dotted red;
       margin-top: 35px;
+      @media (max-width: 1500px) {
+        margin-top: 15px;
+      }
+      @media (max-width: 800px) {
+        margin-top: 10px;
+      }
+
       img {
         width: 50% !important;
         border: 4px solid white;
@@ -207,17 +214,24 @@ body.buddypress {
         @media (max-width: 1250px) {
           width: 70% !important;
         }
-        @media (max-width: 530px) {
+        @media (max-width: 1024px) {
           width: 80% !important;
+        }
+        @media (max-width: 800px) {
+          width: 75% !important;
         }
         @media (max-width: 420px) {
           width: 95% !important;
-          padding-left: 0.5rem;
+          margin-right: -1rem;
+          margin-left: 1rem;
+          margin-top: 15px;
         }
-      }
-
-      @media (max-width: 1500px) {
-        margin-top: 15px;
+        @media (max-width: 400px) {
+          margin-top: 20px;
+        }
+        @media (max-width: 370px) {
+          margin-top: 25px;
+        }
       }
     }
 
@@ -240,8 +254,11 @@ body.buddypress {
             font-size: 0.8rem;
           }
         }
-        @media (max-width: 469px) {
-          padding-top: 1.3rem;
+        @media (max-width: 500px) {
+          padding-top: 1.8rem;
+          small {
+            display: block;
+          }
         }
       }
     }
@@ -601,6 +618,15 @@ body.buddypress {
 
           @media (max-width: 991px) {
             width: 40%;
+          }
+          @media (max-width: 700px) {
+            width: 50%;
+          }
+          @media (max-width: 600px) {
+            width: 60%;
+          }
+          @media (max-width: 500px) {
+            width: 70%;
           }
         }
       }
@@ -1118,11 +1144,16 @@ body.buddypress {
         .icon-text-box {
           background-color: darken($color: #4b5ec1, $amount: 10%);
           border: 1px solid darken($color: #4b5ec1, $amount: 10%);
+          // CSS BUG FIX
           .icon-text {
+            &::before {
+              content: '';
+            }
             color: white;
             text-align: center;
             font-size: 1rem;
             font-weight: 700;
+            font-family: $primary-font;
           }
         }
 
@@ -1149,8 +1180,12 @@ body.buddypress {
 
   .athlete-index-committed-box {
     // border: 2px dotted yellow;
-    position: relative;
+    position: absolute;
     margin-top: -100px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
 
     .univ-logo {
       position: absolute;
@@ -1173,11 +1208,12 @@ body.buddypress {
     }
     .committed-text {
       .text {
-        width: 90%;
+        width: 110%;
         // border: 1px solid black;
         background-color: crimson;
         padding: 1rem 1rem;
-        padding-left: 2rem;
+        padding-left: 1.1rem;
+        margin-left: 1rem;
         color: white;
         font-weight: 700;
         font-size: 1rem;
@@ -1592,6 +1628,15 @@ body.buddypress {
         text-align: center;
         .item-block-asm {
           margin-top: 0;
+        }
+      }
+
+      .commit-status {
+        @media (max-width: 767px) {
+          border: 1px solid black;
+          border-radius: 20px;
+          padding: 0.5rem 2rem;
+          margin-left: 1rem;
         }
       }
 
