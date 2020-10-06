@@ -19,8 +19,8 @@
     .top-page-menu {
       .menu-title {
         padding-right: 2rem;
-        padding-left: 2rem;
-        padding-top: 1.3rem;
+        padding-left: 4rem;
+        padding-top: 1.5rem;
         font-size: 1.4rem;
         font-weight: 600;
         color: white;
@@ -69,11 +69,12 @@
 
 .univ-single-asm {
   margin-bottom: 60px;
+  margin-top: 180px;
   position: relative;
   // border: 5px dotted red;
 
   @media (max-width: 500px) {
-    margin-top: 120px;
+    margin-top: 150px;
   }
 
   .featured-img-holder {
@@ -91,45 +92,75 @@
 
   .entry-content {
     // border: 5px dotted red;
+    .univ-header {
+      padding-bottom: 2rem;
+
+      @media (max-width: 767px) {
+        text-align: center;
+      }
+
+      .entry-title {
+        // border: 5px dotted blue;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        padding-left: 2rem;
+        font-weight: 700;
+        font-size: 3.5rem;
+
+        @media (max-width: 1400px) {
+          font-size: 2.5rem;
+          padding-left: 4rem;
+        }
+        @media (max-width: 800px) {
+          padding-left: 5rem;
+          margin-top: 20px;
+        }
+
+        @media (max-width: 575px) {
+          text-align: center;
+          padding-left: 0;
+        }
+        @media (max-width: 399px) {
+          font-size: 1.7rem;
+        }
+
+        a {
+          color: #013300;
+          font-weight: 700;
+          font-family: $primary-font;
+        }
+      }
+
+      .university-logo {
+        box-shadow: 2px 2px 6px gray;
+        border-radius: 50%;
+        // margin-right: 2rem;
+        width: 140px;
+        height: 140px;
+        display: flex;
+
+        img {
+          width: 80px !important;
+          height: 80px !important;
+          margin: auto;
+        }
+
+        @media (max-width: 575px) {
+          // display: block;
+          margin: auto;
+        }
+      }
+    }
 
     .main-content {
       // width: 90%;
       // border: 5px dotted green;
 
-      .univ-header {
-        border-bottom: 1px solid $cg-primary;
-        padding-bottom: 2rem;
-        margin-bottom: 2rem;
-
-        @media (max-width: 767px) {
-          text-align: center;
-        }
-
-        .entry-title {
-          // border: 5px dotted blue;
-          margin-top: 30px;
-          margin-bottom: 30px;
-
-          @media (max-width: 399px) {
-            font-size: 1.7rem;
-          }
-
-          a {
-            color: #013300;
-            font-weight: 700;
-            font-family: $primary-font;
-          }
-        }
-
-        .university-logo {
-          img {
-            border-radius: 50%;
-            box-shadow: 2px 2px 6px gray;
-          }
-        }
-      }
-
       .univ-left-content {
+        .sub-title {
+          font-weight: 700;
+        }
+
         table {
           thead {
             tr {
@@ -177,8 +208,9 @@
 
       .button-block {
         box-shadow: 2px 2px 6px gray;
-        padding: 3rem;
-        background-color: darken($color: crimson, $amount: 5%);
+        padding: 1rem 3rem;
+        margin-top: 1rem;
+        background-color: $cg-secondary;
         color: white;
 
         i {
@@ -188,6 +220,7 @@
 
         h5 {
           color: white;
+          font-weight: 700;
         }
       }
     }
@@ -245,6 +278,99 @@
                 border-radius: 30px;
               }
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+// REQUEST TO CONNECT MODAL
+
+#contactCoachModal {
+  .modal-content {
+    // border: 1rem dotted red;
+    .modal-header {
+      background: linear-gradient(lighten($cg-primary, 15%), $cg-primary);
+      padding: 2rem 3.5rem;
+
+      @media (max-width: 991px) {
+        padding: 0;
+        padding-left: 1rem;
+        // padding-top: 1rem;
+      }
+
+      .university-logo {
+        box-shadow: 2px 2px 6px gray;
+        border-radius: 50%;
+        margin-top: 1rem;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        background-color: white;
+
+        img {
+          width: 80px !important;
+          height: 80px !important;
+          margin: auto;
+        }
+
+        @media (max-width: 575px) {
+          margin: auto;
+          margin-top: 1.5rem;
+        }
+      }
+      .entry-title {
+        color: white;
+        margin-top: 2.8rem;
+
+        @media (max-width: 991px) {
+          margin-top: 1.5rem;
+          padding-left: 2rem;
+        }
+        @media (max-width: 575px) {
+          text-align: center;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+
+    .modal-body {
+      .gravity-form-shortcode {
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        .gform_title {
+          font-size: 2.2rem;
+        }
+        .gform_description {
+          font-size: 1.2rem;
+          color: gray;
+        }
+        input {
+          padding: 1rem;
+          border-radius: 10px;
+        }
+        textarea {
+          padding: 1rem;
+          margin-top: 1rem;
+          border-radius: 10px;
+        }
+        #gform_submit_button_5 {
+          width: 98%;
+          background-color: $cg-primary;
+
+          @media (max-width: 640px) {
+            width: 100% !important;
+          }
+        }
+
+        @media (max-width: 991px) {
+          padding-left: 0;
+          padding-right: 0;
+
+          .gform_title {
+            font-size: 2rem;
           }
         }
       }

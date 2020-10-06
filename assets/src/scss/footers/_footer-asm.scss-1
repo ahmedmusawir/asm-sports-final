@@ -12,15 +12,6 @@
   padding-bottom: 2rem;
   color: black;
 
-  ul {
-    list-style: none;
-    padding-inline-start: 0px;
-  }
-  #footer-logo {
-    width: 100%;
-    // max-width: 200px;
-  }
-
   .footer-header {
     img {
       width: 40px;
@@ -29,21 +20,6 @@
     .footer-title {
       font-size: 1.5rem;
       font-weight: 800;
-    }
-  }
-
-  .footer-flex-container {
-    display: flex;
-    flex-wrap: wrap;
-
-    .footer-flex-item {
-      padding: 1rem;
-      width: 20%;
-      // border: 1px dotted gray;
-      // border: 2px dotted green;
-    }
-    .footer-flex-col-1 {
-      width: 150px;
     }
   }
 

@@ -10,48 +10,40 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-single'); ?>>
-
   <section class="univ-single-asm">
 
     <div class="entry-content container-fluid">
-
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-8">
-          <!-- UNIVERSITY HEADER -->
-          <header class="univ-header row">
-
-            <div class="col-sm-2">
-              <figure class="university-logo">
-                <img class="img-fluid" src="<?php the_field('university_logo'); ?>" alt="">
-                <!-- <img class="img-fluid" src="/wp-content/uploads/university-logos.png" alt=""> -->
-              </figure>
-            </div>
-
-            <div class="col-sm-10">
-
-              <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-            </div>
-
-          </header>
-
-          <!-- UNIVERSITY HEADER END-->
-        </div>
-        <div class="col-12 col-sm-12 col-md-4">
-          <figure class="request-to-connect mb-4">
-            <a href="#" data-toggle="modal" data-target="#contactCoachModal">
-              <img src="/wp-content/uploads/Request-to-connect-2.png" alt="">
-            </a>
-          </figure>
-        </div>
-      </div>
 
       <div class="row">
 
         <div class="col-sm-12 col-md-12 col-lg-8">
 
           <main class="main-content pb-5">
+            <!-- UNIVERSITY HEADER -->
+            <header class="univ-header row">
 
+              <div class="col-sm-2">
+                <figure class="university-logo">
+                  <img class="img-fluid" src="<?php the_field('university_logo'); ?>" alt="">
+                  <!-- <img class="img-fluid" src="/wp-content/uploads/university-logos.png" alt=""> -->
+                </figure>
+              </div>
+
+              <div class="col-sm-10">
+
+                <?php
+                if ( is_singular() ) :
+                  the_title( '<h1 class="entry-title">', '</h1>' );
+                else :
+                  the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                endif;
+                ?>
+
+              </div>
+
+            </header>
+
+            <!-- UNIVERSITY HEADER END-->
 
             <!-- LEFT COL CONTENT -->
             <section class="univ-left-content">
@@ -291,7 +283,11 @@
         </div>
         <aside id="univ-right-col" class="col-sm-12 col-md-12 col-lg-4">
 
-
+          <figure class="request-to-connect mb-4">
+            <a href="#" data-toggle="modal" data-target="#contactCoachModal">
+              <img src="/wp-content/uploads/Request-to-connect-2.png" alt="">
+            </a>
+          </figure>
 
           <!-- SINGLE ITEM MAP -->
           <div class="acf-map acf-map-single">
@@ -365,14 +361,14 @@
       <div class="modal-header">
         <header class="row">
 
-          <div class="col-12 col-sm-3">
+          <div class="col-sm-3">
             <figure class="university-logo">
               <img class="img-fluid" src="<?php the_field('university_logo'); ?>" alt="">
               <!-- <img class="img-fluid" src="/wp-content/uploads/university-logos.png" alt=""> -->
             </figure>
           </div>
 
-          <div class="col-12 col-sm-9">
+          <div class="col-sm-9">
 
             <h1 class="entry-title">
 

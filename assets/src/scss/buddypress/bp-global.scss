@@ -3,6 +3,8 @@
  * 1. ATHLETE & COACH SINGLE PROFILE
  *  1a. ATHLETE PROFILE RIGHT EMAIL BUTTONS
  *  2a. ATHLETE VIEW COUNT BOX ON RIGHT SIDEBAR
+ *  3. LARGE NEW PROFILE HEADER
+ *  4. ATHLETE COMMITTED BOX IN PROFILE HEADER
  * 2. ATHLETE & COACH INDEX
  * 3. BP GLOBAL SEARCH INDEX
  * 4. BP REGISTRATION PAGE
@@ -165,7 +167,7 @@ body.buddypress {
     }
   }
 
-  //LARGE NEW HEADER
+  // LARGE NEW PROFILE HEADER
   #large-profile-header {
     height: 200px;
     position: fixed;
@@ -174,8 +176,7 @@ body.buddypress {
     z-index: 1000;
     // background-color: gray;
     // background: url(/wp-content/uploads/athlete-header.jpg);
-    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.6)),
-      url('/wp-content/uploads/athlete-header.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.6)), url("/wp-content/uploads/athlete-header.jpg");
     background-position: center top;
     // background-size: 100%;
 
@@ -248,11 +249,26 @@ body.buddypress {
           font-weight: 700;
         }
 
+        @media (max-width: 1400px) {
+          font-size: 2rem;
+          small {
+            font-size: 1rem;
+          }
+        }
         @media (max-width: 1100px) {
           font-size: 1.5rem;
           small {
             font-size: 0.8rem;
           }
+        }
+        @media (min-width: 767px) and (max-width: 900px) {
+          font-size: 1.2rem;
+          small {
+            display: block;
+          }
+        }
+        @media (min-width: 501px) and (max-width: 594px) {
+          margin-top: -1.5rem;
         }
         @media (max-width: 500px) {
           padding-top: 1.8rem;
@@ -325,7 +341,7 @@ body.buddypress {
             @media (max-width: 1100px) {
               font-size: 1rem;
             }
-            @media (max-width: 450px) {
+            @media (max-width: 530px) {
               display: none;
             }
           }
@@ -351,6 +367,7 @@ body.buddypress {
       }
     }
 
+    // ATHLETE COMMITTED BOX IN PROFILE HEADER
     .athlete-committed-box {
       // border: 2px dotted yellow;
       position: relative;
@@ -595,6 +612,9 @@ body.buddypress {
       @media (max-width: 1350px) {
         margin-top: 190px;
       }
+      @media (max-width: 900px) {
+        margin-top: 230px;
+      }
       @media (max-width: 486px) {
         margin-top: 230px;
         // height: 150px;
@@ -819,10 +839,7 @@ body.buddypress {
               a {
                 color: white;
                 &:hover {
-                  background: lighten(
-                    $color: $cg-primary,
-                    $amount: 40%
-                  ) !important;
+                  background: lighten($color: $cg-primary, $amount: 40%) !important;
                 }
               }
 
@@ -1042,16 +1059,8 @@ body.buddypress {
   #athlete-right-email-button {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
     background: #cf0404; /* Old browsers */
-    background: -moz-linear-gradient(
-      left,
-      #cf0404 0%,
-      #ff3019 100%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      left,
-      #cf0404 0%,
-      #ff3019 100%
-    ); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(left, #cf0404 0%, #ff3019 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #cf0404 0%, #ff3019 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to right,
       #cf0404 0%,
@@ -1080,16 +1089,8 @@ body.buddypress {
     margin-bottom: 1rem;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cf0404+0,ff3019+100 */
     background: $cg-primary; /* Old browsers */
-    background: -moz-linear-gradient(
-      left,
-      #035083 0%,
-      #0574b8 100%
-    ); /* FF3.6-15 */
-    background: -webkit-linear-gradient(
-      left,
-      #035083 0%,
-      #0574b8 100%
-    ); /* Chrome10-25,Safari5.1-6 */
+    background: -moz-linear-gradient(left, #035083 0%, #0574b8 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #035083 0%, #0574b8 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(
       to right,
       #035083 0%,
@@ -1147,7 +1148,7 @@ body.buddypress {
           // CSS BUG FIX
           .icon-text {
             &::before {
-              content: '';
+              content: "";
             }
             color: white;
             text-align: center;
@@ -1992,7 +1993,7 @@ body.buddypress {
   // border: 1rem dotted red;
   margin-top: -4.2rem;
   padding: 5rem;
-  background: url('/wp-content/uploads/Group-236.png');
+  background: url("/wp-content/uploads/Group-236.png");
 
   #register-page {
     // border: 1rem dotted dodgerblue;

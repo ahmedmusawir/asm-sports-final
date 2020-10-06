@@ -1,11 +1,19 @@
 <?php
+define ('VERSION', '13.0');
+
+function version_id() {
+  if ( WP_DEBUG )
+    return time();
+  return VERSION;
+}
 
 /**
  * Enqueue scripts and styles.
  */
 function cyberize_scripts() {
 	//CYBERIZE FRAMEWORK 1.0 STYLES UNIFIED & MINIFIED
-	wp_enqueue_style( 'cyberize-framework-1-main-style', get_template_directory_uri() . '/assets/dist/css/main.min.css', '', 12.0 );
+	wp_enqueue_style( 'cyberize-framework-1-main-style', get_template_directory_uri() . '/assets/dist/css/main.min.css', '', version_id() );
+	// wp_enqueue_style( 'cyberize-framework-1-main-style', get_template_directory_uri() . '/assets/dist/css/main.min.css', '', 12.0 );
 
 	//CYBERIZE FRAMEWORK 1.0 STYLES UNIFIED & MINIFIED
 	wp_enqueue_style( 'cyberize-framework-1-feather-light-style', get_template_directory_uri() . '/assets/dist/css/featherlight.min.css', '', 2.0 );
@@ -16,13 +24,14 @@ function cyberize_scripts() {
 
 	//CYBERIZE FRAMEWORK 1.0 JAVASCRIPTS UNIFIED AND MINIFIED
 	// wp_enqueue_script( 'cyberize-framework-1-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js', array('jquery'), '20151215', true );
-	wp_enqueue_script( 'cyberize-framework-1-bootstrap' , get_template_directory_uri() . '/assets/dist/js/bootstrap.bundle.min.js', array('jquery'), '20151215', true );
+	// wp_enqueue_script( 'cyberize-framework-1-bootstrap' , get_template_directory_uri() . '/assets/dist/js/bootstrap.bundle.min.js', array('jquery'), '20151215', true );
 	
 	//CYBERIZE FRAMEWORK 1.0 JAVASCRIPTS UNIFIED AND MINIFIED
-	wp_enqueue_script( 'cyberize-framework-1-script', get_template_directory_uri() . '/assets/dist/js/script.min.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'cyberize-framework-1-script', get_template_directory_uri() . '/assets/dist/js/script.min.js', array('jquery'), version_id(), true );
+	// wp_enqueue_script( 'cyberize-framework-1-script', get_template_directory_uri() . '/assets/dist/js/script.min.js', array('jquery'), '20151215', true );
 
 	//CYBERIZE FRAMEWORK 1.0 JAVASCRIPTS UNIFIED AND MINIFIED
-	wp_enqueue_script( 'cyberize-framework-1-feather-light-js', get_template_directory_uri() . '/assets/dist/js/featherlight.min.js', array('jquery'), '20181105', true );
+	// wp_enqueue_script( 'cyberize-framework-1-feather-light-js', get_template_directory_uri() . '/assets/dist/js/featherlight.min.js', array('jquery'), '20181105', true );
 
 
 //CYBERIZE FRAMEWORK GOOGLE MAP API KEY SETUP

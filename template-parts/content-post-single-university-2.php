@@ -10,107 +10,109 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('post-single'); ?>>
-
   <section class="univ-single-asm">
 
-    <div class="entry-content container-fluid">
+    <!-- UNIVERSITY HEADER IMAGE SLIDER  -->
 
-      <div class="row">
-        <div class="col-12 col-sm-12 col-md-8">
-          <!-- UNIVERSITY HEADER -->
-          <header class="univ-header row">
+    <div id="univ-header-slider" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
 
-            <div class="col-sm-2">
-              <figure class="university-logo">
-                <img class="img-fluid" src="<?php the_field('university_logo'); ?>" alt="">
-                <!-- <img class="img-fluid" src="/wp-content/uploads/university-logos.png" alt=""> -->
-              </figure>
-            </div>
+          <?php if (get_field('header_banner_image_1')) : ?>
 
-            <div class="col-sm-10">
+          <img class="d-block w-100" src="<?php the_field('header_banner_image_1'); ?>" alt="First slide">
 
-              <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+          <?php else : ?>
 
-            </div>
+          <img class="attachment-featured-size size-featured-size wp-post-image"
+            src="/wp-content/uploads/NO-IMG-FOUND.jpg" alt="">
 
-          </header>
+          <?php endif; ?>
 
-          <!-- UNIVERSITY HEADER END-->
-        </div>
-        <div class="col-12 col-sm-12 col-md-4">
-          <figure class="request-to-connect mb-4">
-            <a href="#" data-toggle="modal" data-target="#contactCoachModal">
-              <img src="/wp-content/uploads/Request-to-connect-2.png" alt="">
-            </a>
-          </figure>
-        </div>
+        </div> <!-- END CAROUSEL ITEM 1 -->
+        <div class="carousel-item">
+
+          <?php if (get_field('header_banner_image_2')) : ?>
+
+          <img class="d-block w-100" src="<?php the_field('header_banner_image_2'); ?>" alt="Second slide">
+
+          <?php else : ?>
+
+          <img class="attachment-featured-size size-featured-size wp-post-image"
+            src="/wp-content/uploads/NO-IMG-FOUND.jpg" alt="">
+
+          <?php endif; ?>
+
+        </div> <!-- END CAROUSEL ITEM 2 -->
+        <div class="carousel-item">
+
+          <?php if (get_field('header_banner_image_3')) : ?>
+
+          <img class="d-block w-100" src="<?php the_field('header_banner_image_3'); ?>" alt="Second slide">
+
+          <?php else : ?>
+
+          <img class="attachment-featured-size size-featured-size wp-post-image"
+            src="/wp-content/uploads/NO-IMG-FOUND.jpg" alt="">
+
+          <?php endif; ?>
+
+        </div> <!-- END CAROUSEL ITEM 3 -->
       </div>
+      <a class="carousel-control-prev" href="#univ-header-slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#univ-header-slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- UNIVERSITY HEADER IMAGE SLIDER END -->
+
+    <div class="entry-content container-fluid">
 
       <div class="row">
 
         <div class="col-sm-12 col-md-12 col-lg-8">
 
           <main class="main-content pb-5">
+            <!-- UNIVERSITY HEADER -->
+            <header class="univ-header row">
 
+              <div class="col-md-9">
+
+                <?php
+                if ( is_singular() ) :
+                  the_title( '<h1 class="entry-title">', '</h1>' );
+                else :
+                  the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                endif;
+                ?>
+
+                <h3 class="sub-title">
+                  <span class="text-info pl-3"><?php the_field('university_grade'); ?></span>
+                </h3>
+              </div>
+              <div class="col-md-3">
+                <figure class="university-logo mt-3">
+                  <img class="img-fluid" src="<?php the_field('university_logo'); ?>" alt="">
+                  <!-- <img class="img-fluid" src="/wp-content/uploads/university-logos.png" alt=""> -->
+                </figure>
+              </div>
+
+
+
+
+
+            </header>
+
+            <!-- UNIVERSITY HEADER END-->
 
             <!-- LEFT COL CONTENT -->
             <section class="univ-left-content">
-
-              <!-- LEFT CONTENT TOP 3 IMAGE BLOCK START   -->
-              <section class="top-3-image-block">
-                <div class="row">
-                  <article class="col-md-12">
-                    <figure class="top-image">
-                      <?php if (get_field('header_banner_image_3')) : ?>
-
-                      <img class="d-block w-100" src="<?php the_field('header_banner_image_1'); ?>" alt="Top Image">
-
-                      <?php else : ?>
-
-                      <img class="attachment-featured-size size-featured-size wp-post-image"
-                        src="/wp-content/uploads/NO-IMG-FOUND.jpg" alt="">
-
-                      <?php endif; ?>
-                      <!-- <img class="w-100" src="/wp-content/uploads/Screen-Shot-2020-10-05-at-1.04.49-PM.png" alt=""> -->
-                    </figure>
-                  </article>
-                </div>
-                <div class="row">
-                  <article class="col-md-6">
-                    <figure class="top-image">
-                      <?php if (get_field('header_banner_image_2')) : ?>
-
-                      <img class="d-block w-100" src="<?php the_field('header_banner_image_2'); ?>" alt="Second slide">
-
-                      <?php else : ?>
-
-                      <img class="attachment-featured-size size-featured-size wp-post-image"
-                        src="/wp-content/uploads/NO-IMG-FOUND.jpg" alt="">
-
-                      <?php endif; ?>
-                      <!-- <img src="/wp-content/uploads/Screen-Shot-2020-10-05-at-1.04.49-PM.png" alt=""> -->
-                    </figure>
-                  </article>
-                  <article class="col-md-6">
-                    <figure class="top-image">
-                      <?php if (get_field('header_banner_image_3')) : ?>
-
-                      <img class="d-block w-100" src="<?php the_field('header_banner_image_3'); ?>" alt="Second slide">
-
-                      <?php else : ?>
-
-                      <img class="attachment-featured-size size-featured-size wp-post-image"
-                        src="/wp-content/uploads/NO-IMG-FOUND.jpg" alt="">
-
-                      <?php endif; ?>
-                      <!-- <img src="/wp-content/uploads/Screen-Shot-2020-10-05-at-1.04.49-PM.png" alt=""> -->
-                    </figure>
-                  </article>
-                </div>
-              </section>
-              <!-- LEFT CONTENT TOP 3 IMAGE BLOCK END   -->
-
-              <h2 class="sub-title mt-5">University Information:</h2>
+              <h3 class="">School Data:</h3>
 
               <div class="row mt-5">
                 <div class="col-6">
@@ -291,8 +293,6 @@
         </div>
         <aside id="univ-right-col" class="col-sm-12 col-md-12 col-lg-4">
 
-
-
           <!-- SINGLE ITEM MAP -->
           <div class="acf-map acf-map-single">
 
@@ -341,9 +341,11 @@
           <!-- ADDRESS BLOCK END -->
 
           <!-- BUTTON BLOCK -->
-          <a href="/universities/">
-            <section class="button-block text-center">
-              <h5 class="pt-2">View More Universities</h5>
+          <a href="#" data-toggle="modal" data-target="#contactCoachModal">
+            <section class=" button-block text-center">
+              <i class="fas fa-user-circle"></i>
+              <h5>CONTACT COACH</h5>
+              <!-- <h5>PROFILE NOW</h5> -->
             </section>
           </a>
           <!-- BUTTON BLOCK END -->
@@ -351,6 +353,24 @@
         </aside>
       </div> <!-- top part row end -->
     </div><!-- .entry-content -->
+
+    <!-- MOST VIEWED ATHLETE SECTION -->
+
+    <section id="most-viewed-athlete" class="d-none">
+
+      <div class="container-fluid">
+        <h2 class="block-title text-center">Most Viewed Athletes </h2>
+
+        <div class="popular-athlete-list">
+          <!-- <img class="img-fluid pb-5" src="/wp-content/uploads/Screen-Shot-2020-02-26-at-1.31.40-PM.png" alt=""> -->
+          <?php echo do_shortcode('[bp-visitors-most-visited-users view="list" max="4" duration="30" show_visits="1"]'); ?>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- MOST VIEWED ATHLETE SECTION END -->
+
 
   </section>
 </article><!-- #post- -->
@@ -360,29 +380,10 @@
 <!-- Modal -->
 <div class="modal fade" id="contactCoachModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
   aria-hidden="true">
-  <div class="modal-dialog  modal-lg modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <header class="row">
-
-          <div class="col-12 col-sm-3">
-            <figure class="university-logo">
-              <img class="img-fluid" src="<?php the_field('university_logo'); ?>" alt="">
-              <!-- <img class="img-fluid" src="/wp-content/uploads/university-logos.png" alt=""> -->
-            </figure>
-          </div>
-
-          <div class="col-12 col-sm-9">
-
-            <h1 class="entry-title">
-
-              <?php  echo get_the_title(); ?>
-
-            </h1>
-
-          </div>
-
-        </header>
+        <h5 class="modal-title" id="exampleModalLongTitle">Contact Coach Form</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -396,7 +397,7 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger d-none" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>

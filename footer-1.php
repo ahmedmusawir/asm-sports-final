@@ -15,17 +15,31 @@
 <footer id="footer-asm" class="site-footer">
 
   <section class="footer-header text-center">
+    <!-- <img src="/wp-content/themes/asm-buddypress-cyberize/assets/img/ASM-logo.png" alt=""> -->
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ASM-logo.png" alt="">
+
     <h2 class="footer-title">Recruiting Starts Here ...</h2>
   </section>
 
   <div class="container widgets_wrapper mt-5">
-    <div class="footer-flex-container">
-      <div class="footer-flex-item footer-flex-col-1">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
 
-        <img id="footer-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/ASM-logo.png" alt="">
+        <?php
+
+					if ( ! is_active_sidebar( 'footer-sidebar-1' ) ) {
+
+						echo "Please Insert A Widget";
+					}
+				?>
+
+        <aside id="footer-widget-1" class="widget-area">
+          <?php dynamic_sidebar( 'footer-sidebar-1' ); ?>
+        </aside><!-- #secondary -->
+
 
       </div>
-      <div class="footer-flex-item footer-flex-col-2">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
 
         <?php
 
@@ -35,13 +49,13 @@
 					}
 				?>
 
-        <aside id="footer-widget-1" class="widget-area">
+        <aside id="footer-widget-2" class="widget-area">
           <?php dynamic_sidebar( 'footer-sidebar-2' ); ?>
         </aside><!-- #secondary -->
 
 
       </div>
-      <div class="footer-flex-item footer-flex-col-3">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
 
         <?php
 
@@ -51,13 +65,12 @@
 					}
 				?>
 
-        <aside id="footer-widget-2" class="widget-area">
+        <aside id="footer-widget-3" class="widget-area">
           <?php dynamic_sidebar( 'footer-sidebar-3' ); ?>
         </aside><!-- #secondary -->
 
-
       </div>
-      <div class="footer-flex-item footer-flex-col-4">
+      <div class="col-12 col-sm-12 col-md-6 col-lg-3">
 
         <?php
 
@@ -69,21 +82,6 @@
 
         <aside id="footer-widget-4" class="widget-area">
           <?php dynamic_sidebar( 'footer-sidebar-4' ); ?>
-        </aside><!-- #secondary -->
-
-      </div>
-      <div class="footer-flex-item footer-flex-col-5">
-
-        <?php
-
-					if ( ! is_active_sidebar( 'footer-sidebar-5' ) ) {
-
-						echo "Please Insert A Widget";
-					}
-				?>
-
-        <aside id="footer-widget-5" class="widget-area">
-          <?php dynamic_sidebar( 'footer-sidebar-5' ); ?>
         </aside><!-- #secondary -->
 
       </div>
