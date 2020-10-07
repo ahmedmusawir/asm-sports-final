@@ -7,28 +7,79 @@
 #footer-asm {
   position: relative;
   // z-index: 1000;
-  background-color: #f7f7f7;
-  padding-top: 2rem;
+  background-color: lighten($color: #f7f7f7, $amount: 2%);
+  padding-top: 4rem;
   padding-bottom: 2rem;
   color: black;
 
+  @media (max-width: 379px) {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .loggedin-footer-content {
+    border-top: 4px solid #e3e3e3;
+  }
+
+  // GENERAL FOOTER UL AND LI STYLES
   ul {
     list-style: none;
     padding-inline-start: 0px;
-  }
-  #footer-logo {
-    width: 100%;
-    // max-width: 200px;
+
+    li {
+      a {
+        color: black;
+        font-size: 0.8rem;
+        @media (max-width: 379px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
   }
 
   .footer-header {
-    img {
-      width: 40px;
-    }
-
+    display: none;
     .footer-title {
       font-size: 1.5rem;
       font-weight: 800;
+      padding-left: 2.5rem;
+
+      @media (max-width: 379px) {
+        text-align: center;
+        padding-left: 0px;
+      }
+    }
+    @media (max-width: 549px) {
+      display: block;
+    }
+  }
+
+  #footer-widget-1 {
+    // FOOTER LOGO IMAGE
+    #media_image-3 {
+      img {
+        max-width: none !important;
+        width: 500px !important;
+        margin-top: -4rem;
+      }
+    }
+    #media_image-4 {
+      display: none;
+      img {
+        width: 100%;
+        @media (max-width: 379px) {
+          margin: auto;
+          display: block;
+        }
+      }
+    }
+    @media (max-width: 549px) {
+      #media_image-3 {
+        display: none;
+      }
+      #media_image-4 {
+        display: block;
+      }
     }
   }
 
@@ -38,28 +89,46 @@
 
     .footer-flex-item {
       padding: 1rem;
-      width: 20%;
-      // border: 1px dotted gray;
-      // border: 2px dotted green;
+      width: 200px;
+      @media (max-width: 379px) {
+        width: 100%;
+      }
     }
     .footer-flex-col-1 {
       width: 150px;
+      @media (max-width: 379px) {
+        width: 80%;
+        margin: auto;
+      }
+    }
+    .footer-flex-col-5 {
+      width: 300px;
+    }
+
+    // THE 3RD COLUMN FOR SPORTS - LOWERING IT
+    #menu-global-dropdown-right-menu-4 {
+      margin-top: 2rem;
     }
   }
 
   .widget-title {
-    // border: 3px dotted red;
     color: $cg-text;
-    font-size: 1rem !important;
+    font-size: 1rem;
     font-weight: 800;
+
+    @media (max-width: 379px) {
+      font-size: 1.5rem;
+    }
   }
 
   #footer-address-block {
     h5 {
       font-size: 0.9rem;
       font-weight: 600;
+      color: black !important;
     }
     .footer-text {
+      // border: 3px dotted red;
       list-style: none;
       padding-bottom: 0.5rem;
       font-size: 0.8rem;
