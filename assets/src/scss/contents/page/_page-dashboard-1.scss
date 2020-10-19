@@ -72,7 +72,7 @@
   #dashboard-task-board {
     // position: absolute;
 
-    background: url("/wp-content/uploads/Dashboard-header.jpg");
+    // background: url("/wp-content/uploads/Dashboard-header.jpg");
     height: 450px;
     margin-top: 113px;
     padding: 3rem;
@@ -80,28 +80,97 @@
     #top-task-block {
       // border: 3px dotted hotpink;
       padding: 2rem;
+
+      .block-title {
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .membership-box {
+        // border: 3px dotted green;
+        background-color: white;
+        float: right;
+        padding-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 0.5rem;
+
+        .text {
+          padding-right: 3rem;
+          font-size: 1.8rem;
+          font-weight: 700;
+          color: $cg-primary;
+          float: left;
+        }
+        .btn {
+          padding: 0.5rem 4rem;
+          border-radius: 0;
+        }
+      }
+    }
+
+    // ATHLETE TASK BLOCK
+    #bottom-task-block {
+      // border: 3px dotted dodgerblue;
+      justify-content: space-around;
+
+      .task-box {
+        border: 3px dotted dodgerblue;
+        background-color: white;
+        margin-bottom: 1.5rem;
+        margin-right: 0.5rem;
+        // border: 1rem dotted dodgerblue;
+
+        i {
+          font-size: 2.5rem;
+          font-weight: 600;
+          padding-top: 1rem;
+          color: lighten($color: $cg-primary, $amount: 15%);
+        }
+        i.fa-envelope-square {
+          // border: 4px dotted red;
+        }
+        .text-only {
+          font-weight: 700;
+          padding-top: 0.5rem;
+          padding-bottom: 1rem;
+          color: $cg-secondary;
+        }
+        .text-number {
+          font-size: 3rem;
+          font-weight: 700;
+        }
+        .btn {
+          padding: 1rem 2rem;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+          width: 200px;
+          border-radius: 0;
+          background-color: lighten($color: #0277bb, $amount: 10%);
+        }
+      }
+      .task-box-sm {
+        width: 270px;
+        // border: 3px dotted pink;
+        padding: 1rem 2rem;
+      }
+      .task-box-lg {
+        width: 550px;
+        // border: 3px dotted red;
+      }
     }
   }
 
   #asm-dashboard-content {
     // border: 1rem dotted blue;
     margin-top: -350px;
-
-    .block-title {
-      color: white;
-      font-size: 2rem;
-      font-weight: 700;
-      @media (max-width: 991px) {
-        color: $cg-primary;
-      }
-    }
   }
 
-  //MAIN CONTENT - ATHLETE TASK VIDEO ITEMS
+  //MAIN CONTENT - TASK VIDEO ITEMS
   #main {
     // border: 3px dotted red;
     padding: 4rem;
-    margin-top: -90px;
 
     .task-item {
       box-shadow: 2px 2px 6px #e3e3e3;
@@ -109,14 +178,7 @@
       .col-sm-3 {
         padding: 0 !important;
       }
-
       .video-box {
-        // border: 1rem solid red;
-        // @extend .col-12;
-        @media (max-width: 1599px) {
-          display: block !important;
-          clear: both;
-        }
       }
       .text-box {
         border-right: 1px solid darken($color: #e3e3e3, $amount: 10%);
@@ -152,134 +214,6 @@
         }
       }
     }
-  }
-
-  // ATHLETE DASHBOARD SIDEBAR
-  #asm-dashboard-sidebar {
-    padding-right: 3rem;
-    @media (max-width: 991px) {
-      padding-right: 0px;
-    }
-
-    // ATHLETE VIEW COUND WIDGET CUSTOMIZATION FOR 4 COL WIDHT
-    // THE ONE AT THE PROJECT GLOBAL IS FOR 3 COL WIDTH
-    #athlete-view-count-box {
-      .text-content {
-        .icon-text-box {
-          padding: 0.5rem;
-        }
-        .text-only-box {
-          padding: 0.5rem;
-        }
-      }
-    }
-  }
-}
-
-// MEMBERSHIP WIDGET WITH PROFILE VIEW & NEW MESSAGES
-#membership-widget {
-  .top-task-box {
-    // This is also a row thus a flexbox
-    justify-content: center;
-    flex-wrap: wrap;
-    // border: 3px dotted dodgerblue;
-    .btn {
-      width: 48%;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      border-radius: 0;
-      font-weight: 800;
-      background: linear-gradient(lighten(crimson, 15%), darken(crimson, 10%));
-    }
-
-    // RESPONSIVE
-    @media (max-width: 1527px) {
-      .btn {
-        width: 100%;
-        margin: 5px;
-      }
-    }
-  }
-  #bottom-task-box {
-    justify-content: space-around;
-    margin-top: 1rem;
-
-    .task-box {
-      width: 270px;
-      // border: 3px dotted dodgerblue;
-      background-color: lighten($color: #e3e3e3, $amount: 5%);
-      margin-bottom: 1.5rem;
-      margin-right: 0.5rem;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-      // border: 1rem dotted dodgerblue;
-
-      i {
-        font-size: 2.5rem;
-        font-weight: 600;
-        padding-top: 1rem;
-        color: lighten($color: $cg-primary, $amount: 15%);
-      }
-
-      .text-only {
-        font-weight: 700;
-        padding-top: 0.5rem;
-        padding-bottom: 1rem;
-        color: $cg-secondary;
-      }
-      .text-number {
-        font-size: 3rem;
-        font-weight: 700;
-      }
-      .btn {
-        padding: 1rem 2rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        width: 200px;
-        border-radius: 0;
-        background-color: lighten($color: #0277bb, $amount: 10%);
-      }
-
-      // RESPONSIVE
-      @media (max-width: 1827px) {
-        width: 220px;
-      }
-      @media (max-width: 1527px) {
-        display: block;
-        width: 100%;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-      }
-      @media (max-width: 991px) {
-        display: block;
-        width: 48%;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-      }
-      @media (max-width: 490px) {
-        display: block;
-        width: 100%;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-      }
-    }
-  }
-}
-// MEMBER WIDGET RESPONSIVE
-@media (max-width: 991px) {
-  .member-widget-mobile {
-    display: block;
-  }
-  .member-widget-desktop {
-    display: none;
-  }
-}
-@media (min-width: 992px) {
-  .member-widget-mobile {
-    display: none;
-  }
-  .member-widget-desktop {
-    display: block;
   }
 }
 

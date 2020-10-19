@@ -81,10 +81,7 @@ body.buddypress {
       top: 78px;
       height: 80px;
     }
-    // @media (max-width: 889px) {
-    //   height: 125px;
-    // }
-    @media (max-width: 559px) {
+    @media (max-width: 889px) {
       height: 125px;
     }
 
@@ -190,13 +187,13 @@ body.buddypress {
       height: 170px;
     }
     @media (max-width: 889px) {
-      top: 157px;
+      top: 203px;
       height: 150px;
     }
-    @media (max-width: 559px) {
-      top: 203px;
-      // height: 150px;
-    }
+    // @media (max-width: 486px) {
+    //   top: 248px;
+    //   // height: 150px;
+    // }
 
     .athlete-img-box {
       // border: 4px dotted red;
@@ -300,13 +297,21 @@ body.buddypress {
             font-size: 1rem;
           }
         }
-        @media (max-width: 740px) {
-          padding-top: 2.5rem;
+        @media (max-width: 1100px) {
+          font-size: 1.5rem;
+          small {
+            font-size: 0.8rem;
+          }
         }
-
-        // @media (min-width: 501px) and (max-width: 594px) {
-        //   margin-top: -1.5rem;
-        // }
+        @media (min-width: 767px) and (max-width: 900px) {
+          font-size: 1.2rem;
+          small {
+            display: block;
+          }
+        }
+        @media (min-width: 501px) and (max-width: 594px) {
+          margin-top: -1.5rem;
+        }
         @media (max-width: 500px) {
           padding-top: 1.8rem;
           small {
@@ -647,9 +652,9 @@ body.buddypress {
       // @media (max-width: 1600px) {
       //   margin-top: 180px;
       // }
-      @media (max-width: 1350px) {
-        margin-top: 200px;
-      }
+      // @media (max-width: 1350px) {
+      //   margin-top: 140px;
+      // }
       // @media (max-width: 1200px) {
       //   margin-top: 110px;
       // }
@@ -695,19 +700,55 @@ body.buddypress {
       }
       // ATHLETE INFO BOX (DISABLED TO MAKE NON FIXED)
       .athlete-info-box {
+        // position: fixed;
+        // top: 690px;
+        // width: 23%;
+        // @media (max-width: 1199px) {
+        //   width: 30%;
+        // }
+        // @media (max-width: 991px) {
+        //   position: relative;
+        //   width: 100%;
+        //   top: 20px;
+        // }
+        // @media (max-width: 514px) {
+        //   top: 50px;
+        // }
       }
       // COACH INFO BOX (DISABLED TO MAKE NON FIXED)
       .coach-info-box {
         // border: 4px dotted red;
         margin-top: 50px;
-
-        // @media (max-width: 1350px) {
-        //   margin-top: 10px;
+        // position: fixed;
+        // top: 250px;
+        // width: 23%;
+        // @media (max-width: 1199px) {
+        //   width: 30%;
         // }
-        @media (max-width: 1500px) {
-          margin-top: 10px;
-        }
+        // @media (max-width: 991px) {
+        //   position: relative;
+        //   width: 100%;
+        //   top: -50px;
+        //   // border: 4px dotted red;
+        // }
+        // @media (max-width: 565px) {
+        //   top: 0px;
+        // }
       }
+
+      // #item-header-avatar {
+      //   // border: 3px dotted greenyellow;
+      //   img.avatar {
+      //     border-radius: 50%;
+      //     width: 200px;
+      //   }
+      //   .athlete-title {
+      //     font-size: 1.8rem;
+      //     text-transform: uppercase !important;
+      //     margin: 0;
+      //     margin-top: 0.5rem;
+      //   }
+      // }
 
       .athlete-meta {
         // border: 3px dotted greenyellow;
@@ -1185,63 +1226,62 @@ body.buddypress {
     }
   }
   // 2a. ATHLETE VIEW COUNT BOX ON RIGHT SIDEBAR
-  // MOVED TO PROJECT GLOBALS - _asm-globals.scss
-  // #athlete-view-count-box {
-  //   // border: 4px dotted red;
-  //   .view-count-title {
-  //     font-size: 1.5rem;
-  //     font-weight: 700;
-  //     margin-top: 2rem;
-  //     margin-bottom: 0;
-  //   }
+  #athlete-view-count-box {
+    // border: 4px dotted red;
+    .view-count-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
 
-  //   margin-bottom: 2rem;
-  //   .box-content {
-  //     // border: 4px dotted blue;
-  //     box-shadow: 1px 1px 5px gray;
-  //     padding: 0;
-  //     margin: 0;
-  //     margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    .box-content {
+      // border: 4px dotted blue;
+      box-shadow: 1px 1px 5px gray;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 1rem;
 
-  //     .versity-logo {
-  //       img {
-  //         width: 80px;
-  //         margin-top: 1rem;
-  //       }
-  //     }
+      .versity-logo {
+        img {
+          width: 80px;
+          margin-top: 1rem;
+        }
+      }
 
-  //     .text-content {
-  //       padding: 0;
-  //       margin: 0;
+      .text-content {
+        padding: 0;
+        margin: 0;
 
-  //       .icon-text-box {
-  //         background-color: darken($color: #4b5ec1, $amount: 10%);
-  //         border: 1px solid darken($color: #4b5ec1, $amount: 10%);
-  //         // CSS BUG FIX
-  //         .icon-text {
-  //           &::before {
-  //             content: "";
-  //           }
-  //           color: white;
-  //           text-align: center;
-  //           font-size: 1rem;
-  //           font-weight: 700;
-  //           font-family: $primary-font;
-  //         }
-  //       }
+        .icon-text-box {
+          background-color: darken($color: #4b5ec1, $amount: 10%);
+          border: 1px solid darken($color: #4b5ec1, $amount: 10%);
+          // CSS BUG FIX
+          .icon-text {
+            &::before {
+              content: "";
+            }
+            color: white;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: $primary-font;
+          }
+        }
 
-  //       .text-only-box {
-  //         border: 1px solid #e7e7e7;
-  //         background-color: #e7e7e7;
-  //         .text-only {
-  //           text-align: center;
-  //           font-size: 0.8rem;
-  //           font-weight: 700;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+        .text-only-box {
+          border: 1px solid #e7e7e7;
+          background-color: #e7e7e7;
+          .text-only {
+            text-align: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
 }
 
 /**

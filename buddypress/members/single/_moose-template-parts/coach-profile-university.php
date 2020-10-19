@@ -17,7 +17,7 @@ $act = xprofile_get_field_data( 328, $user_id, $multi_format = 'array' );
 <section id="academics-section">
 
   <h1 class="block-header">
-    <i class="fas fa-university"></i> University or College <?php echo $school_name; ?>
+    <i class="fas fa-university"></i> About <?php echo $school_name; ?>
   </h1>
 
   <div class="school-box clearfix p-4">

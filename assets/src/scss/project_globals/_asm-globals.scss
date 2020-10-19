@@ -4,6 +4,64 @@
  *
  */
 
+// 2a. ATHLETE VIEW COUNT WIDGET ON RIGHT SIDEBAR
+#athlete-view-count-box {
+  // border: 4px dotted red;
+  .view-count-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+  margin-bottom: 2rem;
+  .box-content {
+    // border: 4px dotted blue;
+    box-shadow: 1px 1px 5px gray;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+
+    .versity-logo {
+      img {
+        width: 80px;
+        margin-top: 1rem;
+      }
+    }
+
+    .text-content {
+      padding: 0;
+      margin: 0;
+
+      .icon-text-box {
+        background-color: darken($color: #4b5ec1, $amount: 10%);
+        border: 1px solid darken($color: #4b5ec1, $amount: 10%);
+        // CSS BUG FIX
+        .icon-text {
+          &::before {
+            content: "";
+          }
+          color: white;
+          text-align: center;
+          font-size: 1rem;
+          font-weight: 700;
+          font-family: $primary-font;
+        }
+      }
+
+      .text-only-box {
+        border: 1px solid #e7e7e7;
+        background-color: #e7e7e7;
+        .text-only {
+          text-align: center;
+          font-size: 0.8rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
 // GRAVITY REGISTRATION / SIGNUP FORM
 
 #gform_wrapper_1 {

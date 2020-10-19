@@ -60,6 +60,7 @@ get_header();
       <?php endif; ?>
 
     </section>
+
   </div>
   <div class="top-filter-navbar">
 
@@ -82,16 +83,10 @@ get_header();
             <span class="btn-text">Bio</span>
           </li>
         </a>
-        <a href="#sports-stats-section">
-          <!-- <li class="list-inline-item"><i class="fad fa-trophy-alt"></i></i>Sports Stats</li> -->
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/awards-icon.png" alt="">
-            <span class="btn-text">Sports Info</span>
-          </li>
-        </a>
         <a href="#academics-section">
           <!-- <li class="list-inline-item"><i class="fad fa-file-certificate"></i>Academics</li> -->
           <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/academics-icon-1.png" alt="">
-            <span class="btn-text">Academics</span>
+            <span class="btn-text">University</span>
           </li>
         </a>
         <a href="#instagram-section">
@@ -101,19 +96,13 @@ get_header();
             <span class="btn-text">Instagram</span>
           </li>
         </a>
-        <a href="#interview-section">
-          <!-- <li class="list-inline-item"><i class="fad fa-comments"></i>Interviews</li> -->
-          <li class="list-inline-item"><img class="img-icon" src="/wp-content/uploads/interview-icon-2.png" alt="">
-            <span class="btn-text">Interviews</span>
-          </li>
-        </a>
       </ul>
 
     </section>
   </div>
 
   <div class="bp-wrap">
-    <section id="large-profile-header">
+    <section id="large-profile-header" class="">
 
       <div class="container-fluid">
         <div class="row">
@@ -121,7 +110,7 @@ get_header();
           <!-- ATHLETE AVATAR IMAGE -->
           <article class="col-4 col-md-3">
             <div>
-              <!-- <a href="<?php //bp_displayed_user_link(); ?>"> -->
+              <!-- <a href="<?php bp_displayed_user_link(); ?>"> -->
 
               <div class="athlete-img-box text-center">
 
@@ -137,7 +126,7 @@ get_header();
           <article class="col-7 col-md-7">
 
             <div class="title-box">
-              <h1 class="athlete-title">
+              <h1 class="coach-title">
 
                 <?php echo bp_core_get_user_displayname( $user_id, true ); ?>
 
@@ -161,7 +150,8 @@ get_header();
 
         <?php 
       
-          get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-left-info-box');
+          // get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-left-info-box');
+          get_template_part('/buddypress/members/single/_moose-template-parts/coach-profile-left-info-box');
       
         ?>
 
@@ -210,18 +200,10 @@ get_header();
 
         <!-- ABOUT SECTION END -->
 
-        <!-- SPORTS STATS SECTION STARTS -->
-
-        <?php 
-      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-sports-stats');
-      ?>
-
-        <!-- SPORTS STATS SECTION END -->
-
         <!-- ACADEMICS SECTION START -->
 
         <?php 
-      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-academics');
+      get_template_part('/buddypress/members/single/_moose-template-parts/coach-profile-university');
       ?>
 
         <!-- ACADEMICS SECTION END -->
@@ -233,17 +215,6 @@ get_header();
       ?>
 
         <!-- INSTAGRAM END -->
-
-        <!-- INTERVIEW SECTION START -->
-
-
-        <?php 
-      get_template_part('/buddypress/members/single/_moose-template-parts/athlete-profile-interview');
-      ?>
-
-
-        <!-- INTERVIEW SECTION END -->
-
 
         <!-- CUSTOM MOOSE MAGIC ENDS HERE FOR ATHLETE PROFILE  -->
 
