@@ -111,11 +111,17 @@
       }
 
       .video-box {
-        // border: 1rem solid red;
         // @extend .col-12;
-        @media (max-width: 1599px) {
-          display: block !important;
-          clear: both;
+        @media (max-width: 1366px) {
+          margin-top: 1.5%;
+        }
+        @media (min-width: 991px) and (max-width: 1074px) {
+          // border: 1rem solid red;
+          margin-top: 8%;
+        }
+        @media (min-width: 575px) and (max-width: 768px) {
+          // border: 1rem solid red;
+          margin-top: 4.5%;
         }
       }
       .text-box {
@@ -158,7 +164,7 @@
   #asm-dashboard-sidebar {
     padding-right: 3rem;
     @media (max-width: 991px) {
-      padding-right: 0px;
+      padding-right: 15px;
     }
 
     // ATHLETE VIEW COUND WIDGET CUSTOMIZATION FOR 4 COL WIDHT

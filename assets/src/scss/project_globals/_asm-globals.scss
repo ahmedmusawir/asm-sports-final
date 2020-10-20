@@ -66,6 +66,7 @@
 
 #gform_wrapper_1 {
   // border: 1rem dotted red;
+  // position: fixed;
 
   #gf_progressbar_wrapper_1 {
     display: none;
@@ -78,7 +79,6 @@
       width: 90px;
       display: block;
       margin: 0 auto;
-      margin-top: -5rem;
     }
 
     .asm-reg-title {
@@ -94,7 +94,7 @@
 
   .signup-page-2 {
     // border: 1rem dotted blue;
-    margin-top: -4rem;
+    margin-top: -1rem;
     .asm-reg-dots {
       // border: 1rem dotted red;
       text-align: center;
@@ -108,12 +108,13 @@
     .asm-reg-page2-title {
       font-size: 2rem;
       font-weight: 700;
+      text-align: center;
     }
   }
 
   .signup-page-3 {
     // border: 1rem dotted blue;
-    margin-top: -4rem;
+    margin-top: -1rem;
     .asm-reg-dots {
       // border: 1rem dotted red;
       text-align: center;

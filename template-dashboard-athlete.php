@@ -28,9 +28,13 @@ get_header(); ?>
 
 
   <section id="dashboard-task-board">
-
     <?php 
-    $user_id = get_current_user_id();
+      $logged_in_user_obj = wp_get_current_user();
+
+      $athlete_name = $logged_in_user_obj->display_name;
+      $athlete_slug = $logged_in_user_obj->user_nicename;
+   
+      $user_id = get_current_user_id();
       $total_profile_visit = visitors_get_profile_visit_count($user_id);
       // $total_unique_visitors = visitors_get_unique_visitors_count( $user_id );
     ?>

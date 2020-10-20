@@ -100,3 +100,9 @@ require get_template_directory() . '/_functions/athlete-dynamic-location-ajax-fu
 require get_template_directory() . '/_functions/athlete-dynamic-sports-ajax-function.php';
 require get_template_directory() . '/_functions/univ-men-sports-ajax-function.php';
 require get_template_directory() . '/_functions/univ-women-sports-ajax-function.php';
+
+// add_action('gform_enqueue_scripts_1', 'enqueue_scroll_to_top', 10, 2);
+// function enqueue_scroll_to_top($form, $is_ajax) {
+//     // enqueue the scroll to top script which is stored in the child theme /js/ subdirectory, and depends on jQuery
+//     wp_enqueue_script('scroll_to_top', get_stylesheet_directory_uri() . '/assets/dist/js/scroll-to-top.js', array('jquery'));
+// }

@@ -58,5 +58,6 @@ $coach_name = bp_core_get_user_displayname( bp_loggedin_user_id() );
   </div> <!-- END ROW -->
 </div><!-- #primary -->
 
+
 <?php
 get_footer();
