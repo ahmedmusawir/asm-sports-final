@@ -5,6 +5,7 @@
 @import "global";
 @import "custom";
 @import "contents/sidebar/sidebar-global";
+@import "contents/sidebar/sidebar-asm";
 
 /*=======================================
 =    HEADER & FOOTER & SIDEBAR            =
@@ -31,6 +32,7 @@
 =            PAGE GENERAL & CUSTOM           =
 ========================================*/
 
+@import "contents/page/page-global";
 @import "contents/page/page-asm";
 @import "contents/page/page-dashboard";
 @import "contents/page/page-athlete-email";

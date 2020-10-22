@@ -1,10 +1,13 @@
 /**
  *
  * STYLE: ASM GLOBAL
- *
+ * 1.ATHLETE VIEW COUNT WIDGET ABOVE RIGHT SIDEBAR
+ * 2.GRAVITY REGISTRATION / SIGNUP FORM 
+ * 3.CHAT ROOM 
  */
 
-// 2a. ATHLETE VIEW COUNT WIDGET ON RIGHT SIDEBAR
+// 1.ATHLETE VIEW COUNT WIDGET ABOVE RIGHT SIDEBAR
+// THIS IS NOT A SIDEBAR WIDGET, THUS BELONGS IN PROJECT GLOBAL
 #athlete-view-count-box {
   // border: 4px dotted red;
   .view-count-title {
@@ -62,7 +65,7 @@
   }
 }
 
-// GRAVITY REGISTRATION / SIGNUP FORM
+// 2.GRAVITY REGISTRATION / SIGNUP FORM
 
 #gform_wrapper_1 {
   // border: 1rem dotted red;
@@ -96,8 +99,9 @@
     // border: 1rem dotted blue;
     margin-top: -1rem;
     .asm-reg-dots {
-      // border: 1rem dotted red;
+      // border: 4px dotted dodgerblue;
       text-align: center;
+      margin-left: -2rem !important;
 
       i {
         font-size: 1rem;
@@ -116,8 +120,9 @@
     // border: 1rem dotted blue;
     margin-top: -1rem;
     .asm-reg-dots {
-      // border: 1rem dotted red;
+      // border: 4px dotted dodgerblue;
       text-align: center;
+      margin-left: -2rem !important;
 
       i {
         font-size: 1rem;
@@ -252,5 +257,92 @@ body img.gform_ajax_spinner {
     border-radius: 10px;
     // background-color: red;
     color: white;
+  }
+}
+
+// 3.CHAT ROOM
+#yobro-inbox {
+  // border: 4px dotted red;
+  .yoBro-chatbox-main-content {
+    border: none;
+  }
+  // LEFT COLUMN
+  .yoBro-chatbox-sidebar {
+    .yoBro-chatHistory {
+      .yoBro-singleChatMsg {
+        .yoBro-userImgGrp {
+          .yoBro-userImg {
+            width: 60px;
+            height: 60px;
+          }
+        }
+      }
+      .yoBro-singleChatMsg.active {
+        color: white;
+        background-color: $cg-secondary;
+
+        .yoBro-msgWrapper {
+          .yoBro-msgHeader {
+            h5 {
+              color: white;
+            }
+          }
+          .msgExcerpt {
+            color: white;
+            p {
+              color: white;
+            }
+            img {
+              width: 100px !important;
+              border: 2px solid red;
+            }
+          }
+        }
+      }
+    }
+  }
+  // RIGHT COLUMN
+  .yoBro-chatbox {
+    .yoBro-chatBody {
+      // HEADER
+      .yoBro-chatBody-header {
+        .ion-android-more-vertical {
+          color: white;
+        }
+        .new-msg {
+          // background-color: red;
+          color: white;
+          border: 1px solid black;
+          padding: 1rem 2rem;
+          box-shadow: 2px 2px 6px gray;
+          background: linear-gradient(lighten(crimson, 15%), darken(crimson, 10%));
+        }
+        border: 4px solid $cg-primary;
+        background-color: lighten($color: $cg-primary, $amount: 8%);
+      }
+      // SINGLE MESSAGE
+      .yoBro-singleChatMsg {
+        .yoBro-chatMsgWrapper {
+          .yoBro-chatMsgContent {
+            padding: 1rem;
+            border-radius: 20px;
+
+            .msgText {
+              font-weight: 700;
+              p {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      // FOOTER TEXT ENTRY BAR
+      .yoBro-TypeArea {
+        // border: 1px solid red;
+        .yoBro-sendBtn {
+          background-color: lighten($color: $cg-primary, $amount: 8%);
+        }
+      }
+    }
   }
 }
