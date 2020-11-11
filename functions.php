@@ -106,3 +106,8 @@ require get_template_directory() . '/_functions/univ-women-sports-ajax-function.
 //     // enqueue the scroll to top script which is stored in the child theme /js/ subdirectory, and depends on jQuery
 //     wp_enqueue_script('scroll_to_top', get_stylesheet_directory_uri() . '/assets/dist/js/scroll-to-top.js', array('jquery'));
 // }
+
+/**
+ * ASM WOOCOM FUNCTIONS
+ */
+require get_template_directory() . '/_functions/asm-functions/asm-woocom-functions.php';
