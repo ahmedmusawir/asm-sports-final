@@ -53,11 +53,11 @@ get_header();
     <section class="top-page-menu clearfix">
 
       <h3 class="menu-title float-left">Profile</h3>
-      <?php if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
+      <?php //if (is_user_logged_in() && ($user_id == $current_user_id)) : ?>
 
       <!-- <h3 id="edit-athlete-profile-button" class="menu-title float-right">Edit Profile</h3> -->
 
-      <?php endif; ?>
+      <?php //endif; ?>
 
     </section>
   </div>
@@ -75,6 +75,7 @@ get_header();
       </h3>
 
       <?php endif; ?>
+
 
       <ul class="list-inline menu-box">
         <a href="#top-video-section">
