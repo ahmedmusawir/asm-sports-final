@@ -21,7 +21,7 @@ get_header(); ?>
 
 <div id="page-asm" class="content-area container">
   <div class="row">
-    <main id="main" class="site-main col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <main id="main" class="site-main col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
       <?php
 			while ( have_posts() ) : the_post();
 
@@ -40,20 +40,30 @@ get_header(); ?>
 
         if( isset($_COOKIE["USER_INFO"]) ) {
           $pieces = explode(",", $_COOKIE["USER_INFO"]);
-          print_r($pieces);
           $user_id = $pieces[0];
           $user_pass = $pieces[1];
         }
 
         $user_object = get_userdata($user_id);
         $user_name = $user_object->user_login;
-        echo "USER NAME: $user_name  & USER PASS: $user_pass";
-        wp_die();
+        // echo "USER NAME: $user_name  & USER PASS: $user_pass";
+        // wp_die();
       ?>
 
       <!-- USER NAME & PASSWORD + LOGIN BUTTON HTML CODE-->
+      <style>
+      .registered-user-info {
+        border: 4px double #e3e3e3;
+        box-shadow: 1px 1px 6px gray;
+      }
+      </style>
 
-      <div class="registered-user-info p-5" style="border: 1px double #e3e3e3;">
+      <div class="registered-user-info p-5 my-4 text-center">
+        <h4>You can login now by using the following credentials & clicking on the following button ...</h3>
+          <h4>Your User ID: <strong><?php echo $user_name; ?></strong></h4>
+          <h4>Your Password: <strong><?php echo $user_pass; ?></strong></h4>
+          <hr>
+          <a href="<?php echo wp_login_url(); ?>" class="btn btn-lg btn-primary">Log In Now</a>
 
       </div>
 
