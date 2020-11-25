@@ -21,10 +21,17 @@ add_action( 'gform_user_registered', 'asm_set_registered_coach_membership', 10, 
 
 function asm_set_registered_coach_membership($user_id, $feed, $entry, $user_pass) {
 
-  $coach_role = $entry['23.3'];
+  // WRITING USER ID AND PASSWORD OF A NEWLY REGISTERED USER TO A COOKIE
+  $cookie_name = "USER_INFO";
   
-  if ( $coach_role == 'coach' ) {
+  setcookie($cookie_name, $user_id . "," . $user_pass, time() + (86400 * 1), "/"); // 86400 = 1 day
+  
+  // COLLECTING MEMBER TYPE FROM GRAVITY FORM
+  $coach_role = $entry['25'];
+  
+  if ( $coach_role == 'Coach' ) {
 
+    // ASSIGNING COACH'S MEMBERSHIP MANUALLY
     $args = array(
         // Enter the ID (post ID) of the plan to grant at registration
         'plan_id'	=> 8741,
@@ -35,5 +42,5 @@ function asm_set_registered_coach_membership($user_id, $feed, $entry, $user_pass
   }
 
   GFCommon::log_debug( __METHOD__ . '(): entry => ' . print_r( $entry, true ) );
-  GFCommon::log_debug( __METHOD__ . '(): entry => ' . print_r( $form, true ) );
+  GFCommon::log_debug( __METHOD__ . '(): entry => ' . print_r( $feed, true ) );
 } 

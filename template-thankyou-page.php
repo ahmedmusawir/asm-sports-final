@@ -1,6 +1,6 @@
 <?php
 /**
- *
+ * Template Name: Thankyou Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -19,7 +19,7 @@ get_header(); ?>
 </section>
 
 
-<div id="page-asm" class="content-area container-fullwidth">
+<div id="page-asm" class="content-area container">
   <div class="row">
     <main id="main" class="site-main col-sm-12 col-md-12 col-lg-12 col-xl-12">
       <?php
@@ -33,7 +33,29 @@ get_header(); ?>
 				endif;
 
 			endwhile; // End of the loop.
-			?>
+      ?>
+
+      <!-- USER NAME & PASSWORD + LOGIN BUTTON PHP CODE-->
+      <?php 
+
+        if( isset($_COOKIE["USER_INFO"]) ) {
+          $pieces = explode(",", $_COOKIE["USER_INFO"]);
+          print_r($pieces);
+          $user_id = $pieces[0];
+          $user_pass = $pieces[1];
+        }
+
+        $user_object = get_userdata($user_id);
+        $user_name = $user_object->user_login;
+        echo "USER NAME: $user_name  & USER PASS: $user_pass";
+        wp_die();
+      ?>
+
+      <!-- USER NAME & PASSWORD + LOGIN BUTTON HTML CODE-->
+
+      <div class="registered-user-info p-5" style="border: 1px double #e3e3e3;">
+
+      </div>
 
     </main><!-- #main -->
 

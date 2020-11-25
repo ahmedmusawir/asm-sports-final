@@ -5,7 +5,24 @@
  * @since   1.0.0
  * @version 3.0.0
  */
+
+$user_id = bp_displayed_user_id();
+$current_user = wp_get_current_user();
+$current_user_id = $current_user->ID;
+
+if (!is_user_logged_in() && ($user_id != $current_user_id)) {
+  echo '<h1 class="pt-5 mt-5">You cannot see this page ...</h1>';
+  wp_die();
+  // wp_redirect( home_url() ); exit;
+}  
+
+if (is_user_logged_in() && ($user_id != $current_user_id)) {
+  echo '<h1 class="pt-5 mt-5">You cannot see this page ...</h1>';
+  wp_die();
+}
+
 get_header();
+
 ?>
 <div id="buddypress" class="buddypress-wrap coach bp-dir-hori-nav">
   <!-- FONT AWESOME 5 PRO -->

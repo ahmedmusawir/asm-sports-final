@@ -14,6 +14,24 @@
 
 get_header(); ?>
 
+<style type="text/css">
+/* #general-page-header {
+  width: 100vw;
+  height: 50px;
+  background-color: black;
+  background-image: url('<?php the_field('general_page_header_image', 'option') ?>'); 
+  background-size: cover;
+  background-position: top center;
+  margin-top: 50px;
+} */
+</style>
+
+<?php 
+$athlete_name = bp_get_displayed_user_fullname();
+// $athlete_email = bp_displayed_user_email();
+$coach_name = bp_core_get_user_displayname( bp_loggedin_user_id() );
+?>
+
 <section id="general-page-header" class="text-center">
 
 </section>

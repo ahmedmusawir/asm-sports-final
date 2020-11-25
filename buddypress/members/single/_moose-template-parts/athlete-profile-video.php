@@ -27,6 +27,8 @@ $user_id = bp_displayed_user_id();
     <img class="menu-icon" src="/wp-content/uploads/video-icon.png" alt=""></i> Videos
   </h1>
 
+  <?php if ($video_1) : ?>
+
   <div class="embed-responsive embed-responsive-16by9">
 
     <iframe class="embed-responsive-item"
@@ -36,6 +38,14 @@ $user_id = bp_displayed_user_id();
     </iframe>
 
   </div>
+
+  <?php else : ?>
+
+  <div class="no-video-message p-3" style="border: 1px solid #e3e3e3;">
+    <h5>No Video Available</h5>
+  </div>
+
+  <?php endif; ?>
 
 </section> <!-- end top-video-section -->
 
