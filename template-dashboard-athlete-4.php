@@ -198,22 +198,22 @@ get_header(); ?>
         endif;
         ?>
 
-        <!-- SCHOLARSHIP CONSULTANCY START -->
+        <!-- PROFILE VERIFICATION FORM START -->
 
         <div class="row task-item mt-4" data-task="task-status-11">
 
           <div class="col-sm-3 text-center video-box">
 
-            <a type="button" class="asm-task-button" data-toggle="modal" data-target="#scholarship-consultancy-modal">
+            <a type="button" class="asm-task-button" data-toggle="modal" data-target="#profile-verification-modal">
 
-              <img src="<?php the_field('scholarship_consultancy_image'); ?>" alt="" class=" w-100">
+              <img src="<?php the_field('profile_verification_image'); ?>" alt="" class=" w-100">
 
             </a>
           </div>
           <div class="col-sm-6 text-center text-box">
-            <h3 class="title"><?php the_field('scholarship_consultancy_title'); ?></h3>
+            <h3 class="title"><?php the_field('profile_verification_title'); ?></h3>
             <p class="sub-title">
-              <?php the_field('scholarship_consultancy_sub_title'); ?>
+              <?php the_field('profile_verification_sub_title'); ?>
             </p>
           </div>
           <div id="<?php //the_field('task_id'); ?>" class="col-sm-3 text-center icon-box">
@@ -225,134 +225,10 @@ get_header(); ?>
             <i class="d-none fas fa-check-circle text-success"></i>
           </div>
 
-          <!-- BOOTSTRAP MODAL -->
+          <!-- YOUTUBE VIDEO MODAL -->
 
           <!-- Modal -->
-          <div class="modal fade bd-example-modal-lg" id="scholarship-consultancy-modal" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="gravity-form-shortcode">
-                    <a class="btn btn-lg btn-primary btn-block"
-                      href="<?php the_field('scholarship_consultancy_button_url'); ?>" target="_blank">
-                      <?php the_field('scholarship_consultancy_button_text'); ?>
-                    </a>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary modal-mark-complete-btn">Mark Complete</button>
-                  <button type="button" class="btn btn-danger modal-task-reset-btn">Reset</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- BOOTSTRAP MODAL END -->
-
-        </div>
-
-        <!-- SCHOLARSHIP CONSULTANCY END -->
-
-        <!-- HOW TO GET SCHOLARSHIP START -->
-
-        <div class="row task-item mt-4" data-task="task-status-12">
-
-          <div class="col-sm-3 text-center video-box">
-
-            <a type="button" class="asm-task-button" data-toggle="modal" data-target="#get-scholarship-modal">
-
-              <img src="<?php the_field('get_scholarship_image'); ?>" alt="" class=" w-100">
-
-            </a>
-          </div>
-          <div class="col-sm-6 text-center text-box">
-            <h3 class="title"><?php the_field('get_scholarship_title'); ?></h3>
-            <p class="sub-title">
-              <?php the_field('get_scholarship_sub_title'); ?>
-            </p>
-          </div>
-          <div id="<?php //the_field('task_id'); ?>" class="col-sm-3 text-center icon-box">
-            <h4 class="status-text">
-
-            </h4>
-            <i class="d-none fas fa-exclamation-circle text-danger"></i>
-            <i class="d-none far fa-clock text-info"></i>
-            <i class="d-none fas fa-check-circle text-success"></i>
-          </div>
-
-          <!-- BOOTSTRAP MODAL -->
-
-          <!-- Modal -->
-          <div class="modal fade bd-example-modal-lg" id="get-scholarship-modal" tabindex="-1" role="dialog"
-            aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="gravity-form-shortcode">
-                    <a class="btn btn-lg btn-primary btn-block" href="<?php the_field('get_scholarship_button_url'); ?>"
-                      target="_blank">
-                      <?php the_field('get_scholarship_button_text'); ?>
-                    </a>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary modal-mark-complete-btn">Mark Complete</button>
-                  <button type="button" class="btn btn-danger modal-task-reset-btn">Reset</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- BOOTSTRAP MODAL END -->
-
-        </div>
-
-        <!-- HOW TO GET SCHOLARSHIP END -->
-
-        <!-- SEARCH UNIVERSITY START -->
-
-        <div class="row task-item mt-4" data-task="task-status-11">
-
-          <div class="col-sm-3 text-center video-box">
-
-            <a type="button" class="asm-task-button" data-toggle="modal" data-target="#search-universities-modal">
-
-              <img src="<?php the_field('search_universities_image'); ?>" alt="" class=" w-100">
-
-            </a>
-          </div>
-          <div class="col-sm-6 text-center text-box">
-            <h3 class="title"><?php the_field('search_universities_title'); ?></h3>
-            <p class="sub-title">
-              <?php the_field('search_universities_sub_titles'); ?>
-            </p>
-          </div>
-          <div id="<?php //the_field('task_id'); ?>" class="col-sm-3 text-center icon-box">
-            <h4 class="status-text">
-
-            </h4>
-            <i class="d-none fas fa-exclamation-circle text-danger"></i>
-            <i class="d-none far fa-clock text-info"></i>
-            <i class="d-none fas fa-check-circle text-success"></i>
-          </div>
-
-          <!-- BOOTSTRAP MODAL -->
-
-          <!-- Modal -->
-          <div class="modal fade bd-example-modal-lg" id="search-universities-modal" tabindex="-1" role="dialog"
+          <div class="modal fade bd-example-modal-lg" id="profile-verification-modal" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
               <div class="modal-content">
@@ -364,10 +240,10 @@ get_header(); ?>
                 </div>
                 <div class="modal-body">
                   <div class="gravity-form-shortcode">
-                    <a class="btn btn-lg btn-primary btn-block"
-                      href="<?php the_field('search_universities_button_url'); ?>" target="_blank">
-                      <?php the_field('search_universities_button_text'); ?>
-                    </a>
+                    <?php 
+                      $gravity_form = get_field('profile_verification_gravity_form');
+                      echo do_shortcode( $gravity_form ); 
+                    ?>
                   </div>
                 </div>
                 <div class="modal-footer">
@@ -379,11 +255,74 @@ get_header(); ?>
             </div>
           </div>
 
-          <!-- BOOTSTRAP MODAL END -->
+          <!-- YOUTUBE VIDEO MODAL END -->
 
         </div>
 
-        <!-- SEARCH UNIVERSITY END -->
+        <!-- PROFILE VERIFICATION FORM END -->
+
+        <!-- COMMITMENT FORM START -->
+
+        <div class="row task-item mt-4" data-task="task-status-12">
+
+          <div class="col-sm-3 text-center video-box">
+
+            <a type="button" class="asm-task-button" data-toggle="modal" data-target="#commitment-modal">
+
+              <img src="<?php the_field('commitment_image'); ?>" alt="" class=" w-100">
+
+            </a>
+          </div>
+          <div class="col-sm-6 text-center text-box">
+            <h3 class="title"><?php the_field('commitment_title'); ?></h3>
+            <p class="sub-title">
+              <?php the_field('commitment_sub_title'); ?>
+            </p>
+          </div>
+          <div id="<?php //the_field('task_id'); ?>" class="col-sm-3 text-center icon-box">
+            <h4 class="status-text">
+
+            </h4>
+            <i class="d-none fas fa-exclamation-circle text-danger"></i>
+            <i class="d-none far fa-clock text-info"></i>
+            <i class="d-none fas fa-check-circle text-success"></i>
+          </div>
+
+          <!-- YOUTUBE VIDEO MODAL -->
+
+          <!-- Modal -->
+          <div class="modal fade bd-example-modal-lg" id="commitment-modal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="gravity-form-shortcode">
+                    <?php 
+                      $gravity_form = get_field('commitment_gravity_form');
+                      echo do_shortcode( $gravity_form ); 
+                    ?>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary modal-mark-complete-btn">Mark Complete</button>
+                  <button type="button" class="btn btn-danger modal-task-reset-btn">Reset</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- YOUTUBE VIDEO MODAL END -->
+
+        </div>
+
+        <!-- COMMITMENT FORM END -->
 
 
       </main><!-- #main -->

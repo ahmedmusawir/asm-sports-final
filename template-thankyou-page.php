@@ -59,6 +59,7 @@ get_header(); ?>
       </style>
 
       <div class="registered-user-info p-5 my-4 text-center">
+
         <h4>You can login now by using the following credentials & clicking on the following button ...</h3>
           <h4>Your User ID: <strong><?php echo $user_name; ?></strong></h4>
           <h4>Your Password: <strong><?php echo $user_pass; ?></strong></h4>

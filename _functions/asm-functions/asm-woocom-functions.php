@@ -41,6 +41,15 @@ function asm_set_registered_coach_membership($user_id, $feed, $entry, $user_pass
     wc_memberships_create_user_membership( $args );
   }
 
-  GFCommon::log_debug( __METHOD__ . '(): entry => ' . print_r( $entry, true ) );
-  GFCommon::log_debug( __METHOD__ . '(): entry => ' . print_r( $feed, true ) );
-} 
+  // GFCommon::log_debug( __METHOD__ . '(): entry => ' . print_r( $entry, true ) );
+  // GFCommon::log_debug( __METHOD__ . '(): entry => ' . print_r( $feed, true ) );
+}
+
+// GRAVITY FORM SUBMISSION
+// add_action( 'gform_after_submission', 'set_post_content', 10, 2 );
+// function set_post_content( $entry, $form ) {
+ 
+//    GFCommon::log_debug( __METHOD__ . '(): entry => ' . print_r( $entry, true ) );
+//    GFCommon::log_debug( __METHOD__ . '(): form => ' . print_r( $form, true ) );
+
+// }
