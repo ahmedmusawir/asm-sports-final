@@ -4,11 +4,19 @@
  */
 
 // REDIRECT ADD TO CART OR SIGNUP BUTTON STRAIGHT TO CHECKOUT
-add_filter('woocommerce_add_to_cart_redirect', 'themeprefix_add_to_cart_redirect');
-function themeprefix_add_to_cart_redirect() {
+add_filter('woocommerce_add_to_cart_redirect', 'moose_add_to_cart_redirect');
+function moose_add_to_cart_redirect() {
  global $woocommerce;
  $checkout_url = wc_get_checkout_url();
  return $checkout_url;
+}
+
+// SELL ONE PRODUCT AT A TIME
+add_filter( 'woocommerce_add_to_cart_validation', 'moose_only_one_in_cart', 99, 2 );
+   
+function moose_only_one_in_cart( $passed, $added_product_id ) {
+   wc_empty_cart();
+   return $passed;
 }
 
 /**
@@ -53,3 +61,9 @@ function asm_set_registered_coach_membership($user_id, $feed, $entry, $user_pass
 //    GFCommon::log_debug( __METHOD__ . '(): form => ' . print_r( $form, true ) );
 
 // }
+
+ /**
+ * @author        MOOSE
+ * @compatible    WC 3.7
+ */
+  

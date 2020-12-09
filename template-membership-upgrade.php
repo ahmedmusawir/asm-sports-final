@@ -37,7 +37,7 @@ $coach_name = bp_core_get_user_displayname( bp_loggedin_user_id() );
 </section>
 
 
-<div id="page-asm" class="content-area container">
+<div id="page-asm" class="content-area container-fluid">
   <div class="row">
     <main id="main" class="site-main col-sm-12 col-md-12 col-lg-12 col-xl-12">
       <?php
