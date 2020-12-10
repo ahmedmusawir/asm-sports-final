@@ -25,7 +25,11 @@ add_action('wp_ajax_athlete_dynamic_sports_ajax_function', 'athlete_dynamic_spor
         // SPORTS 
         $sport = xprofile_get_field_data( 49, $user_id, $multi_format = 'array' );
 
-        $option = '<option value="' . $sport . '">' . $sport . '</option>';
+        if ( $sport ) {
+
+          $option = '<option value="' . $sport . '">' . $sport . '</option>';
+
+        }
 
         array_push($sports, $option);
 

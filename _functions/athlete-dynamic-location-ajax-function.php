@@ -26,7 +26,9 @@ add_action('wp_ajax_athlete_dynamic_location_ajax_function', 'athlete_dynamic_lo
         $nationality = xprofile_get_field_data( 11, $user_id, $multi_format = 'array' );
 
         if ($nationality) {
+
           $option = '<option value="' . $nationality . '">' . $nationality . '</option>';
+          
         }
 
         array_push($locations, $option);
