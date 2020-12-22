@@ -13,6 +13,7 @@
 function cyberize_scripts() {
 	//CYBERIZE FRAMEWORK 1.0 STYLES UNIFIED & MINIFIED
 	wp_enqueue_style( 'cyberize-framework-1-main-style', get_template_directory_uri() . '/assets/dist/css/main.min.css', '', time() );
+
 	// wp_enqueue_style( 'cyberize-framework-1-main-style', get_template_directory_uri() . '/assets/dist/css/main.min.css', '', 12.0 );
 
 	//CYBERIZE FRAMEWORK 1.0 STYLES UNIFIED & MINIFIED
@@ -28,6 +29,12 @@ function cyberize_scripts() {
 	
 	//CYBERIZE FRAMEWORK 1.0 JAVASCRIPTS UNIFIED AND MINIFIED
 	wp_enqueue_script( 'cyberize-framework-1-script', get_template_directory_uri() . '/assets/dist/js/script.min.js', array('jquery'), time(), true );
+		// LOCALIZED VARIABLES
+		wp_localize_script('cyberize-framework-1-script', 'asmData', array(
+			'root_url' => get_site_url(),
+			'ajax_url' => admin_url('admin-ajax.php'),
+			'nonce' => wp_create_nonce('wp_rest')
+		));
 	// wp_enqueue_script( 'cyberize-framework-1-script', get_template_directory_uri() . '/assets/dist/js/script.min.js', array('jquery'), '20151215', true );
 
 	//CYBERIZE FRAMEWORK 1.0 JAVASCRIPTS UNIFIED AND MINIFIED

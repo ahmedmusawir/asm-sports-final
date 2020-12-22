@@ -19,7 +19,7 @@ class FilterSwitchModal extends AdvanceFiltersParentHelper {
     this.filterSwitchModal = $('#filterSwitchModal');
 
     // LOADING init METHODS TO CREATE THE SPORTS CHOICE RADIO BTNS
-    this.init();
+    // this.init();
 
     // RADIO BTN - CUZ THESE ARE CREATED AFTER THE this.ini() HAS RUN
     this.sportsRadioItem = $('.sports-radio-item').find(':radio');

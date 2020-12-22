@@ -4,7 +4,7 @@ import AdvanceFiltersParentHelper from './AdvanceFiltersParentHelper';
 class AdvFiltersSelect extends AdvanceFiltersParentHelper {
   constructor() {
     super();
-    this.init();
+    // this.init();
 
     // COLLECTING BASE SELECTS
     this.selectGender = $('#gender-select-adv');

@@ -25,9 +25,14 @@ import AdvanceFilterParentHelper from './_modules/athlete-adv-filters/AdvanceFil
 import FilterSwitchModal from './_modules/athlete-filter-switch-modal/FilterSwitchModal';
 import AdvFiltersSelect from './_modules/athlete-adv-filters/AdvFiltersSelect';
 
+// TEST CODE
+import UnivDataFromJson from './_modules/_test/UnivDataFromJson';
+
 class App {
   constructor() {
     console.info('ES6 Script Initialized!');
+
+    this.testCode();
 
     // ASM Global Dropdown Navigation
     new ASMDropdownMenu();
@@ -97,6 +102,10 @@ class App {
     // new AdvGenderFiltersSelect();
     // new AdvAvailFiltersSelect();
   }
+
+  testCode = () => {
+    new UnivDataFromJson();
+  };
 }
 
 const app = new App();

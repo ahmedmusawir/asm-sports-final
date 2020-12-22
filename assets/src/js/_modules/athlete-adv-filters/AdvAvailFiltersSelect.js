@@ -4,7 +4,7 @@ import AdvanceFiltersParent from './AdvanceFiltersParent';
 class AdvAvailFiltersSelect extends AdvanceFiltersParent {
   constructor() {
     super();
-    this.init();
+    // this.init();
 
     // COLLECTING SELECT
     this.selectGender = $('#avail-select-adv');

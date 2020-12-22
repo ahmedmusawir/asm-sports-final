@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 class ASMCoachDashboardSearch {
   constructor() {
-    this.init();
+    // this.init();
     // COLLECTING BUTTON
     this.button = $('#coach-search-button');
     this.setEvents();

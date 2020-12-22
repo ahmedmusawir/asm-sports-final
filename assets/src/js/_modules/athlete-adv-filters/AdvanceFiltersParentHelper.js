@@ -4,7 +4,7 @@ import AdvanceFiltersParent from './AdvanceFiltersParent';
 class AdvanceFilterParentHelper extends AdvanceFiltersParent {
   constructor() {
     super();
-    this.init();
+    // this.init();
 
     // COLLECTING RESET BUTTON
     this.buttonReset = $('#ath-adv-filter-reset');
