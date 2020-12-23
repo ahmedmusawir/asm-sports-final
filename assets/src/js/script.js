@@ -27,6 +27,7 @@ import AdvFiltersSelect from './_modules/athlete-adv-filters/AdvFiltersSelect';
 
 // TEST CODE
 import UnivDataFromJson from './_modules/_test/UnivDataFromJson';
+import UnivDataFromJsonToLocalStorage from './_modules/_test/UnivDataFromJsonToLocalStorage';
 
 class App {
   constructor() {
@@ -101,6 +102,7 @@ class App {
     new AdvFiltersSelect();
     // new AdvGenderFiltersSelect();
     // new AdvAvailFiltersSelect();
+    new UnivDataFromJsonToLocalStorage();
   }
 
   testCode = () => {

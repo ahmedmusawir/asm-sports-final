@@ -111,3 +111,9 @@ require get_template_directory() . '/_functions/univ-women-sports-ajax-function.
  * ASM WOOCOM FUNCTIONS
  */
 require get_template_directory() . '/_functions/asm-functions/asm-woocom-functions.php';
+
+/**
+ * UNIVERSITY DATA TO JSON FUNCTIONS
+ */
+require get_template_directory() . '/_functions/asm-functions/wp-to-json/get-all-university-data.php';
+require get_template_directory() . '/_functions/asm-functions/wp-to-json/get-state-university-data.php';

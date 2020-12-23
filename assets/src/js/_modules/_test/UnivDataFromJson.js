@@ -14,30 +14,30 @@ class UnivDataFromJson {
     // COLLECTION DATA
     this.url = this.siteRoot + '/wp-content/uploads/_DATA/university_data.json';
     this.thePromise = this.getData(this.url);
-    this.loadMainCatData(this.thePromise);
+    // this.loadMainCatData(this.thePromise);
   }
 
   init = () => {
-    console.log('Univ Data from JSON - Testing ...');
+    console.log('Univ Data from JSON - STATE DATA - TEXAS ...');
   };
 
-  async getData(url) {
+  getData = async (url) => {
     try {
       let response = await fetch(url);
       let data = await response.json();
-      console.log(data);
-      return data;
+      // console.log(data);
+      this.showData(data);
+      // return data;
     } catch (e) {
       console.log(e);
     }
-  }
+  };
 
-  loadMainCatData = (thePromise) => {
-    thePromise.then((d) => {
-      let displayData = '';
-      d.map((univData) => {
-        // ADDING ITEMS DYNAMICALLY
-        displayData += `
+  showData = (data) => {
+    let displayData = '';
+    data.map((univData) => {
+      // ADDING ITEMS DYNAMICALLY
+      displayData += `
         <ul class="card p-3 bg-light">
         <li>${univData.title}</li>
         <li>${univData.permalink}</li>
@@ -46,10 +46,8 @@ class UnivDataFromJson {
         <li>${univData.university_address}</li>
         </ul>
         `;
-      });
-      this.dataDisplayBox.html(displayData);
-      localStorage.setItem('univData', JSON.stringify(displayData));
     });
+    this.dataDisplayBox.html(displayData);
   };
 }
 

@@ -24,92 +24,72 @@ get_header(); ?>
     <main id="main" class="site-main col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
 
       <?php 
-    
-/**
- * 
- * GETTING FIRST 25 POSTS
- * 
- */
-// $args_25 = [
-//   'post_type' => 'universities',
-//   'posts_per_page' => 25,
-// ];
-// $posts_25 = new WP_Query($args_25);
 
-// $results_25 = [];
+      // PULLING ALL UNIVERSITY DATA
+      // Location: _functions/wp-to-json/get-all-university-data.php
+      // get_all_university_data();
+      // PULLING ALABAMA STATE UNIVERSITY DATA
+      // Location: _functions/wp-to-json/get-state-university-data.php
+      // get_state_university_data();
 
-// if ( $posts_25->have_posts() ) {
+      $args = [
+        'post_type' => 'universities',
+        'posts_per_page' => 1,
+      ];
+      $posts = new WP_Query($args);
+      
+        $results = [];
+        $mens_sports = [];
+        $womens_sports = [];
+        $divisions = [];
 
-//   while ( $posts_25->have_posts() ) {
-//     $posts_25->the_post();
+      
+        if ( $posts->have_posts() ) {
+          echo 'TOTAL UNIVERSITIES: ' . $posts->found_posts;
+          while ( $posts->have_posts() ) {
+            $posts->the_post();
+            
+            the_title();
 
-//     array_push( $results_25, [
-//       'title' => get_the_title(),
-//       'permalink' => get_the_permalink(),
-//     ] );
-    
-//   }
-// }
+            $mapLocation = get_field('university_address');
 
-// $json_data_25 = json_encode($results_25, JSON_PRETTY_PRINT);
+            $taxonomies = get_terms();
+            echo '<pre>';
+            // print_r($taxonomies);
+            echo '</pre>';
 
-// // WRITING UNIVERSITY DATA (25 items) TO A JSON FILE
-// $cat_json_dir = wp_upload_dir()['basedir'];
-// $json_file = '/_DATA/university_data_25.json';
-// $file_location = $cat_json_dir . $json_file;
-// file_put_contents($file_location, $json_data_25);
+            $university_tax = [];
+            foreach ( $taxonomies as $tax ) {
+              if ( $tax->taxonomy == 'mens-sports' ) {
+                // echo $tax->slug . '<br>';
+                array_push($mens_sports, $tax->slug);
+              }
 
-// wp_die();
+            }
+            echo '<pre>';
+            print_r($mens_sports);
+            echo '</pre>';
 
-/**
- * 
- * GETTING ALL THE POSTS
- * 
- */
-    $args = [
-      'post_type' => 'universities',
-      'posts_per_page' => -1,
-    ];
-    $posts = new WP_Query($args);
 
-      // echo '<pre>';
-      // print_r($posts);
-      // echo '</pre>';
-
-      $results = [];
-
-      if ( $posts->have_posts() ) {
-        echo 'TOTAL UNIVERSITIES: ' . $posts->found_posts;
-        while ( $posts->have_posts() ) {
-          $posts->the_post();
-
-          $mapLocation = get_field('university_address');
-
-          array_push( $results, [
-            'title' => get_the_title(),
-            'permalink' => get_the_permalink(),
-            'featured_img_url' => get_the_post_thumbnail_url(get_the_ID(),'featured-size'),
-            'university_logo' => get_field('university_logo'),
-            'university_address' => $mapLocation['address']
-          ] );
-          
+      
+            array_push( $results, [
+              'title' => get_the_title(),
+              'permalink' => get_the_permalink(),
+              'featured_img_url' => get_the_post_thumbnail_url(get_the_ID(),'featured-size'),
+              'university_logo' => get_field('university_logo'),
+              'university_address' => $mapLocation['address']
+            ] );
+            
+          }
         }
-      }
 
-      $json_data = json_encode($results, JSON_PRETTY_PRINT);
-      // echo '<pre>';
-      // echo $json_data;
-      // echo '</pre>';
-
-      // WRITING UNIVERSITY DATA (2096 items) TO A JSON FILE
-      $cat_json_dir = wp_upload_dir()['basedir'];
-      $json_file = '/_DATA/university_data.json';
-      $file_location = $cat_json_dir . $json_file;
-      file_put_contents($file_location, $json_data);
+        echo '<pre>';
+        // print_r($results);
+        echo '</pre>';
 
     ?>
 
-      <section id="univ-json-data-container" class="p-5 card">University Data Goes Here...</section>
+      <!-- <section id="univ-json-data-container" class="p-5 card">University Data Goes Here...</section> -->
 
 
     </main><!-- #main -->

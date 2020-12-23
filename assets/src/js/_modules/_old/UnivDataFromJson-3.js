@@ -40,8 +40,10 @@ class UnivDataFromJson {
         displayData += `
         <ul class="card p-3 bg-light">
         <li>${univData.title}</li>
-        <li>${univData.title}</li>
-        <li>${univData.title}</li>
+        <li>${univData.permalink}</li>
+        <li>${univData.featured_img_url}</li>
+        <li>${univData.university_logo}</li>
+        <li>${univData.university_address}</li>
         </ul>
         `;
       });

@@ -12,20 +12,21 @@ class UnivDataFromJson {
     this.siteRoot = asmData.root_url;
     // console.log(selflistData.root_url);
     // COLLECTION DATA
-    this.url = this.siteRoot + '/wp-content/uploads/_DATA/university_data.json';
+    this.url =
+      this.siteRoot + '/wp-content/uploads/_DATA/university_data_25.json';
     this.thePromise = this.getData(this.url);
     this.loadMainCatData(this.thePromise);
   }
 
   init = () => {
-    console.log('Univ Data from JSON - STATE DATA - TEXAS ...');
+    console.log('Univ Data from JSON - Testing ...');
   };
 
   async getData(url) {
     try {
       let response = await fetch(url);
       let data = await response.json();
-      // console.log(data);
+      console.log(data);
       return data;
     } catch (e) {
       console.log(e);
@@ -34,20 +35,15 @@ class UnivDataFromJson {
 
   loadMainCatData = (thePromise) => {
     thePromise.then((d) => {
-      let displayData = '';
-      d.map((univData) => {
+      let data = d;
+      let displayData;
+      data.map((univData) => {
         // ADDING ITEMS DYNAMICALLY
-        displayData += `
-        <ul class="card p-3 bg-light">
-        <li>${univData.title}</li>
-        <li>${univData.permalink}</li>
-        <li>${univData.featured_img_url}</li>
-        <li>${univData.university_logo}</li>
-        <li>${univData.university_address}</li>
-        </ul>
-        `;
+        // displayData += `<li>${univData.title}</li>`;
+        displayData = `<li>${univData.title}</li>`;
+        this.dataDisplayBox.append(displayData);
       });
-      this.dataDisplayBox.html(displayData);
+      // this.dataDisplayBox.html(displayData);
     });
   };
 }
