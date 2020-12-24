@@ -23,7 +23,7 @@ add_action('wp_ajax_univ_men_sports_ajax_function', 'univ_men_sports_ajax_functi
   // CREATING THE OPTIONS WITH HTML
   foreach ( $tax_terms as $tax_term ) {
 
-    $option .= '<option value="' . $tax_term->slug . '">' . $tax_term->name . '</option>';
+    $option .= '<option value="mens-sports-' . $tax_term->slug . '">' . $tax_term->name . '</option>';
 
   }
 

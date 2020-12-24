@@ -5,9 +5,6 @@
  *
  */
 ?>
-<link rel="stylesheet" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLPeaPHJFYJCR0xKMI-0aGPZpuc2aru8U">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/dist/js/GoogleMap.min.js' ?>">
-
 <section id="" class="univ-index-block-asm">
 
   <div id="primary" class="content-area">
@@ -39,18 +36,18 @@
               <select class="select-filter" id="division-select">
 
                 <option value="all">All Divisions</option>
-                <option value="cccaa">CCCAA</option>
-                <option value="uscaa">USCAA</option>
-                <option value="naia-division-i">NAIA Division I</option>
-                <option value="naia-division-ii">NAIA Division II</option>
-                <option value="ncaa-division-i">NCAA Division I</option>
-                <option value="ncaa-division-i-fbs">NCAA Division I-FBS</option>
-                <option value="ncaa-division-i-fcs">NCAA Division I-FCS</option>
-                <option value="ncaa-division-ii">NCAA Division II</option>
-                <option value="ncaa-division-iii">NCAA Division III</option>
-                <option value="njcaa-division-i">NJCAA Division I</option>
-                <option value="njcaa-division-ii">NJCAA Division II</option>
-                <option value="njcaa-division-iii">NJCAA Division III</option>
+                <option value="divisions-cccaa">CCCAA</option>
+                <option value="divisions-uscaa">USCAA</option>
+                <option value="divisions-naia-division-i">NAIA Division I</option>
+                <option value="divisions-naia-division-ii">NAIA Division II</option>
+                <option value="divisions-ncaa-division-i">NCAA Division I</option>
+                <option value="divisions-ncaa-division-i-fbs">NCAA Division I-FBS</option>
+                <option value="divisions-ncaa-division-i-fcs">NCAA Division I-FCS</option>
+                <option value="divisions-ncaa-division-ii">NCAA Division II</option>
+                <option value="divisions-ncaa-division-iii">NCAA Division III</option>
+                <option value="divisions-njcaa-division-i">NJCAA Division I</option>
+                <option value="divisions-njcaa-division-ii">NJCAA Division II</option>
+                <option value="divisions-njcaa-division-iii">NJCAA Division III</option>
 
               </select>
 
@@ -119,53 +116,53 @@
 
             <article class="post-item-container">
 
-              <style>
-              #univ-index-data-container {
-                height: 500px;
-              }
+              <!-- NO DATA FOUND START -->
 
-              #footer-asm {
-                display: none;
-              }
+              <div class="no-data-found text-center d-none">
+                <h3 class="no-data-title">NO MATCHED DATA FOUND! ... PLEASE CLICK RESET FILTERS & TRY AGAIN</h3>
+              </div>
 
-              #spinner {
-                visibility: hidden;
-                width: 80px;
-                height: 80px;
+              <!-- NO DATA FOUND END -->
 
-                border: 2px solid #f3f3f3;
-                border-top: 3px solid #f25a41;
-                border-radius: 100%;
+              <?php	if ( have_posts() ) :	?>
 
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
+              <div class="row">
+                <section class="univ-post-container">
+                  <?php
+									/* Start the Loop */
+                  while ( have_posts() ) : the_post();
+                  
+										/*
+										 * Include the Post-Format-specific template for the content.
+										 * If you want to override this in a child theme, then include a file
+										 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+										 */
+										get_template_part( 'template-parts/content', 'univ-item-asm' );
 
-                animation: spin 1s infinite linear;
-              }
+                  endwhile;
 
-              @keyframes spin {
-                from {
-                  transform: rotate(0deg);
-                }
+                  ?>
+                </section>
+              </div>
+              <!-- <div class="post-nav-holder col-12"><?php //the_posts_navigation(); ?></div> -->
+              <!-- THE LOAD MORE STARTS -->
 
-                to {
-                  transform: rotate(360deg);
-                }
-              }
+              <div class="text-center">
+                <a id="univ-load-more-btn" class="btn btn-light btn-lg" data-page="1"
+                  data-url="<?php echo admin_url('admin-ajax.php'); ?>" data-univ="index">
+                  <span class="asm-loading pr-3"><i class="fas fa-spinner"></i></span>Load More
+                </a>
+              </div>
 
-              #spinner.show {
-                visibility: visible;
-              }
-              </style>
+              <!-- THE LOAD MORE ENDS -->
+              <?php
 
-              <section id="univ-index-data-container" class="">
-                <!-- UNIV DATA GOES HERE -->
-                <i id="spinner" class="show"></i>
-              </section>
+								else :
+
+									get_template_part( 'template-parts/content', 'none' );
+
+								endif;
+							?>
 
             </article>
 

@@ -31,62 +31,6 @@ get_header(); ?>
       // PULLING ALABAMA STATE UNIVERSITY DATA
       // Location: _functions/wp-to-json/get-state-university-data.php
       // get_state_university_data();
-
-      $args = [
-        'post_type' => 'universities',
-        'posts_per_page' => 1,
-      ];
-      $posts = new WP_Query($args);
-      
-        $results = [];
-        $mens_sports = [];
-        $womens_sports = [];
-        $divisions = [];
-
-      
-        if ( $posts->have_posts() ) {
-          echo 'TOTAL UNIVERSITIES: ' . $posts->found_posts;
-          while ( $posts->have_posts() ) {
-            $posts->the_post();
-            
-            the_title();
-
-            $mapLocation = get_field('university_address');
-
-            $taxonomies = get_terms();
-            echo '<pre>';
-            // print_r($taxonomies);
-            echo '</pre>';
-
-            $university_tax = [];
-            foreach ( $taxonomies as $tax ) {
-              if ( $tax->taxonomy == 'mens-sports' ) {
-                // echo $tax->slug . '<br>';
-                array_push($mens_sports, $tax->slug);
-              }
-
-            }
-            echo '<pre>';
-            print_r($mens_sports);
-            echo '</pre>';
-
-
-      
-            array_push( $results, [
-              'title' => get_the_title(),
-              'permalink' => get_the_permalink(),
-              'featured_img_url' => get_the_post_thumbnail_url(get_the_ID(),'featured-size'),
-              'university_logo' => get_field('university_logo'),
-              'university_address' => $mapLocation['address']
-            ] );
-            
-          }
-        }
-
-        echo '<pre>';
-        // print_r($results);
-        echo '</pre>';
-
     ?>
 
       <!-- <section id="univ-json-data-container" class="p-5 card">University Data Goes Here...</section> -->

@@ -5,7 +5,7 @@ import regeneratorRuntime from 'regenerator-runtime';
 
 class UnivDataFromJson {
   constructor() {
-    this.init();
+    // this.init();
     // COLLECTING ELEMENT
     this.dataDisplayBox = $('#univ-json-data-container');
     // SITE ROOT URL FROM WP LOCALIZE SCRIPT

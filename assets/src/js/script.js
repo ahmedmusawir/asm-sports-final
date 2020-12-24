@@ -25,6 +25,10 @@ import AdvanceFilterParentHelper from './_modules/athlete-adv-filters/AdvanceFil
 import FilterSwitchModal from './_modules/athlete-filter-switch-modal/FilterSwitchModal';
 import AdvFiltersSelect from './_modules/athlete-adv-filters/AdvFiltersSelect';
 
+// LOADING UNIVERSITY DATA
+import UnivDataLoadJsonToLocalStorage from './_modules/univ-data/UnivDataLoadJsonToLocalStorage';
+import UnivDataDisplayFromLocalStorage from './_modules/univ-data/UnivDataDisplayFromLocalStorage';
+
 // TEST CODE
 import UnivDataFromJson from './_modules/_test/UnivDataFromJson';
 import UnivDataFromJsonToLocalStorage from './_modules/_test/UnivDataFromJsonToLocalStorage';
@@ -72,9 +76,12 @@ class App {
     new AthleteVerificationFiltersSelect();
 
     /**
-    UNIVERSITY INDEX PAGE FILTERS
+    UNIVERSITY INDEX PAGE 
     */
-
+    // UNIVERSITY DATA LOAD
+    new UnivDataLoadJsonToLocalStorage();
+    // UNIVERSITY DATA DISPLAY
+    new UnivDataDisplayFromLocalStorage();
     // UNIVERSITY FILTER PARENT
     new UniversityFiltersParent();
     // UNIVERSITY DIVISION FILTER SELECT
@@ -102,11 +109,11 @@ class App {
     new AdvFiltersSelect();
     // new AdvGenderFiltersSelect();
     // new AdvAvailFiltersSelect();
-    new UnivDataFromJsonToLocalStorage();
   }
 
   testCode = () => {
-    new UnivDataFromJson();
+    // new UnivDataFromJson();
+    new UnivDataFromJsonToLocalStorage();
   };
 }
 

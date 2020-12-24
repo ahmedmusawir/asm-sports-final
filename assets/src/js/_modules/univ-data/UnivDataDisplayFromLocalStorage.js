@@ -3,13 +3,13 @@ import $ from 'jquery';
 // FOLLOWING NEEDED EVERY TIME ASYNC AWAIT IS USED
 import regeneratorRuntime from 'regenerator-runtime';
 
-class UnivDataFromJsonToLocalStorage {
+class UnivDataDisplayFromLocalStorage {
   constructor() {
     this.init();
     // LOADER GIF
     this.loaderSpinner = $('#spinner');
     // COLLECTING ELEMENT
-    this.dataDisplayBox = $('#univ-json-local-storage-container');
+    this.dataDisplayBox = $('#univ-index-data-container');
     // SITE ROOT URL FROM WP LOCALIZE SCRIPT
     this.siteRoot = asmData.root_url;
     // COLLECTION DATA
@@ -19,7 +19,7 @@ class UnivDataFromJsonToLocalStorage {
   }
 
   init = () => {
-    console.log('Univ Data from JSON to LOCAL STORAGE - Testing');
+    console.log('Univ Data Prod Display');
   };
 
   loadUnivData = () => {
@@ -30,10 +30,11 @@ class UnivDataFromJsonToLocalStorage {
 
     // IF LOCAL STORAGE EMTPY, READING FROM JSON FILE & WRITING TO LOCAL STORAGE
     if (!universityData) {
-      // this.getData(this.url);
+      this.getData(this.url);
     } else {
       // DISPLAY DATA TO PAGE
       this.displayUnivData(universityData);
+      console.log(universityData);
     }
   };
 
@@ -63,9 +64,12 @@ class UnivDataFromJsonToLocalStorage {
 
     let displayData = '';
     data.map((univData) => {
+      const divisionClasses = univData.divisions.join(' ');
+      const menSportsClasses = univData.mens_sports.join(' ');
+      const womentSportsClasses = univData.womens_sports.join(' ');
       // ADDING ITEMS DYNAMICALLY
       displayData = `
-      <article class="col-md-12 univ-post-item item animated bounceIn">
+      <article class="col-md-12 univ-post-item item animated bounceIn ${divisionClasses} ${menSportsClasses} ${womentSportsClasses}">
 
       <div class="entry-content row">
     
@@ -120,4 +124,4 @@ class UnivDataFromJsonToLocalStorage {
   };
 }
 
-export default UnivDataFromJsonToLocalStorage;
+export default UnivDataDisplayFromLocalStorage;
