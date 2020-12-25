@@ -12,6 +12,8 @@ class UniversityFiltersParent {
     this.dropDownBox = $('#menu-university-menu');
     // STATES DROPDOWN MENU CLOSE BTN
     this.statesDropdownMenuCloseBtn = $('.states-menu-close');
+    // COLLECTING ELEMENT
+    this.dataDisplayBox = $('#univ-index-data-container');
 
     // console.log(this.button);
     this.setEvents();
@@ -58,7 +60,7 @@ class UniversityFiltersParent {
     this.dropDownBox.addClass('d-none');
   };
 
-  resetFilters() {
+  resetFilters = () => {
     const theItem = $('.univ-post-item');
     console.log('Univ Reset btn clicked');
 
@@ -75,7 +77,7 @@ class UniversityFiltersParent {
     setTimeout(function () {
       theItem.removeClass('d-none');
     });
-  }
+  };
 }
 
 export default UniversityFiltersParent;

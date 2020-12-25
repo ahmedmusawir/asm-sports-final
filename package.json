@@ -47,6 +47,7 @@
     "gulp-uglify": "^3.0.0",
     "jquery": "^3.5.1",
     "react-addons-css-transition-group": "^15.6.2",
+    "selectize": "^0.12.6",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },

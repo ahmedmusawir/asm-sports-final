@@ -49,6 +49,7 @@
       border-bottom: 2px solid lighten($color: gray, $amount: 35%);
 
       .menu-title {
+        margin-top: 0.5rem;
         padding-right: 2rem;
         padding-left: 2rem;
         padding-top: 1.3rem;
@@ -64,12 +65,49 @@
         margin-top: 1.3rem;
         margin-left: 1rem;
         position: relative;
+        // border: 1rem solid red;
 
         // THE LOCATION DROPDOWN BUTTON
         #location-dropdown-btn {
           // border: 3px dotted blue;
           .btn-text {
             padding-right: 3rem;
+          }
+        }
+        // SELECTIZE STATE INPUT
+        .selectize-dropdown .optgroup-header,
+        .selectize-dropdown .option {
+          padding: 3px 12px;
+          font-size: 0.7rem;
+          font-weight: 600;
+        }
+        .selectize-input {
+          margin-bottom: -0.9rem;
+          width: 13rem;
+          border: 1px solid gray;
+          font-size: 0.7rem;
+          font-weight: 600;
+          color: #036bb2;
+
+          #state-select-selectized {
+            &::-webkit-input-placeholder {
+              /* Edge */
+              color: #036bb2;
+              font-size: 0.7rem;
+              font-weight: 600;
+            }
+
+            &:-ms-input-placeholder {
+              /* Internet Explorer 10-11 */
+              color: #036bb2;
+              font-size: 0.7rem;
+              font-weight: 600;
+            }
+            &::placeholder {
+              color: #036bb2;
+              font-size: 0.7rem;
+              font-weight: 600;
+            }
           }
         }
 

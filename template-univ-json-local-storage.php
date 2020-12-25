@@ -27,7 +27,7 @@ get_header(); ?>
 
       // PULLING ALL UNIVERSITY DATA
       // Location: _functions/wp-to-json/get-all-university-data.php
-      // get_all_university_data();
+      get_all_university_data();
       // PULLING ALABAMA STATE UNIVERSITY DATA
       // Location: _functions/wp-to-json/get-state-university-data.php
       // get_state_university_data();

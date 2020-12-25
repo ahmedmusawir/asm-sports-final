@@ -32,6 +32,7 @@ import UnivDataDisplayFromLocalStorage from './_modules/univ-data/UnivDataDispla
 // TEST CODE
 import UnivDataFromJson from './_modules/_test/UnivDataFromJson';
 import UnivDataFromJsonToLocalStorage from './_modules/_test/UnivDataFromJsonToLocalStorage';
+import UnivStateSelectizeFilter from './_modules/univ-filters/UnivStateSelectizeFilter';
 
 class App {
   constructor() {
@@ -84,6 +85,8 @@ class App {
     new UnivDataDisplayFromLocalStorage();
     // UNIVERSITY FILTER PARENT
     new UniversityFiltersParent();
+    // UNIVERSITY STATE FILTER
+    new UnivStateSelectizeFilter();
     // UNIVERSITY DIVISION FILTER SELECT
     new UnivDivisionsFiltersSelect();
     // UNIVERSITY MEN'S SPORTS FILTER SELECT

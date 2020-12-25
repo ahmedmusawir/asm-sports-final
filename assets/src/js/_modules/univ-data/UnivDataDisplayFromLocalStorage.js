@@ -7,7 +7,7 @@ class UnivDataDisplayFromLocalStorage {
   constructor() {
     this.init();
     // LOADER GIF
-    this.loaderSpinner = $('#spinner');
+    // this.loaderSpinner = $('#spinner');
     // COLLECTING ELEMENT
     this.dataDisplayBox = $('#univ-index-data-container');
     // SITE ROOT URL FROM WP LOCALIZE SCRIPT
@@ -34,7 +34,7 @@ class UnivDataDisplayFromLocalStorage {
     } else {
       // DISPLAY DATA TO PAGE
       this.displayUnivData(universityData);
-      console.log(universityData);
+      // console.log(universityData);
     }
   };
 

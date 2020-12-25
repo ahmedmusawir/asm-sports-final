@@ -30,7 +30,7 @@ get_header(); ?>
       // get_all_university_data();
       // PULLING ALABAMA STATE UNIVERSITY DATA
       // Location: _functions/wp-to-json/get-state-university-data.php
-      // get_state_university_data();
+      get_state_university_data();
     ?>
 
       <!-- <section id="univ-json-data-container" class="p-5 card">University Data Goes Here...</section> -->

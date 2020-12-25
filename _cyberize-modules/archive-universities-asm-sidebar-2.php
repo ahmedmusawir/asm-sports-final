@@ -7,9 +7,7 @@
 ?>
 <link rel="stylesheet" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLPeaPHJFYJCR0xKMI-0aGPZpuc2aru8U">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/dist/js/GoogleMap.min.js' ?>">
-<link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
-  integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+
 <section id="" class="univ-index-block-asm">
 
   <div id="primary" class="content-area">
@@ -30,14 +28,9 @@
 
           <ul class="list-inline menu-box">
 
+            <li id="location-dropdown-btn" class="list-inline-item">
 
-            <li class="list-inline-item">
-
-              <select class="" id="state-select" placeholder="SELECT A STATE">
-
-                <!-- <option value="all">ALL STATE</option> -->
-
-              </select>
+              <span class="btn-text select-filter">All States</span>
 
             </li>
 
@@ -181,8 +174,8 @@
           <div class="col-sm-12 col-md-12 col-lg-6">
 
             <!-- ACF MAP START -->
-            <div class="">
-              <!-- <div class="acf-map"> -->
+            <!-- <div class=""> -->
+            <div class="acf-map">
 
               <?php 
 
