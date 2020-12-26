@@ -35,7 +35,7 @@
 
               <select class="" id="state-select" placeholder="SELECT A STATE">
 
-                <!-- <option value="all">ALL STATE</option> -->
+                <option value="all">ALL STATES</option>
 
               </select>
 
@@ -181,8 +181,8 @@
           <div class="col-sm-12 col-md-12 col-lg-6">
 
             <!-- ACF MAP START -->
-            <div class="">
-              <!-- <div class="acf-map"> -->
+            <!-- <div class=""> -->
+            <div class="acf-map">
 
               <?php 
 

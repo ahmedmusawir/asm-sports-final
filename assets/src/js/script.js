@@ -26,7 +26,7 @@ import FilterSwitchModal from './_modules/athlete-filter-switch-modal/FilterSwit
 import AdvFiltersSelect from './_modules/athlete-adv-filters/AdvFiltersSelect';
 
 // LOADING UNIVERSITY DATA
-import UnivDataLoadJsonToLocalStorage from './_modules/univ-data/UnivDataLoadJsonToLocalStorage';
+// import UnivDataLoadJsonToLocalStorage from './_modules/univ-data/UnivDataLoadJsonToLocalStorage';
 import UnivDataDisplayFromLocalStorage from './_modules/univ-data/UnivDataDisplayFromLocalStorage';
 
 // TEST CODE
@@ -80,7 +80,7 @@ class App {
     UNIVERSITY INDEX PAGE 
     */
     // UNIVERSITY DATA LOAD
-    new UnivDataLoadJsonToLocalStorage();
+    // new UnivDataLoadJsonToLocalStorage();
     // UNIVERSITY DATA DISPLAY
     new UnivDataDisplayFromLocalStorage();
     // UNIVERSITY FILTER PARENT

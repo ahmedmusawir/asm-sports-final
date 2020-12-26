@@ -124,10 +124,6 @@ class UnivStateSelectizeFilter extends UnivFilterParent {
     try {
       // this.loaderSpinner.addClass('show');
       if (selectedState) {
-        if (selectedState == 'all') {
-          location.reload();
-          return;
-        }
         // READING FROM JSON FILE
         let response = await fetch(stateFileUrl);
         let data = await response.json();

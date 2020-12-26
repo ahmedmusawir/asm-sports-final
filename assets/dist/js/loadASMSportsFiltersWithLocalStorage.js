@@ -1,4 +1,4 @@
-jQuery(document).ready(function ($) {
+jQuery(function ($) {
   var selectBtn = $('#sports-select');
   var ajaxUrl = selectBtn.data('url');
   var ajaxFunction = 'athlete_dynamic_sports_ajax_function';
