@@ -5,8 +5,8 @@
  *
  */
 ?>
-<link rel="stylesheet" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLPeaPHJFYJCR0xKMI-0aGPZpuc2aru8U">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/assets/dist/js/GoogleMap.min.js' ?>">
+<!-- <link rel="stylesheet" href="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLPeaPHJFYJCR0xKMI-0aGPZpuc2aru8U"> -->
+<!-- <link rel="stylesheet" href="<?php //echo get_template_directory_uri() . '/assets/dist/js/GoogleMap.min.js' ?>"> -->
 <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
   integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />

@@ -38,7 +38,7 @@ class App {
   constructor() {
     console.info('ES6 Script Initialized!');
 
-    this.testCode();
+    // this.testCode();
 
     // ASM Global Dropdown Navigation
     new ASMDropdownMenu();
@@ -116,7 +116,7 @@ class App {
 
   testCode = () => {
     // new UnivDataFromJson();
-    new UnivDataFromJsonToLocalStorage();
+    // new UnivDataFromJsonToLocalStorage();
   };
 }
 
